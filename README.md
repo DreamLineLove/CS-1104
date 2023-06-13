@@ -26,5 +26,8 @@ I also explored various aspects of the C++ programming language whenever I felt 
     $ ./v1_insertion_deletion
 ```
 
+# Contents
+### Array insertion and deletion
+### Linear search
 
 
