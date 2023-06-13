@@ -27,7 +27,7 @@ I also explored various aspects of the C++ programming language whenever I felt 
 ```
 
 # Contents
-### Array insertion and deletion
-### Linear search
+#### Array insertion and deletion
+#### Linear search
 
 
