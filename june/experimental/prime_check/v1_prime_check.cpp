@@ -12,11 +12,15 @@ bool primeCheck(int n) {
 }
 
 int main() {
+  cout << "\tPRIME CHECK" << endl;
+  cout << "\t-----------\n" << endl;
 
   bool isPrime = false;
   int n;
-  cout << "What is the number? ";
+  cout << "- What is the number? ";
   cin >> n;
+
+  cout << "- ";
 
   isPrime = primeCheck(n);
   if (isPrime) {
@@ -24,6 +28,8 @@ int main() {
   } else {
     cout << n << " is NOT a prime number!";
   }
+
+  cout << endl;
 
   return 0;
 }
