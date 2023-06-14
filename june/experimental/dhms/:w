@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int days, hours, minutes, seconds, inputSeconds;
+  int daySeconds = 86400;
+  cout << "- How many seconds? ";
+  cin >> inputSeconds;
+
+  days = inputSeconds / daySeconds;
+  hours = (inputSeconds % daySeconds) / 3600;
+  minutes = ((inputSeconds % daySeconds) % 3600) / 60;
+  seconds = (((inputSeconds % daySeconds) % 3600) % 60) / 60;
+
+  return 0;
+}
