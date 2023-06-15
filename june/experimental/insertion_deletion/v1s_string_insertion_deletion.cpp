@@ -1,15 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int checkIndexOutOfBounds(string mode, int array_size) {
+int checkIndexOutOfBounds(int array_size) {
   int index;
-  if (mode == "insertion") {
-    cout << "index you would like to insert at: ";
-    cin >> index;
-  } else if (mode == "deletion") {
-    cout << "index you would like to delete from: ";
-    cin >> index;
-  }
+  cout << "index you would like to insert at: ";
+  cin >> index;
   while (index < 0 || index >= array_size) {
     cout << "\nindex must be between 0 and " << array_size - 1 << "!" << endl;
     cout << "index you would like to insert at: ";
@@ -20,8 +15,9 @@ int checkIndexOutOfBounds(string mode, int array_size) {
 }
 
 void insertion(int index, string array[], int array_size) {
+  cout << "\n\tInsertion";
   string input;
-  cout << "name of the element: ";
+  cout << "\nname of the element: ";
   cin >> input;
   array[index] = input;
 
@@ -31,8 +27,16 @@ void insertion(int index, string array[], int array_size) {
   }
 }
 
-void deletion(int index, string array[], int array_size) {
-  array[index] = "";
+void deletion(string array[], int array_size) {
+  cout << "\tDeletion";
+  string input;
+  cout << "\nname of the element you want to delete: ";
+  cin >> input;
+  for (int i = 0; i < array_size; i++) {
+    if (array[i] == input) {
+      array[i] = "";
+    }
+  }
   cout << "\n\tArray elements" << endl;
   for (int i = 0; i < array_size; i++) {
     cout << "  \"" << array[i] << "\"" << endl;
@@ -50,13 +54,10 @@ int main() {
   }
 
   int index;
-  cout << "\n\tInsertion" << endl;
-  index = checkIndexOutOfBounds("insertion", array_size);
+  index = checkIndexOutOfBounds(array_size);
   insertion(index, array, array_size);
   cout << endl;
-  cout << "\n\tDeletion" << endl;
-  index = checkIndexOutOfBounds("deletion", array_size);
-  deletion(index, array, array_size);
+  deletion(array, array_size);
 
   return 0;
 }
