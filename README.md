@@ -1,9 +1,9 @@
 # Welcome to CS-1105!
 
 In this repository, you will find:
-- Final (submitted) versions of assignments
-- Experimental versions, and
-- Exam versions.
+- Final (submitted) versions of assignments,
+- In-between experiments I had done, and
+- Gist versions for exam prepreration.
 
 I also explored various aspects of the C++ programming language whenever I felt necessary!
 
