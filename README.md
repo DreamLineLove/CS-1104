@@ -28,7 +28,13 @@ I also explored various aspects of the C++ programming language whenever I felt 
 - To fetch latest versions after cloning, use ```$ git pull```
 
 # Contents
-- **Array insertion and deletion**
-- **Linear search**
+- (Array) insertion and deletion
+- Linear search
+- Bubble sort
+- Module 4 Arrays
+    - Multi-dimensional arrays
+- Prime check
+- Days, hours, minutes, seconds
+- Module 4 Strings
 
 
