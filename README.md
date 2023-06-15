@@ -25,9 +25,10 @@ I also explored various aspects of the C++ programming language whenever I felt 
     $ cd CS-1105/june/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
 ```
+- To fetch latest versions after cloning, use ```$ git pull```
 
 # Contents
-#### Array insertion and deletion
-#### Linear search
+- **Array insertion and deletion**
+- **Linear search**
 
 
