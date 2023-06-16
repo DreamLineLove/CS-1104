@@ -1,9 +1,9 @@
 # Welcome to CS-1105!
 
 In this repository, you will find:
-- Final (submitted) versions of assignments
-- Experimental versions, and
-- Exam versions.
+- Final (submitted) versions of assignments,
+- In-between experiments I had done, and
+- Gist versions for exam prepreration.
 
 I also explored various aspects of the C++ programming language whenever I felt necessary!
 
@@ -25,9 +25,16 @@ I also explored various aspects of the C++ programming language whenever I felt 
     $ cd CS-1105/june/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
 ```
+- To fetch latest versions after cloning, use ```$ git pull```
 
 # Contents
-#### Array insertion and deletion
-#### Linear search
+- (Array) insertion and deletion
+- Linear search
+- Bubble sort
+- Module 4 Arrays
+    - Multi-dimensional arrays
+- Prime check
+- Days, hours, minutes, seconds
+- Module 4 Strings
 
 
