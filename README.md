@@ -19,8 +19,7 @@ I also explored various aspects of the C++ programming language whenever I felt 
 ```
     $ cd CS-1105
 ```
-- Navigate to the directory in which the program you want to test lives and run it. 
-- For example:
+- Navigate to the directory in which the program you want to test lives and run it. For example:
 ```
     $ cd CS-1105/june/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
