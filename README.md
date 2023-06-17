@@ -1,7 +1,7 @@
 # Welcome to CS-1105!
 
 In this repository, you will find:
-- Final (submitted) versions of assignments,
+- Final (submitted) versions of assignments or tutorials,
 - In-between experiments I had done, and
 - Gist versions for exam prepreration.
 
