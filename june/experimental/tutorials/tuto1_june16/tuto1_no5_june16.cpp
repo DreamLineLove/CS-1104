@@ -18,16 +18,16 @@ int main() {
 
   ofstream studentsFile;
   studentsFile.open("studentsData.txt");
-  studentsFile << "No." << setw(22) << "Names" << setw(8) << "Marks" << endl;
-  studentsFile << "---" << setw(22) << "--------------------" << setw(8)
+  studentsFile << "No." << setw(23) << "Names" << setw(8) << "Marks" << endl;
+  studentsFile << "---" << setw(23) << "--------------------" << setw(8)
                << "-----" << endl;
   int i;
   for (i = 0; i < 5; i++) {
-    studentsFile << i + 1 << ". " << setw(22) << names[i] << setw(5) << marks[i]
+    studentsFile << i + 1 << ". " << setw(23) << names[i] << setw(5) << marks[i]
                  << endl;
   }
   if (i == 5) {
-    studentsFile << "\n" << setw(25) << "Total:" << setw(6) << total << endl;
+    studentsFile << "\n" << setw(26) << "Total:" << setw(6) << total << endl;
   }
   studentsFile.close();
 
