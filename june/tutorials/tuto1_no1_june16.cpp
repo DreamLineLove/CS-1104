@@ -40,6 +40,9 @@ int main() {
     }
   }
   cout << "\n- Reversed and inverted string:\n\t" << spell << endl;
+  count = countLowercaseLetters(spell, 14);
+  cout << "\tThere are " << count << " lowercase letters in the new string."
+       << endl;
 
   return 0;
 }
