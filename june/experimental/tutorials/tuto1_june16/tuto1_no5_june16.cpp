@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 using namespace std;
 
@@ -13,7 +14,15 @@ int main() {
   for (int i = 0; i < 5; i++) {
     total += marks[i];
   }
-  cout << total;
+
+  ofstream studentsFile;
+  studentsFile.open("studentsData.txt");
+  int i;
+  for (i = 0; i < 5; i++) {
+    studentsFile << " " << names[i] << "\t" << marks[i] << endl;
+  }
+  if (i == 5)
+    studentsFile << "\tTotal:\t" << total << endl;
 
   return 0;
 }
