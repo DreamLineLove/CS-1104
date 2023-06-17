@@ -39,5 +39,8 @@ int main() {
   }
   readFile.close();
 
+  string filePath = "/studentsData.txt";
+  cout << "\n" << filePath << endl;
+
   return 0;
 }
