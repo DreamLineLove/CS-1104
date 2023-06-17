@@ -40,7 +40,7 @@ int main() {
   readFile.close();
 
   string filePath = "/studentsData.txt";
-  cout << "\n\nfilepath: \"" << filePath << "\"" << endl;
+  cout << "\n\n- filepath: \"" << filePath << "\"" << endl;
 
   return 0;
 }
