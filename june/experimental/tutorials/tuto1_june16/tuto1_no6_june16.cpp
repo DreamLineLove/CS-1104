@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-#include <iostream>
-using namespace std;
-
 int main() {
   string people[] = {"Min Thu", "Cherry", "Thura", "Thar Htoo", ""};
   int length = sizeof(people) / sizeof(people[0]);
