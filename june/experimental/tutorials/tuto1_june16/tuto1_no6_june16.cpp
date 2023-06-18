@@ -28,7 +28,6 @@ int main() {
   for (int i = 0; i < length; i++) {
     cout << "\t\"" << people[i] << "\"" << endl;
   }
-  cout << endl;
 
   return 0;
 }
