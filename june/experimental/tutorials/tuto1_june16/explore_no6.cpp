@@ -2,10 +2,7 @@
 using namespace std;
 
 int main() {
-  string array[5] =
-  { "one",
-    "two",
-    "three" }
+  string array[5] = {"one", "two", "three", "four", "five"};
 
   return 0;
 }
