@@ -1,16 +1,9 @@
 #include <cctype>
+#include <cstring>
 #include <iostream>
 using namespace std;
 
-int countLowercaseLetters(char spell[], int size) {
-  int count = 0;
-  for (int i = 0; i < size; i++) {
-    if (islower(spell[i])) {
-      count++;
-    }
-  }
-  return count;
-}
+int countLowercaseLetters(char spell[], int string_length);
 
 int main() {
   char spell[14] = "Avada kedavra";
@@ -20,7 +13,7 @@ int main() {
   cout << "\tThere are " << count
        << " lowercase letters in the original string." << endl;
 
-  for (int i = 0; i < 14; i++) {
+  for (int i = 0; i < strlen(spell); i++) {
     if (spell[i] == 'k') {
       spell[i] = toupper(spell[i]);
     }
@@ -32,7 +25,7 @@ int main() {
   cout << "\tThere are " << count << " lowercase letters in the new string."
        << endl;
 
-  for (int i = 13; i >= 0; i--) {
+  for (int i = strlen(spell) - 1; i >= 0; i--) {
     if (isupper(spell[i])) {
       spell[i] = tolower(spell[i]);
     } else if (islower(spell[i])) {
@@ -45,4 +38,14 @@ int main() {
        << endl;
 
   return 0;
+}
+
+int countLowercaseLetters(char spell[], int string_length) {
+  int count = 0;
+  for (int i = 0; i < string_length; i++) {
+    if (islower(spell[i])) {
+      count++;
+    }
+  }
+  return count;
 }
