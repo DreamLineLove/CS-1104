@@ -28,7 +28,7 @@ int main() {
   int distinction = 75;
 
   cout << "\tCS 1104 EXAM RESULTS" << endl << endl;
-  cout << "\tstudent(s)\tmark" << endl;
+  cout << "\tStudent(s)\tMark" << endl;
   cout << "\t----------\t----" << endl;
   for (int i = 0; i < 4; i++) {
     cout << "\tStudent " << i + 1 << "\t" << marks[i] << endl;
