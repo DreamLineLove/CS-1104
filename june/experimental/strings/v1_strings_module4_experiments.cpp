@@ -19,6 +19,9 @@ int main() {
   strcat(avatar, avatarCompleter);
   cout << avatar << endl;
 
+  reverseCases(avatar, 80);
+  cout << avatar << endl;
+
   return 0;
 }
 
