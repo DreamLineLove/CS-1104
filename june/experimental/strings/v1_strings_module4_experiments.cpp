@@ -31,6 +31,22 @@ int main() {
   }
   cout << endl;
 
+  // inline case reversal
+  char mba15[80] = "The all new 15-inch Macbook Air starts at just $1299";
+  char mba15Reverse[80];
+  for (int i = 0; i < strlen(mba15); i++) {
+    if (islower(mba15[i])) {
+      mba15[i] = toupper(mba15[i]);
+      mba15Reverse[i] = mba15[i];
+    } else if (isupper(mba15[i])) {
+      mba15[i] = tolower(mba15[i]);
+    }
+    mba15Reverse[i] = mba15[i];
+  }
+  cout << mba15 << endl;
+  cout << mba15Reverse << endl;
+  cout << endl;
+
   return 0;
 }
 
