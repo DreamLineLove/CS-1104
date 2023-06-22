@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void reverseCases(char *string, int size);
+void reverseCases(char *string, int string_length);
 
 int main() {
   // strcpy
@@ -19,14 +19,23 @@ int main() {
   strcat(avatar, avatarCompleter);
   cout << avatar << endl;
 
-  reverseCases(avatar, 80);
+  // strlen
+  reverseCases(avatar, strlen(avatar));
   cout << avatar << endl;
+  cout << endl;
+
+  // strcmp
+  char avatarReverse[80] = "aVATAR THE lAST aIRBENDER";
+  if (strcmp(avatar, avatarReverse) == 0) {
+    cout << avatar << " and " << avatarReverse << " are equal!" << endl;
+  }
+  cout << endl;
 
   return 0;
 }
 
-void reverseCases(char *string, int size) {
-  for (int i = 0; i < size; i++) {
+void reverseCases(char *string, int string_length) {
+  for (int i = 0; i < string_length; i++) {
     if (islower(*string)) {
       *string = toupper(*string);
     } else if (isupper(*string)) {
