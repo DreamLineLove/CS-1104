@@ -12,6 +12,14 @@ int main() {
   strcpy(blumentopf, blumen);
   cout << blumentopf << endl;
   cout << endl;
+
+  // strcat
+  char avatar[80] = "Avatar";
+  char avatarCompleter[80] = " the Last Airbender";
+  strcat(avatar, avatarCompleter);
+  cout << avatar << endl;
+
+  return 0;
 }
 
 void reverseCases(char *string, int size) {
