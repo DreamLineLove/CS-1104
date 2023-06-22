@@ -27,6 +27,14 @@ int main() {
   int credit = 65;
   int distinction = 75;
 
+  cout << "\tCS 1104 EXAM RESULTS" << endl << endl;
+  cout << "\tstudent(s)\tmark" << endl;
+  cout << "\t----------\t----" << endl;
+  for (int i = 0; i < 4; i++) {
+    cout << "\tStudent " << i + 1 << "\t" << marks[i] << endl;
+  }
+  cout << endl;
+
   for (int i = 0; i < 4; i++) {
     decideStudentStatus(i, marks[i], pass, credit, distinction);
   }
