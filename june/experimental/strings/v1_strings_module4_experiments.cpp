@@ -4,6 +4,7 @@
 using namespace std;
 
 void reverseCases(char *string, int string_length);
+void printOnNewLine(char string[]);
 
 int main() {
   // strcpy
@@ -47,7 +48,21 @@ int main() {
   cout << mba15Reverse << endl;
   cout << endl;
 
+  char sample[] = "All tasks at hand have been cleared!";
+  printOnNewLine(sample);
+
   return 0;
+}
+
+void printOnNewLine(char string[]) {
+  // No need to print each char out using for loop.
+  // Cout can handle char array strings provided that the whole array is the
+  // argument
+  // ([]syntax not just the name, which instead refers to the pointer to the
+  // first element of the array)
+  // However, notice the special char that appears at the front of the intended
+  // text
+  cout << string << endl;
 }
 
 void reverseCases(char *string, int string_length) {
