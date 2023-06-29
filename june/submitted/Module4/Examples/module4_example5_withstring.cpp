@@ -5,7 +5,7 @@ int main() {
   string str;
 
   cout << "Enter a string: ";
-  getline(cin, str, '#');
+  getline(cin, str);
   cout << "Here is your string: ";
   cout << str;
 
