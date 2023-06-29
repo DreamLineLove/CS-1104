@@ -17,5 +17,8 @@ int main() {
   else
     cout << " are not equal!" << endl;
 
+  strcat(s1, s2);
+  cout << s1 << endl;
+
   return 0;
 }
