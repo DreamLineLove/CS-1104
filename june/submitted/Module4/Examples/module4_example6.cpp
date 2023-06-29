@@ -23,5 +23,9 @@ int main() {
   strcpy(s2, s1);
   cout << s1 << " and " << s2 << endl;
 
+  if (strcmp(s1, s2) == 0) {
+    cout << "s1 and s2 are now the same" << endl;
+  }
+
   return 0;
 }
