@@ -20,5 +20,8 @@ int main() {
   strcat(s1, s2);
   cout << s1 << endl;
 
+  strcpy(s2, s1);
+  cout << s1 << " and " << s2 << endl;
+
   return 0;
 }
