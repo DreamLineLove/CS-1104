@@ -9,7 +9,7 @@ int main() {
 
   strcpy(str, "this is a test!");
 
-  for (i = 0; str[i]; i++)
+  for (i = 0; i < strlen(str); i++)
     str[i] = toupper(str[i]);
   cout << str;
 
