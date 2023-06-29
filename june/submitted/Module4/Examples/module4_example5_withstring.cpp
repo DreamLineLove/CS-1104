@@ -1,13 +1,11 @@
-// Using cin to read a string from keyboard.
-
 #include <iostream>
 using namespace std;
 
 int main() {
-  char str[80];
+  string str;
 
   cout << "Enter a string: ";
-  cin >> str; // read string from keyboard
+  getline(cin, str, '#');
   cout << "Here is your string: ";
   cout << str;
 
