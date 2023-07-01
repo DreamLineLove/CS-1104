@@ -8,7 +8,9 @@ int main(int argc, char *argv[]) {
   }
 
   char isee[] = "9.99";
-  cout << atof(isee);
+  cout << atof(isee) << endl;
+  cout << atoi(isee) << endl;
+  cout << atol(isee) << endl;
 
   return 0;
 }
