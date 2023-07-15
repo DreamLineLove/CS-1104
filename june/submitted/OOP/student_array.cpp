@@ -7,7 +7,7 @@ public:
   float marks[6];
   float total = 0;
   string name;
-  Student() { cout << "\tstudent object constructed..."; }
+  Student() { cout << "\tstudent object constructed..." << endl; }
   void gather_information() {
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
@@ -15,7 +15,6 @@ public:
       cout << " \t" << subjects[i] << " mark: ";
       cin >> marks[i];
       total = marks[i] + total;
-      cout << endl;
     }
   }
   void print_average() {
