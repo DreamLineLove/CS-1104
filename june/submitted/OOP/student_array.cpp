@@ -11,7 +11,9 @@ public:
   void gather_information() {
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
-      getline(cin, subjects[i]);
+      string subject_name;
+      getline(cin, subject_name);
+      subjects[i] = subject_name;
       cout << " \t" << subjects[i] << " mark: ";
       cin >> marks[i];
       total = marks[i] + total;
