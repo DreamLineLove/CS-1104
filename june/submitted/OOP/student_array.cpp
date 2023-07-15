@@ -22,10 +22,15 @@ public:
   }
   void print_average() {
     float average = total / 6;
-    cout << "\n-\tTotal marks: " << total << endl;
-    cout << "\n-\tAverage: " << average << endl;
+    cout << "\n-\tTotal marks: " << total;
+    cout << "\n-\tAverage: " << average;
     if (student_failed()) {
-      cout << "\n \tSTUDENT FAILED" << endl;
+      cout << "\n \tSTUDENT FAILED";
+    } else {
+      cout << "\n\n";
+      for (int i = 0; i < 6; i++) {
+        cout << "-\t" << subjects[i] << "   " << grade_specifier[i] << endl;
+      }
     }
   }
 
