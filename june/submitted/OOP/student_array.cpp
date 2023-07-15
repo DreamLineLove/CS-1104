@@ -10,6 +10,9 @@ public:
   string name;
   Student() { cout << "\tstudent object constructed..." << endl; }
   void gather_information() {
+    cout << "What is the name of the student? ";
+    cin >> name;
+    cout << endl;
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
       if (i != 0)
@@ -27,9 +30,9 @@ public:
     if (student_failed()) {
       cout << "\n\tSTUDENT FAILED";
     } else {
-      cout << "\n\nGRADE SPECIFIERS";
+      cout << "\n\nGRADE SPECIFIERS" << endl;
       for (int i = 0; i < 6; i++) {
-        cout << "-\t" << subjects[i] << "   " << grade_specifier[i] << endl;
+        cout << "\t- " << subjects[i] << "\t" << grade_specifier[i] << endl;
       }
     }
   }
