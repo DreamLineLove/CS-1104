@@ -32,7 +32,7 @@ public:
       cout << "\t----------------" << endl;
       for (int i = 0; i < 6; i++) {
         // cout << "\t- " << subjects[i] << "\t" << grade_specifier[i] << endl;
-        cout << "\t- (" << grade_specifier[i] << ")\t" << subjects[i] << endl;
+        cout << "\t-" << grade_specifier[i] << "\t" << subjects[i] << endl;
       }
     }
   }
