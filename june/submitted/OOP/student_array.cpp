@@ -33,8 +33,6 @@ public:
       for (int i = 0; i < 6; i++) {
         // cout << "\t- " << subjects[i] << "\t" << grade_specifier[i] << endl;
         cout << "\t- " << grade_specifier[i];
-        if (grade_specifier[i] == "passed")
-          cout << "\t";
         cout << "\t" << subjects[i] << endl;
       }
     }
