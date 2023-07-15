@@ -10,7 +10,7 @@ public:
   string name;
   Student() { cout << "\tstudent object constructed..." << endl; }
   void gather_information() {
-    cout << "What is the name of the student? ";
+    cout << "\nWhat is the name of the student? ";
     cin >> name;
     cout << endl;
     for (int i = 0; i < 6; i++) {
