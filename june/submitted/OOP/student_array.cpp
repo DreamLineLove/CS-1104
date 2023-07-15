@@ -14,8 +14,7 @@ public:
     cin >> name;
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
-      if (i != 0)
-        cin.ignore();
+      cin.ignore();
       getline(cin, subjects[i]);
       cout << " \t" << subjects[i] << " mark: ";
       cin >> marks[i];
