@@ -22,14 +22,25 @@ public:
   }
   void print_average() {
     float average = total / 6;
-    cout << "\n-\tTotal marks: " << total;
-    cout << "\n-\tAverage: " << average;
+    cout << "\n\tTotal marks: " << total;
+    cout << "\n\tAverage: " << average;
     if (student_failed()) {
-      cout << "\n \tSTUDENT FAILED";
+      cout << "\n\tSTUDENT FAILED";
     } else {
-      cout << "\n\n";
+      cout << "\n\nGRADE SPECIFIERS";
       for (int i = 0; i < 6; i++) {
         cout << "-\t" << subjects[i] << "   " << grade_specifier[i] << endl;
+      }
+    }
+  }
+  void calculate_grade_specifier() {
+    for (int i = 0; i < 6; i++) {
+      if (marks[i] >= 75) {
+        grade_specifier[i] = "**Distinction";
+      } else if (marks[i] >= 65 && marks[i] < 75) {
+        grade_specifier[i] = "*qualified";
+      } else {
+        grade_specifier[i] = "passed";
       }
     }
   }
@@ -42,22 +53,12 @@ private:
     }
     return false;
   }
-  void print_grade_specifier() {
-    for (int i = 0; i < 6; i++) {
-      if (marks[i] >= 75) {
-        grade_specifier[i] = "**Distinction";
-      } else if (marks[i] >= 65 && marks[i] < 75) {
-        grade_specifier[i] = "*qualified";
-      } else {
-        grade_specifier[i] = "passed";
-      }
-    }
-  }
 };
 
 int main() {
   Student znz;
   znz.gather_information();
+  znz.calculate_grade_specifier();
   znz.print_average();
 
   return 0;
