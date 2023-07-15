@@ -11,7 +11,8 @@ public:
   void gather_information() {
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
-      cin.ignore();
+      if (i != 0)
+        cin.ignore();
       getline(cin, subjects[i]);
       cout << " \t" << subjects[i] << " mark: ";
       cin >> marks[i];
