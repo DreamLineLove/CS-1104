@@ -12,7 +12,6 @@ public:
   void gather_information() {
     cout << "\nWhat is the name of the student? ";
     cin >> name;
-    cout << endl;
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
       if (i != 0)
