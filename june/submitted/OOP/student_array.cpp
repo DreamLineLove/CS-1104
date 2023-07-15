@@ -10,9 +10,9 @@ public:
   Student() { cout << "\tstudent object constructed..."; }
   void gather_information() {
     for (int i = 0; i < 6; i++) {
-      cout << "\n-\tEnter subject " << i << ": ";
+      cout << "\n-\tSubject " << i << " name: ";
       cin >> subjects[i];
-      cout << "-\tEnter mark for " << subjects[i] << ": ";
+      cout << "\n \t" << subjects[i] << " mark: ";
       cin >> marks[i];
       total = marks[i] + total;
       cout << endl;
