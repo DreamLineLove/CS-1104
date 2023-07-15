@@ -40,7 +40,7 @@ public:
   void calculate_grade_specifier() {
     for (int i = 0; i < 6; i++) {
       if (marks[i] >= 75) {
-        grade_specifier[i] = "**Distinction";
+        grade_specifier[i] = "*Distinction";
       } else if (marks[i] >= 65 && marks[i] < 75) {
         grade_specifier[i] = "*qualified";
       } else {
@@ -64,6 +64,7 @@ int main() {
   znz.gather_information();
   znz.calculate_grade_specifier();
   znz.print_average();
+  cout << endl;
 
   return 0;
 }
