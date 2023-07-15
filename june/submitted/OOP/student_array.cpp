@@ -5,6 +5,7 @@ class Student {
 public:
   string subjects[6];
   float marks[6];
+  string grade_specification[6];
   float total = 0;
   string name;
   Student() { cout << "\tstudent object constructed..." << endl; }
@@ -21,7 +22,31 @@ public:
   }
   void print_average() {
     float average = total / 6;
-    cout << "\tAverage mark: " << average;
+    cout << "\n-\tTotal marks: " << total << endl;
+    cout << "\n-\tAverage: " << average << endl;
+    if (student_failed()) {
+      cout << "\n \tSTUDENT FAILED" << endl;
+    }
+  }
+
+private:
+  bool student_failed() {
+    for (int i = 0; i < 6; i++) {
+      if (i < 50)
+        return true;
+    }
+    return false;
+  }
+  void print_grade_specification() {
+    for (int i = 0; i < 6; i++) {
+      if (marks[i] >= 75) {
+        grade_specification[i] = "**Distinction";
+      } else if (marks[i] >= 65 && marks[i] < 75) {
+        grade_specification[i] = "*qualified";
+      } else {
+        grade_specification[i] = "passed";
+      }
+    }
   }
 };
 
