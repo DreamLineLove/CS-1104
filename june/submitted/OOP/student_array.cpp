@@ -11,7 +11,7 @@ public:
   Student() { cout << "\tstudent object constructed..." << endl; }
   void gather_information() {
     cout << "\nWhat is the name of the student? ";
-    cin >> name;
+    getline(cin, name);
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
       cin.ignore();
