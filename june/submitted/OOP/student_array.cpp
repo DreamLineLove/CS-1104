@@ -12,6 +12,7 @@ public:
   void gather_information() {
     cout << "\nWhat is the name of the student? ";
     getline(cin, name);
+    cin.ignore();
     for (int i = 0; i < 6; i++) {
       cout << "\n-\tSubject " << i + 1 << " name: ";
       cin.ignore();
