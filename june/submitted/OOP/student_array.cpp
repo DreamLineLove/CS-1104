@@ -37,7 +37,7 @@ public:
 private:
   bool student_failed() {
     for (int i = 0; i < 6; i++) {
-      if (i < 50)
+      if (marks[i] < 50)
         return true;
     }
     return false;
