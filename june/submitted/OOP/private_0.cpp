@@ -22,6 +22,8 @@ int main() {
   Custom mein;
   if (mein.constructed == 1)
     cout << "constructed: true" << endl;
+  cout << "\n(original) strState: " << mein.getStr() << endl;
+  cout << "(original) intState: " << mein.getInt() << endl;
 
   return 0;
 }
