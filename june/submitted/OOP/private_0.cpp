@@ -8,6 +8,10 @@ public:
     constructed = true;
   }
   bool constructed = false;
+  void setStr(string str) { strState = str; }
+  string getStr() { return strState; }
+  void setInt(int integer) { intState = integer; }
+  int getInt() { return intState; }
 
 private:
   string strState;
