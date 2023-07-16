@@ -23,6 +23,7 @@ int main() {
   if (mein.constructed == 1)
     cout << "constructed: true" << endl;
   cout << "\n(original) strState: " << mein.getStr() << endl;
+  // Expected 0 instead
   cout << "(original) intState: " << mein.getInt() << endl;
 
   mein.setStr("Now it is something");
