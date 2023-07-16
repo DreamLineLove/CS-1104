@@ -25,5 +25,10 @@ int main() {
   cout << "\n(original) strState: " << mein.getStr() << endl;
   cout << "(original) intState: " << mein.getInt() << endl;
 
+  mein.setStr("Now it is something");
+  cout << "\n(modified) strState: " << mein.getStr() << endl;
+  mein.setInt(999);
+  cout << "(modified) intState: " << mein.getInt() << endl;
+
   return 0;
 }
