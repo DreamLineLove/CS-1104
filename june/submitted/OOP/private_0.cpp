@@ -4,7 +4,7 @@ using namespace std;
 class Custom {
 public:
   Custom() {
-    cout << "Custom object constructed";
+    cout << "Custom object constructed" << endl;
     constructed = true;
   }
   bool constructed = false;
@@ -17,7 +17,7 @@ private:
 int main() {
   Custom mein;
   if (mein.constructed == 1)
-    cout << "constructed: true";
+    cout << "constructed: true" << endl;
 
   return 0;
 }
