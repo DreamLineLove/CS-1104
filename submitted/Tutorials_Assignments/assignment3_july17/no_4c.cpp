@@ -49,9 +49,9 @@ int getAverageNumber(int arr[], int size) {
 
 int main() {
   int arr[5] = {88, 55, 44, 356, 78};
-  cout << "-Array members: ";
+  cout << " Array members: ";
   for (int i = 0; i < 5; i++) {
-    cout << " " << arr[i];
+    cout << arr[i] << " ";
   }
   cout << "\n\nmaximum number: " << getMaximumNumber(arr, 5) << endl;
   cout << "minimum number: " << getMinimumNumber(arr, 5) << endl;
