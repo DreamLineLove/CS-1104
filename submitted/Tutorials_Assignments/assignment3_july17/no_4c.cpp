@@ -49,7 +49,7 @@ int getAverageNumber(int arr[], int size) {
 
 int main() {
   int arr[5] = {88, 55, 44, 356, 78};
-  cout << " Array members: ";
+  cout << "Array elements: ";
   for (int i = 0; i < 5; i++) {
     cout << arr[i] << " ";
   }
