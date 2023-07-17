@@ -1,4 +1,4 @@
-# Welcome to CS-1105!
+# Welcome to CS-1104!
 
 In this repository, you will find:
 - Final (submitted) versions of assignments or tutorials,
@@ -13,7 +13,7 @@ I also explored various aspects of the C++ programming language whenever I felt 
 # Usage
 - First, clone the repository to your local machine:
 ```
-    $ git clone https://github.com/DreamLineLove/CS-1105.git
+    $ git clone https://github.com/DreamLineLove/CS-1104.git
 ```
 - Navigate to the folder:
 ```
