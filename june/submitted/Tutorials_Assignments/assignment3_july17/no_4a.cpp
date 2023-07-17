@@ -14,7 +14,7 @@ int main() {
   cout << "Give a number: ";
   cin >> number;
 
-  cout << "\nAnswer: " << find_factorial_recursively(number);
+  cout << "\nAnswer: " << find_factorial_recursively(number) << endl;
 
   return 0;
 }
