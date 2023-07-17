@@ -1,0 +1,9 @@
+No.                  Names   Marks
+---   --------------------   -----
+1.     Min Thu Kyaw Khaung   80
+2.               Htike San   80
+3.              Thet Thiha   80
+4.         Swan Htet Naing   85
+5.         Min Phone Thike   80
+
+                    Total:   405
