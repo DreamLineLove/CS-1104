@@ -9,17 +9,17 @@ int main() {
   cin >> n;
 
   while (i <= n) {
-    float value;
+    float val;
     cout << "Input a value ";
-    cin >> value;
-    sum = sum + value;
+    cin >> val;
+    sum = sum + val;
     i += 1;
   }
 
-  float average = sum / n;
+  float avg = sum / n;
 
   cout << "Sum = " << sum << endl;
-  cout << "Average = " << average << endl;
+  cout << "Average = " << avg << endl;
 
   return 0;
 }
