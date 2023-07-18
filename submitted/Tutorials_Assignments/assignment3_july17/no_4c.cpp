@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int getMaximumNumber(int arr[], int size) {
+int maxNum(int arr[], int size) {
   int newArr[size];
   for (int i = 0; i < size; i++) {
     newArr[i] = arr[i];
@@ -20,7 +20,7 @@ int getMaximumNumber(int arr[], int size) {
   return newArr[size - 1];
 }
 
-int getMinimumNumber(int arr[], int size) {
+int minNum(int arr[], int size) {
   int newArr[size];
   for (int i = 0; i < size; i++) {
     newArr[i] = arr[i];
@@ -39,7 +39,7 @@ int getMinimumNumber(int arr[], int size) {
   return newArr[0];
 }
 
-int getAverageNumber(int arr[], int size) {
+int avgNum(int arr[], int size) {
   int sum = 0;
   for (int i = 0; i < size; i++) {
     sum += arr[i];
@@ -53,9 +53,9 @@ int main() {
   for (int i = 0; i < 5; i++) {
     cout << arr[i] << " ";
   }
-  cout << "\n\nmaximum number: " << getMaximumNumber(arr, 5) << endl;
-  cout << "minimum number: " << getMinimumNumber(arr, 5) << endl;
-  cout << "average number: " << getAverageNumber(arr, 5) << endl;
+  cout << "\n\nmaximum number: " << maxNum(arr, 5) << endl;
+  cout << "minimum number: " << minNum(arr, 5) << endl;
+  cout << "average number: " << avgNum(arr, 5) << endl;
 
   return 0;
 }
