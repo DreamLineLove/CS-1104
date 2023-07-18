@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int find_factorial_recursively(int number) {
-  if (number == 0) {
+int factorial(int num) {
+  if (num == 0) {
     return 1;
   } else {
-    return number * find_factorial_recursively(number - 1);
+    return num * factorial(num - 1);
   }
 }
 
 int main() {
-  int number;
+  int num;
   cout << "Give a number: ";
-  cin >> number;
+  cin >> num;
 
-  cout << "\nAnswer: " << find_factorial_recursively(number) << endl;
+  cout << "\nAnswer: " << factorial(num) << endl;
 
   return 0;
 }
