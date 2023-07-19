@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void decideStudentStatus(int index, int mark, int pass, int credit,
-                         int distinction) {
+void printStatus(int index, int mark, int pass, int credit, int distinction) {
   if (mark >= distinction) {
     cout << "- Student " << index + 1
          << " passed the CS1104 exam! \tw/ distinction" << endl;
@@ -36,7 +35,7 @@ int main() {
   cout << endl;
 
   for (int i = 0; i < 4; i++) {
-    decideStudentStatus(i, marks[i], pass, credit, distinction);
+    printStatus(i, marks[i], pass, credit, distinction);
   }
 
   return 0;
