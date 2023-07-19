@@ -17,11 +17,11 @@ I also explored various aspects of the C++ programming language whenever I felt 
 ```
 - Navigate to the folder:
 ```
-    $ cd CS-1105
+    $ cd CS-1104
 ```
 - Navigate to the directory in which the program you want to test lives and run it. For example:
 ```
-    $ cd CS-1105/june/experimental/insertion_deletion/
+    $ cd CS-1104/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
 ```
 - To fetch latest versions after cloning, use ```$ git pull```
