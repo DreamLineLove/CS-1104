@@ -1,4 +1,4 @@
-// This alt version of no_4c uses Bubble Sort to sort the given array first.
+// This version of no_4c uses Bubble Sort to sort the given array first.
 // Then, the maximum and minimum values from that sorted array are accessed.
 // The default version instead attempts to return the values from functions
 // (using Selection Sort instead).
