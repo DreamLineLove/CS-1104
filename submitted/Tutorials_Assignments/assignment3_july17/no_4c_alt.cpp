@@ -1,3 +1,7 @@
+// This alt version of no_4c uses bubblesort to sort the given array first.
+// Then, it returns the maximum and minimum values from that sorted array.
+// The default version attempts to return the values directly.
+
 #include <iostream>
 using namespace std;
 
