@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-int lowercaseCount(char str[], int string_length);
+int lowercaseCount(char str[], int str_len);
 
 int main() {
   char str[14] = "Avada kedavra";
@@ -40,9 +40,9 @@ int main() {
   return 0;
 }
 
-int lowercaseCount(char str[], int string_length) {
+int lowercaseCount(char str[], int str_len) {
   int count = 0;
-  for (int i = 0; i < string_length; i++) {
+  for (int i = 0; i < str_len; i++) {
     if (islower(str[i])) {
       count++;
     }
