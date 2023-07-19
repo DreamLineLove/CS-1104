@@ -17,13 +17,13 @@ int main() {
   avg = sum / 5;
 
   for (i = 0; i < 5; i++) {
-    int currentMin = i;
+    int min = i;
 
     for (j = i; j < 5; j++) {
-      if (arr[j] < arr[currentMin]) {
+      if (arr[j] < arr[min]) {
         int temp = arr[j];
-        arr[j] = arr[currentMin];
-        arr[currentMin] = temp;
+        arr[j] = arr[min];
+        arr[min] = temp;
       }
     }
   }
