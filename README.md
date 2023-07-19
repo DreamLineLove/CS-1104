@@ -1,9 +1,9 @@
 # Welcome to CS-1104!
 
 In this repository, you will find:
-- Final (submitted) versions of assignments or tutorials,
+- code submitted for assignments, tutorials, or lecture,
 - In-between experiments I had done, and
-- Gist versions for exam prepreration.
+- code intended as gists for exam prepreration.
 
 I also explored various aspects of the C++ programming language whenever I felt necessary!
 
@@ -17,16 +17,24 @@ I also explored various aspects of the C++ programming language whenever I felt 
 ```
 - Navigate to the folder:
 ```
-    $ cd CS-1105
+    $ cd CS-1104
 ```
 - Navigate to the directory in which the program you want to test lives and run it. For example:
 ```
-    $ cd CS-1105/june/experimental/insertion_deletion/
+    $ cd CS-1104/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
 ```
 - To fetch latest versions after cloning, use ```$ git pull```
 
 # Contents
+The repository is organized into two sections:
+- ***experimental***, and
+- ***submitted***
+### *experimental*
+contains experiments I had done divided into their own sub-folders, as well as gists I had prepared for exam prep.
+### *submitted*
+contains final code submitted for assignments and tutorials. It also contains the code during class time or those given as an ungraded assignment (homework).
+<!---
 - (Array) insertion and deletion
 - Linear search
 - Bubble sort
@@ -35,5 +43,5 @@ I also explored various aspects of the C++ programming language whenever I felt 
 - Prime check
 - Days, hours, minutes, seconds
 - Module 4 Strings
-
+--->
 
