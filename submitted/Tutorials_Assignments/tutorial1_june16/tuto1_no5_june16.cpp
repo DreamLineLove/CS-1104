@@ -16,20 +16,20 @@ int main() {
     total += marks[i];
   }
 
-  ofstream studentsFile;
-  studentsFile.open("studentsData.txt");
-  studentsFile << "No." << setw(23) << "Names" << setw(8) << "Marks" << endl;
-  studentsFile << "---" << setw(23) << "--------------------" << setw(8)
-               << "-----" << endl;
+  ofstream writeFile;
+  writeFile.open("studentsData.txt");
+  writeFile << "No." << setw(23) << "Names" << setw(8) << "Marks" << endl;
+  writeFile << "---" << setw(23) << "--------------------" << setw(8) << "-----"
+            << endl;
   int i;
   for (i = 0; i < 5; i++) {
-    studentsFile << i + 1 << ". " << setw(23) << names[i] << setw(5) << marks[i]
-                 << endl;
+    writeFile << i + 1 << ". " << setw(23) << names[i] << setw(5) << marks[i]
+              << endl;
   }
   if (i == 5) {
-    studentsFile << "\n" << setw(26) << "Total:" << setw(6) << total << endl;
+    writeFile << "\n" << setw(26) << "Total:" << setw(6) << total << endl;
   }
-  studentsFile.close();
+  writeFile.close();
 
   ifstream readFile;
   readFile.open("studentsData.txt");
