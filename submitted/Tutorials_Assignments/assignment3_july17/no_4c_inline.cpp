@@ -1,3 +1,10 @@
+// This alt version of no_4c uses Selection Sort to sort the given array first.
+// Then, it simply references the first and last values from this sorted array.
+// The default version instead attempts to return the values from functions
+// (using Selection Sort instead).
+// The default version attempts to implement forward and reverse Selection Sort
+// (depending on minimum or maximum value) in separate functions and returns the
+// resulting value directly.
 #include <iostream>
 using namespace std;
 
@@ -31,5 +38,6 @@ int main() {
   cout << "\n\nminimum number: " << arr[0] << endl;
   cout << "average number: " << avg << endl;
   cout << "maximum number: " << arr[4] << endl;
+
   return 0;
 }
