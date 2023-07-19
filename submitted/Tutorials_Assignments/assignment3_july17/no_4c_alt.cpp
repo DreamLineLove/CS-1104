@@ -57,6 +57,7 @@ int main() {
   for (int i = 0; i < 5; i++) {
     cout << arr[i] << " ";
   }
+
   cout << "\n\nminimum number: " << minNum(arr, 5) << endl;
   cout << "average number: " << avgNum(arr, 5) << endl;
   cout << "maximum number: " << maxNum(arr, 5) << endl;
