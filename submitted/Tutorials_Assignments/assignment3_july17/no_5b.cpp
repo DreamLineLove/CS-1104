@@ -3,13 +3,14 @@ using namespace std;
 
 int main() {
   int size, i = 0;
-  cout << "How many elements do you want in the array? ";
+  cout << "- How many elements do you want in the array? ";
   cin >> size;
 
   int arr[size];
+  cout << endl;
 
   while (i < size) {
-    cout << "\nEnter element value: ";
+    cout << "\t- Enter value for index " << i << ": ";
     cin >> arr[i];
     i++;
   }
