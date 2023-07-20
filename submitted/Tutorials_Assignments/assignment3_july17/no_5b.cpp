@@ -20,9 +20,11 @@ int main() {
 
   selection_sort(arr, size);
 
+  cout << "\n\t- Sorted array: ";
   for (int j = 0; j < size; j++) {
-    cout << arr[j] << endl;
+    cout << " " << arr[j];
   }
+  cout << endl;
 
   return 0;
 }
