@@ -1,5 +1,8 @@
+#include <fstream>
 #include <iostream>
 using namespace std;
+
+void selection_sort(int arr[], int size);
 
 int main() {
   int size, i = 0;
@@ -15,9 +18,23 @@ int main() {
     i++;
   }
 
-  for (int i = 0; i < size; i++) {
-    cout << arr[i] << endl;
+  selection_sort(arr, size);
+
+  for (int j = 0; j < size; j++) {
+    cout << arr[j] << endl;
   }
 
   return 0;
+}
+
+void selection_sort(int arr[], int size) {
+  for (int i = 0; i < size; i++) {
+    int min = i;
+
+    for (int j = i; j < size; j++) {
+      if (arr[j] < arr[min]) {
+        swap(arr[j], arr[min]);
+      }
+    }
+  }
 }
