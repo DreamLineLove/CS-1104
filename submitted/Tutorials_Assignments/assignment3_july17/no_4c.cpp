@@ -13,6 +13,7 @@ int minNum(int arr[], int size) {
 
   for (int j = 0; j < size; j++) {
     int min = j;
+
     for (int z = j; z < size; z++) {
       if (newArr[z] > newArr[min]) {
         int temp = newArr[z];
@@ -34,6 +35,7 @@ int maxNum(int arr[], int size) {
 
   for (int j = 0; j < size; j++) {
     int max = j;
+
     for (int z = j; z < size; z++) {
       if (newArr[z] < newArr[max]) {
         int temp = newArr[z];
