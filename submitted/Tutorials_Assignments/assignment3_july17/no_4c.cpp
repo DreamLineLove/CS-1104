@@ -5,27 +5,6 @@
 #include <iostream>
 using namespace std;
 
-int maxNum(int arr[], int size) {
-  int newArr[size], max_num;
-  for (int i = 0; i < size; i++) {
-    newArr[i] = arr[i];
-  }
-
-  for (int j = 0; j < size; j++) {
-    int max = 1;
-    for (int z = j; z < size; z++) {
-      if (newArr[z] > newArr[max]) {
-        int temp = newArr[z];
-        newArr[z] = newArr[max];
-        newArr[max] = temp;
-      }
-    }
-    max_num = newArr[max];
-  }
-
-  return max_num;
-}
-
 int minNum(int arr[], int size) {
   int newArr[size], min_num;
   for (int i = 0; i < size; i++) {
@@ -33,9 +12,9 @@ int minNum(int arr[], int size) {
   }
 
   for (int j = 0; j < size; j++) {
-    int min = 1;
+    int min = j;
     for (int z = j; z < size; z++) {
-      if (newArr[z] < newArr[min]) {
+      if (newArr[z] > newArr[min]) {
         int temp = newArr[z];
         newArr[z] = newArr[min];
         newArr[min] = temp;
@@ -45,6 +24,27 @@ int minNum(int arr[], int size) {
   }
 
   return min_num;
+}
+
+int maxNum(int arr[], int size) {
+  int newArr[size], max_num;
+  for (int i = 0; i < size; i++) {
+    newArr[i] = arr[i];
+  }
+
+  for (int j = 0; j < size; j++) {
+    int max = j;
+    for (int z = j; z < size; z++) {
+      if (newArr[z] < newArr[max]) {
+        int temp = newArr[z];
+        newArr[z] = newArr[max];
+        newArr[max] = temp;
+      }
+    }
+    max_num = newArr[max];
+  }
+
+  return max_num;
 }
 
 int avgNum(int arr[], int size) {
