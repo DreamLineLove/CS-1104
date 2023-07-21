@@ -20,18 +20,6 @@ int main() {
   }
   avg = sum / 5;
 
-  // for (i = 0; i < 5; i++) {
-  //   int min = i;
-  //
-  //   for (j = i; j < 5; j++) {
-  //     if (arr[j] < arr[min]) {
-  //       int temp = arr[j];
-  //       arr[j] = arr[min];
-  //       arr[min] = temp;
-  //     }
-  //   }
-  // }
-
   for (i = 0; i < 5 - 1; i++) {
     int min = i;
 
