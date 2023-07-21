@@ -30,15 +30,6 @@ int main() {
 }
 
 void selection_sort(int arr[], int size) {
-  // for (int i = 0; i < size; i++) {
-  //   int min = i;
-  //
-  //   for (int j = i; j < size; j++) {
-  //     if (arr[j] < arr[min]) {
-  //       swap(arr[j], arr[min]);
-  //     }
-  //   }
-  // }
   for (int i = 0; i < size - 1; i++) {
     int min = i;
 
