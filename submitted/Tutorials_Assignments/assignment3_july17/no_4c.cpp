@@ -1,7 +1,3 @@
-// The default version attempts to implement forward and reverse Selection Sort
-// (depending on minimum or maximum value) in separate functions and returns the
-// resulting value directly.
-
 #include <iostream>
 using namespace std;
 

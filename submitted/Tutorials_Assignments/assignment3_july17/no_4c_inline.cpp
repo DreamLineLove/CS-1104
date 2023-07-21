@@ -1,7 +1,3 @@
-// This version of no_4c uses Selection Sort to sort the given array first.
-// Then, it simply references the first and last values from this sorted array.
-// The default version instead attempts to return the values from functions.
-
 #include <iostream>
 using namespace std;
 

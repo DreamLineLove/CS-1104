@@ -1,10 +1,3 @@
-// The default version attempts to implement forward and reverse Selection Sort
-// (depending on minimum or maximum value) in separate functions and returns the
-// resulting value directly.
-// This version of no_4c copies the original array first before perfomring
-// swapping (Selection Sort) operations inside the minNum and maxNum functions.
-// It is otherwise the same as the default version.
-
 #include <iostream>
 using namespace std;
 
