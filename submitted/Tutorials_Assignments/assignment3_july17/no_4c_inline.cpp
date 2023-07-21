@@ -20,14 +20,27 @@ int main() {
   }
   avg = sum / 5;
 
-  for (i = 0; i < 5; i++) {
+  // for (i = 0; i < 5; i++) {
+  //   int min = i;
+  //
+  //   for (j = i; j < 5; j++) {
+  //     if (arr[j] < arr[min]) {
+  //       int temp = arr[j];
+  //       arr[j] = arr[min];
+  //       arr[min] = temp;
+  //     }
+  //   }
+  // }
+
+  for (i = 0; i < 5 - 1; i++) {
     int min = i;
 
-    for (j = i; j < 5; j++) {
+    for (j = i + 1; j < 5; j++) {
       if (arr[j] < arr[min]) {
-        int temp = arr[j];
-        arr[j] = arr[min];
-        arr[min] = temp;
+        min = j;
+      }
+      if (min != i) {
+        swap(arr[min], arr[i]);
       }
     }
   }
