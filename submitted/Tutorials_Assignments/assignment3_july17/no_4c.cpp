@@ -7,15 +7,17 @@ using namespace std;
 
 int minNum(int arr[], int size) {
   int min_num;
-  for (int i = 0; i < size; i++) {
+
+  for (int i = 0; i < size - 1; i++) {
     int min = i;
 
-    for (int j = i; j < size; j++) {
-      if (arr[j] > arr[min]) {
-        swap(arr[j], arr[min]);
+    for (int j = i + 1; j < size; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
       }
+      swap(arr[min], arr[i]);
+      min_num = arr[min];
     }
-    min_num = arr[min];
   }
 
   return min_num;
@@ -23,19 +25,53 @@ int minNum(int arr[], int size) {
 
 int maxNum(int arr[], int size) {
   int max_num;
-  for (int i = 0; i < size; i++) {
+
+  for (int i = 0; i < size - 1; i++) {
     int max = i;
 
-    for (int j = i; j < size; j++) {
+    for (int j = i + 1; j < size; j++) {
       if (arr[j] < arr[max]) {
-        swap(arr[j], arr[max]);
+        max = j;
       }
+      swap(arr[max], arr[i]);
+      max_num = arr[max];
     }
-    max_num = arr[max];
   }
 
   return max_num;
 }
+
+// int minNum(int arr[], int size) {
+//   int min_num;
+//   for (int i = 0; i < size; i++) {
+//     int min = i;
+//
+//     for (int j = i; j < size; j++) {
+//       if (arr[j] > arr[min]) {
+//         swap(arr[j], arr[min]);
+//       }
+//     }
+//     min_num = arr[min];
+//   }
+//
+//   return min_num;
+// }
+//
+// int maxNum(int arr[], int size) {
+//   int max_num;
+//   for (int i = 0; i < size; i++) {
+//     int max = i;
+//
+//     for (int j = i; j < size; j++) {
+//       if (arr[j] < arr[max]) {
+//         swap(arr[j], arr[max]);
+//       }
+//     }
+//     max_num = arr[max];
+//   }
+//
+//   return max_num;
+// }
 
 int avgNum(int arr[], int size) {
   int sum = 0;
