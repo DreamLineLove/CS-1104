@@ -10,15 +10,16 @@ int main() {
 
   while (isCorrectFormat(date) != true) {
     if (isFirstTime == false) {
-      cout << "Validation failed! (the correct format is DD/MM/YYYY)" << endl;
+      cout << "\tValidation failed!\n\t(the correct format is DD/MM/YYYY)"
+           << endl;
     }
-    cout << "\tEnter a date: ";
+    cout << "Enter a date: ";
     cin >> date;
     cout << endl;
     isFirstTime = false;
   }
 
-  cout << "Validation passed!" << endl;
+  cout << "\tValidation passed!" << endl;
 
   return 0;
 }
