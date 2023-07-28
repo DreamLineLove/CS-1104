@@ -10,7 +10,7 @@ int main() {
 
   while (isCorrectFormat(date) != true) {
     if (isFirstTime == false) {
-      cout << "\tValidation failed!\n\t(the correct format is DD/MM/YYYY)"
+      cout << "#\tValidation failed!\n#\t(the correct format is DD/MM/YYYY)"
            << endl;
     }
     cout << "Enter a date: ";
