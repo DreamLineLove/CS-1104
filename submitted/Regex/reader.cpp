@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-  // regex pattern("(fe)?male", regex_constants::icase);
   regex pattern("female", regex_constants::icase);
 
   string name;
@@ -16,13 +15,19 @@ int main() {
   string line;
   ifstream file(name);
 
-  int i = 0, n = 0;
+  int n = 0, count = 0;
   while (getline(file, line)) {
-    cout << i << ":\t" << line << endl;
-    if (regex_search(line, pattern)) {
-      n++;
+    cout << n << ":\t" << line << endl;
+
+    sregex_iterator itr(line.begin(), line.end(), pattern);
+    sregex_iterator end;
+
+    while (itr != end) {
+      count++;
+      itr++;
     }
-    i++;
+
+    n++;
   }
 
   file.close();
