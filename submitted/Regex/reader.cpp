@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
   // regex pattern("(fe)?male", regex_constants::icase);
-  regex pattern("female");
+  regex pattern("female", regex_constants::icase);
 
   string name;
   cout << "Enter name of the file: ";
@@ -19,7 +19,10 @@ int main() {
   int i = 0, n = 0;
   while (getline(file, line)) {
     cout << i << ":\t" << line << endl;
-    cout << regex_match(line, pattern);
+    if (regex_search(line, pattern)) {
+      n++;
+    }
+    i++;
   }
 
   file.close();
