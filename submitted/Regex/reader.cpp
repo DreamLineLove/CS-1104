@@ -4,7 +4,12 @@
 using namespace std;
 
 int main() {
-  regex pattern("female|male", regex_constants::icase);
+  // regex pattern("male", regex_constants::icase); produces 8 results
+  // regex pattern("\\bmale", regex_constants::icase); produces 4 results
+  // regex pattern("(fe)?male", regex_constants::icase); produces 8 results
+  // regex pattern("(fe)*male", regex_constants::icase); produces 8 results
+  // regex pattern("(fe)+male", regex_constants::icase); produces 4 results
+  regex pattern("(fe)?male", regex_constants::icase);
 
   string name;
   cout << "Enter name of the file: ";
