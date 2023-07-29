@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-  regex pattern("female", regex_constants::icase);
+  regex pattern("female|male", regex_constants::icase);
 
   string name;
   cout << "Enter name of the file: ";
@@ -33,7 +33,7 @@ int main() {
   file.close();
 
   cout << endl;
-  cout << "There are " << n << " matches." << endl;
+  cout << "There are " << count << " matches." << endl;
 
   return 0;
 }
