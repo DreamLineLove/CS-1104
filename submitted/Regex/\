@@ -13,18 +13,11 @@ int main() {
   string line;
   ifstream file(name);
 
-  int i = 0, n = 0;
   while (getline(file, line)) {
-    cout << i << ":\t" << line << endl;
-    if (regex_match(line, pattern)) {
-      n++;
-    }
+    cout << line << endl;
   }
 
   file.close();
-
-  cout << endl;
-  cout << "There are " << n << " matches." << endl;
 
   return 0;
 }
