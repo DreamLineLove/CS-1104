@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  regex pattern("female");
+  regex pattern("female", regex_constants::icase);
   string str = "female Female female Female";
 
   sregex_iterator itr(str.begin(), str.end(), pattern);
@@ -15,7 +15,10 @@ int main() {
   int count = 0;
   while (itr != end) {
     count++;
+    itr++;
   }
+
+  cout << "using sregex_iterator class: " << count << endl;
 
   return 0;
 }
