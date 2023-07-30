@@ -26,14 +26,8 @@ int main(int argc, char *argv[]) {
     printHelp(argv[0]);
   }
   if (argc > 2) {
-    cout << "Only one command line argument accepted!" << endl;
-    cout << "The pattern is\t"
-         << "./program_name type" << endl;
-    cout << "\nThree types are availabe: whole, once, and multi." << endl;
-    cout << "\twhole implements regex_match" << endl;
-    cout << "\tonce implements regex_search" << endl;
-    cout << "\tmulti implements sregex_iterator" << endl;
-    cout << "\nExample:\t" << argv[0] << " whole" << endl;
+    cout << "#\tOnly one command line argument accepted!" << endl;
+    printHelp(argv[0]);
   }
 
   return 0;
