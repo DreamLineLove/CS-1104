@@ -37,9 +37,12 @@ void printHelp(string program) {
   cout << "\t" << program << " multiPLE ab?c{2}" << endl;
 }
 
-// void whole_matching(string pattern, string str) {
-//
-// }
+void whole_matching(string pattern, string str) {
+  regex patt(pattern);
+  if (regex_match(str, patt)) {
+    cout << "\tMatch found!" << endl;
+  }
+}
 
 int main(int argc, char *argv[]) {
   if (argc == 1) {
@@ -58,6 +61,17 @@ int main(int argc, char *argv[]) {
     cout << "#\tPlease choose an existing option!" << endl;
     printHelp(argv[0]);
     return 0;
+  }
+
+  string pattern, str;
+  cout << "Please enter a pattern: ";
+  cin >> pattern;
+  cin.ignore();
+  cout << "Please enter a string: ";
+  getline(cin, str);
+
+  if (chosen == whole) {
+    whole_matching(pattern, str);
   }
 
   return 0;
