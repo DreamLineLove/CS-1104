@@ -1,3 +1,7 @@
+// To-do
+// add case-insensitive option
+// add option: type in string or get data from .txt file
+
 #include <iostream>
 #include <regex>
 using namespace std;
@@ -59,9 +63,20 @@ void once_matching(regex pattern, string str) {
   }
 }
 
-// void multi_matching(string pattern, string str) {
-//   sregex_iterator itr(str.begin(), str.end(), pattern);
-// }
+void multi_matching(regex pattern, string str) {
+  sregex_iterator itr(str.begin(), str.end(), pattern);
+  sregex_iterator end;
+  int count;
+  while (itr != end) {
+    count++;
+    itr++;
+  }
+
+  cout << "\n\n\tRESULT" << endl;
+  cout << "\t-------" << endl;
+  cout << endl;
+  cout << "#\t" << count << "matches found in given string!" << endl;
+}
 
 int main(int argc, char *argv[]) {
   if (argc == 1) {
@@ -97,6 +112,8 @@ int main(int argc, char *argv[]) {
   } else if (chosen == once) {
     once_matching(pattern, str);
     return 0;
+  } else if (chosen == multiple) {
+    multi_matching(pattern, str);
   }
 
   return 0;
