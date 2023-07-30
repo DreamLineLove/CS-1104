@@ -80,7 +80,5 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  cout << "never reached!" << endl;
-
   return 0;
 }
