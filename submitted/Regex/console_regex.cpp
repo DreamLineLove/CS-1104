@@ -38,7 +38,6 @@ void printHelp(string program) {
 }
 
 void whole_matching(regex pattern, string str) {
-  // regex patt(pattern);
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
@@ -50,7 +49,6 @@ void whole_matching(regex pattern, string str) {
 }
 
 void once_matching(regex pattern, string str) {
-  // regex patt(pattern);
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
