@@ -2,9 +2,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-  cout << argv[0] << endl;
-  cout << argv[1] << endl;
-  cout << argv[2] << endl;
+  for (int i = 0; i < argc; i++) {
+    cout << argv[i] << endl;
+  }
+  cout << argc << endl;
 
   return 0;
 }
