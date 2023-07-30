@@ -7,7 +7,7 @@ enum Options { whole, once, multiple, none };
 Options option(string arg) {
   regex patternWhole("whole", regex_constants::icase);
   regex patternOnce("once", regex_constants::icase);
-  regex patternMulti("multi.?", regex_constants::icase);
+  regex patternMulti("\\bmulti\\w*\\b", regex_constants::icase);
 
   if (regex_match(arg, patternWhole)) {
     return whole;
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 
   Options chosen = option(argv[1]);
   if (chosen == none) {
-    cout << "\n#\tPlease choose an existing option!" << endl;
+    cout << "#\tPlease choose an existing option!" << endl;
     printHelp(argv[0]);
   }
 
