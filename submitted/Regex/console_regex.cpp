@@ -24,6 +24,53 @@ Options option(string arg) {
   return none;
 }
 
+void printHelp(string program);
+void whole_matching(regex pattern, string str);
+void once_matching(regex pattern, string str);
+void multi_matching(regex pattern, string str);
+
+int main(int argc, char *argv[]) {
+  if (argc == 1) {
+    cout << "#\tOne command line argument required!" << endl;
+    printHelp(argv[0]);
+    return 0;
+  }
+  if (argc > 2) {
+    cout << "#\tOnly one command line argument accepted!" << endl;
+    printHelp(argv[0]);
+    return 0;
+  }
+
+  Options chosen = option(argv[1]);
+  if (chosen == none) {
+    cout << "#\tPlease choose an existing option!" << endl;
+    printHelp(argv[0]);
+    return 0;
+  }
+
+  string patternStr, str;
+  cout << "Please enter a pattern:\t";
+  cin >> patternStr;
+  cin.ignore();
+  cout << "Please enter a string :\t";
+  getline(cin, str);
+
+  regex pattern(patternStr);
+
+  if (chosen == whole) {
+    whole_matching(pattern, str);
+    return 0;
+  } else if (chosen == once) {
+    once_matching(pattern, str);
+    return 0;
+  } else if (chosen == multiple) {
+    multi_matching(pattern, str);
+    return 0;
+  }
+
+  return 0;
+}
+
 void printHelp(string program) {
   cout << "#\tThe pattern is\t"
        << "./program_name option" << endl;
@@ -75,47 +122,5 @@ void multi_matching(regex pattern, string str) {
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
-  cout << "#\t" << count << "matches found in given string!" << endl;
-}
-
-int main(int argc, char *argv[]) {
-  if (argc == 1) {
-    cout << "#\tOne command line argument required!" << endl;
-    printHelp(argv[0]);
-    return 0;
-  }
-  if (argc > 2) {
-    cout << "#\tOnly one command line argument accepted!" << endl;
-    printHelp(argv[0]);
-    return 0;
-  }
-
-  Options chosen = option(argv[1]);
-  if (chosen == none) {
-    cout << "#\tPlease choose an existing option!" << endl;
-    printHelp(argv[0]);
-    return 0;
-  }
-
-  string patternStr, str;
-  cout << "Please enter a pattern:\t";
-  cin >> patternStr;
-  cin.ignore();
-  cout << "Please enter a string :\t";
-  getline(cin, str);
-
-  regex pattern(patternStr);
-
-  if (chosen == whole) {
-    whole_matching(pattern, str);
-    return 0;
-  } else if (chosen == once) {
-    once_matching(pattern, str);
-    return 0;
-  } else if (chosen == multiple) {
-    multi_matching(pattern, str);
-    return 0;
-  }
-
-  return 0;
+  cout << "#\t" << count << " matches found in given string!" << endl;
 }
