@@ -27,7 +27,7 @@ void printHelp(string name) {
   cout << "-\twhole implements regex_match" << endl;
   cout << "-\tonce implements regex_search" << endl;
   cout << "-\tmulti implements sregex_iterator" << endl;
-  cout << "\nExample:\t" << name << " whole" << endl;
+  cout << "\nExample:\t" << name << " whole ab?c{2}" << endl;
 }
 
 int main(int argc, char *argv[]) {
@@ -46,6 +46,7 @@ int main(int argc, char *argv[]) {
   if (chosen == none) {
     cout << "#\tPlease choose an existing option!" << endl;
     printHelp(argv[0]);
+    return 0;
   }
 
   return 0;
