@@ -49,6 +49,18 @@ void whole_matching(string pattern, string str) {
   }
 }
 
+void once_matching(string pattern, string str) {
+  regex patt(pattern);
+  cout << "\n\n\tRESULT" << endl;
+  cout << "\t-------" << endl;
+  cout << endl;
+  if (regex_search(str, patt)) {
+    cout << "#\tMatch found in given string!" << endl;
+  } else {
+    cout << "#\tNo match was found in given string!" << endl;
+  }
+}
+
 int main(int argc, char *argv[]) {
   if (argc == 1) {
     cout << "#\tOne command line argument required!" << endl;
@@ -77,6 +89,9 @@ int main(int argc, char *argv[]) {
 
   if (chosen == whole) {
     whole_matching(pattern, str);
+    return 0;
+  } else if (chosen == once) {
+    once_matching(pattern, str);
     return 0;
   }
 
