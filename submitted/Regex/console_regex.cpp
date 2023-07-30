@@ -23,14 +23,14 @@ Options option(string arg) {
 void printHelp(string program) {
   cout << "#\tThe pattern is\t"
        << "./program_name option pattern" << endl;
+  cout << "#\tThe case does not actually matter so long as the option is "
+          "spelled correctly"
+       << endl;
   cout << "\nThree options are availabe: whole, once, and multi (or multiple)."
        << endl;
   cout << "-\twhole implements regex_match" << endl;
   cout << "-\tonce implements regex_search" << endl;
   cout << "-\tmulti implements sregex_iterator" << endl;
-  cout << "\n#\tThe case does not actually matter so long as the option is "
-          "spelled correctly"
-       << endl;
   cout << "\nExamples:" << endl;
   cout << "\t" << program << " whole ab?c{2}" << endl;
   cout << "\t" << program << " mULti ab?c{2}" << endl;
