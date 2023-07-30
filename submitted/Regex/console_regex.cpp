@@ -22,7 +22,7 @@ Options option(string arg) {
 
 void printHelp(string program) {
   cout << "#\tThe pattern is\t"
-       << "./program_name option pattern" << endl;
+       << "./program_name option" << endl;
   cout << "#\tThe case does not actually matter so long as the option is "
           "spelled correctly"
        << endl;
@@ -36,6 +36,10 @@ void printHelp(string program) {
   cout << "\t" << program << " mULti ab?c{2}" << endl;
   cout << "\t" << program << " multiPLE ab?c{2}" << endl;
 }
+
+// void whole_matching(string pattern, string str) {
+//
+// }
 
 int main(int argc, char *argv[]) {
   if (argc == 1) {
