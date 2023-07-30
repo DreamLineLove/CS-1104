@@ -31,10 +31,10 @@ void printHelp(string program) {
   cout << "\n#\tThe case does not actually matter so long as the option is "
           "spelled correctly"
        << endl;
-  cout << "Examples:" << endl;
-  cout << "-\t" << program << " whole ab?c{2}" << endl;
-  cout << "-\t" << program << " mULti ab?c{2}" << endl;
-  cout << "-\t" << program << " multiPLE ab?c{2}" << endl;
+  cout << "\nExamples:" << endl;
+  cout << "\t" << program << " whole ab?c{2}" << endl;
+  cout << "\t" << program << " mULti ab?c{2}" << endl;
+  cout << "\t" << program << " multiPLE ab?c{2}" << endl;
 }
 
 int main(int argc, char *argv[]) {
