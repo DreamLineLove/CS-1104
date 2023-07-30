@@ -77,7 +77,10 @@ int main(int argc, char *argv[]) {
 
   if (chosen == whole) {
     whole_matching(pattern, str);
+    return 0;
   }
+
+  cout << "never reached!" << endl;
 
   return 0;
 }
