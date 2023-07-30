@@ -37,29 +37,33 @@ void printHelp(string program) {
   cout << "\t" << program << " multiPLE ab?c{2}" << endl;
 }
 
-void whole_matching(string pattern, string str) {
-  regex patt(pattern);
+void whole_matching(regex pattern, string str) {
+  // regex patt(pattern);
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
-  if (regex_match(str, patt)) {
+  if (regex_match(str, pattern)) {
     cout << "#\tMatch found!" << endl;
   } else {
     cout << "#\tNo match was found!" << endl;
   }
 }
 
-void once_matching(string pattern, string str) {
-  regex patt(pattern);
+void once_matching(regex pattern, string str) {
+  // regex patt(pattern);
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
-  if (regex_search(str, patt)) {
+  if (regex_search(str, pattern)) {
     cout << "#\tMatch found in given string!" << endl;
   } else {
     cout << "#\tNo match was found in given string!" << endl;
   }
 }
+
+// void multi_matching(string pattern, string str) {
+//   sregex_iterator itr(str.begin(), str.end(), pattern);
+// }
 
 int main(int argc, char *argv[]) {
   if (argc == 1) {
@@ -80,12 +84,14 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  string pattern, str;
+  string patternStr, str;
   cout << "Please enter a pattern: ";
-  cin >> pattern;
+  cin >> patternStr;
   cin.ignore();
   cout << "Please enter a string: ";
   getline(cin, str);
+
+  regex pattern(patternStr);
 
   if (chosen == whole) {
     whole_matching(pattern, str);
