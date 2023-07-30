@@ -39,8 +39,13 @@ void printHelp(string program) {
 
 void whole_matching(string pattern, string str) {
   regex patt(pattern);
+  cout << "\n\n\tRESULT" << endl;
+  cout << "\t-------" << endl;
+  cout << endl;
   if (regex_match(str, patt)) {
-    cout << "\tMatch found!" << endl;
+    cout << "#\tMatch found!" << endl;
+  } else {
+    cout << "#\tNo match was found!" << endl;
   }
 }
 
