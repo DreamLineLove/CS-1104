@@ -30,8 +30,8 @@ void printHelp(string program) {
        << endl;
   cout << "-\twhole implements regex_match" << endl;
   cout << "-\tonce implements regex_search" << endl;
-  cout << "-\tmulti implements sregex_iterator" << endl;
-  cout << "\nEXAMPLES:" << endl;
+  cout << "-\tmulti (also multiple) implements sregex_iterator" << endl;
+  cout << "\nEXAMPLES" << endl;
   cout << "\t" << program << " whole ab?c{2}" << endl;
   cout << "\t" << program << " mULti ab?c{2}" << endl;
   cout << "\t" << program << " multiPLE ab?c{2}" << endl;
