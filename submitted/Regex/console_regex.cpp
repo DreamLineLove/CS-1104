@@ -66,7 +66,7 @@ void once_matching(regex pattern, string str) {
 void multi_matching(regex pattern, string str) {
   sregex_iterator itr(str.begin(), str.end(), pattern);
   sregex_iterator end;
-  int count;
+  int count = 0;
   while (itr != end) {
     count++;
     itr++;
@@ -98,10 +98,10 @@ int main(int argc, char *argv[]) {
   }
 
   string patternStr, str;
-  cout << "Please enter a pattern: ";
+  cout << "Please enter a pattern:\t";
   cin >> patternStr;
   cin.ignore();
-  cout << "Please enter a string: ";
+  cout << "Please enter a string :\t";
   getline(cin, str);
 
   regex pattern(patternStr);
@@ -114,6 +114,7 @@ int main(int argc, char *argv[]) {
     return 0;
   } else if (chosen == multiple) {
     multi_matching(pattern, str);
+    return 0;
   }
 
   return 0;
