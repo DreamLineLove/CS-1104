@@ -8,25 +8,14 @@ using namespace std;
 
 enum Options { whole, once, multiple, none };
 
-Options option(string arg) {
-  regex patternWhole("whole", regex_constants::icase);
-  regex patternOnce("once", regex_constants::icase);
-  regex patternMulti("\\bmulti(ple)?\\b", regex_constants::icase);
-
-  if (regex_match(arg, patternWhole)) {
-    return whole;
-  } else if (regex_match(arg, patternOnce)) {
-    return once;
-  } else if (regex_match(arg, patternMulti)) {
-    return multiple;
-  }
-
-  return none;
-}
+Options option(string arg);
 
 void printHelp(string program);
+
 void whole_matching(regex pattern, string str);
+
 void once_matching(regex pattern, string str);
+
 void multi_matching(regex pattern, string str);
 
 int main(int argc, char *argv[]) {
@@ -69,6 +58,22 @@ int main(int argc, char *argv[]) {
   }
 
   return 0;
+}
+
+Options option(string arg) {
+  regex patternWhole("whole", regex_constants::icase);
+  regex patternOnce("once", regex_constants::icase);
+  regex patternMulti("\\bmulti(ple)?\\b", regex_constants::icase);
+
+  if (regex_match(arg, patternWhole)) {
+    return whole;
+  } else if (regex_match(arg, patternOnce)) {
+    return once;
+  } else if (regex_match(arg, patternMulti)) {
+    return multiple;
+  }
+
+  return none;
 }
 
 void printHelp(string program) {
