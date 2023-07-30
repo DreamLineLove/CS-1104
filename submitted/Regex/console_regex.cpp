@@ -22,7 +22,7 @@ Options option(string arg) {
 
 void printHelp(string name) {
   cout << "#\tThe pattern is\t"
-       << "./program_name type" << endl;
+       << "./program_name option pattern" << endl;
   cout << "\nThree options are availabe: whole, once, and multi." << endl;
   cout << "-\twhole implements regex_match" << endl;
   cout << "-\tonce implements regex_search" << endl;
@@ -34,10 +34,12 @@ int main(int argc, char *argv[]) {
   if (argc == 1) {
     cout << "#\tOne command line argument required!" << endl;
     printHelp(argv[0]);
+    return 0;
   }
   if (argc > 2) {
     cout << "#\tOnly one command line argument accepted!" << endl;
     printHelp(argv[0]);
+    return 0;
   }
 
   Options chosen = option(argv[1]);
