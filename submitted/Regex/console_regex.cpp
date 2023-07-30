@@ -7,7 +7,7 @@ enum Options { whole, once, multiple, none };
 Options option(string arg) {
   regex patternWhole("whole", regex_constants::icase);
   regex patternOnce("once", regex_constants::icase);
-  regex patternMulti("\\bmulti\\w*\\b", regex_constants::icase);
+  regex patternMulti("\\bmulti(ple)?\\b", regex_constants::icase);
 
   if (regex_match(arg, patternWhole)) {
     return whole;
@@ -20,14 +20,21 @@ Options option(string arg) {
   return none;
 }
 
-void printHelp(string name) {
+void printHelp(string program) {
   cout << "#\tThe pattern is\t"
        << "./program_name option pattern" << endl;
-  cout << "\nThree options are availabe: whole, once, and multi." << endl;
+  cout << "\nThree options are availabe: whole, once, and multi (or multiple)."
+       << endl;
   cout << "-\twhole implements regex_match" << endl;
   cout << "-\tonce implements regex_search" << endl;
   cout << "-\tmulti implements sregex_iterator" << endl;
-  cout << "\nExample:\t" << name << " whole ab?c{2}" << endl;
+  cout << "\n#\tThe case does not actually matter so long as the option is "
+          "spelled correctly"
+       << endl;
+  cout << "Examples:" << endl;
+  cout << "-\t" << program << " whole ab?c{2}" << endl;
+  cout << "-\t" << program << " mULti ab?c{2}" << endl;
+  cout << "-\t" << program << " multiPLE ab?c{2}" << endl;
 }
 
 int main(int argc, char *argv[]) {
