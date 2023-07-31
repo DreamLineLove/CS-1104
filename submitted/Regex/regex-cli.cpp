@@ -19,7 +19,7 @@ void whole_matching(regex pattern, string str, bool from_file, ifstream &file);
 
 void once_matching(regex pattern, string str, bool from_file, ifstream &file);
 
-void multi_matching(regex pattern, string str);
+void multi_matching(regex pattern, string str, bool from_file, ifstream &file);
 
 int main(int argc, char *argv[]) {
   if (argc < 4) {
@@ -81,10 +81,10 @@ int main(int argc, char *argv[]) {
   } else if (chosen == multiple) {
     if (is_icase == true) {
       regex pattern(patternStr, regex_constants::icase);
-      multi_matching(pattern, str);
+      multi_matching(pattern, str, from_file, file);
     } else {
       regex pattern(patternStr);
-      multi_matching(pattern, str);
+      multi_matching(pattern, str, from_file, file);
     }
     file.close();
     return 0;
@@ -210,17 +210,41 @@ void once_matching(regex pattern, string str, bool from_file, ifstream &file) {
   }
 }
 
-void multi_matching(regex pattern, string str) {
-  sregex_iterator itr(str.begin(), str.end(), pattern);
-  sregex_iterator end;
+void multi_matching(regex pattern, string str, bool from_file, ifstream &file) {
   int count = 0;
-  while (itr != end) {
-    count++;
-    itr++;
+  if (from_file != true) {
+    sregex_iterator itr(str.begin(), str.end(), pattern);
+    sregex_iterator end;
+    while (itr != end) {
+      count++;
+      itr++;
+    }
   }
 
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
-  cout << "#\t" << count << " matches found in given string!" << endl;
+
+  if (from_file != false) {
+    string line;
+    int n = 0;
+    while (getline(file, line)) {
+      cout << "line" << n << "  (m=";
+
+      sregex_iterator itr(line.begin(), line.end(), pattern);
+      sregex_iterator end;
+
+      int inner = 0;
+      while (itr != end) {
+        count++;
+        inner++;
+        itr++;
+      }
+
+      cout << inner << ") \t\t" << line << endl;
+      n++;
+    }
+  }
+
+  cout << "\n#\t" << count << " matches found in given string!" << endl;
 }
