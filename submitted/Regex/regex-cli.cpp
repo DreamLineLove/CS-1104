@@ -2,6 +2,7 @@
 // add case-insensitive option
 // add option: type in string or get data from .txt file
 
+#include <iomanip>
 #include <iostream>
 #include <regex>
 using namespace std;
@@ -55,7 +56,6 @@ int main(int argc, char *argv[]) {
       whole_matching(pattern, str);
     }
     return 0;
-
   } else if (chosen == once) {
     if (is_icase == true) {
       regex pattern(patternStr, regex_constants::icase);
@@ -106,17 +106,16 @@ Options option(string arg1, string arg2, bool *is_icase) {
 }
 
 void printHelp(string program) {
-  cout << "#\tThe pattern is\t"
-       << "./program_name matching-option case-option" << endl;
+  cout << "#\tThe pattern is\t\t"
+       << "./program_name matching-option case-option input_option" << endl;
   cout << "#\tThe case does not actually matter so long as the option is "
           "spelled correctly"
        << endl;
-  cout << "\nThree Matching-Options are availabe: whole, once, and multi (or "
-          "multiple)."
+  cout << "\n3 Matching-Options are availabe:" << endl;
+  cout << "\twhole" << setw(42) << "implements regex_match" << endl;
+  cout << "\tonce" << setw(44) << "implements regex_search" << endl;
+  cout << "\tmulti (multiple)" << setw(35) << "implements sregex_iterator"
        << endl;
-  cout << "-\twhole implements regex_match" << endl;
-  cout << "-\tonce implements regex_search" << endl;
-  cout << "-\tmulti (also multiple) implements sregex_iterator" << endl;
   cout << "\nEXAMPLES" << endl;
   cout << "\t" << program << " whole ab?c{2}" << endl;
   cout << "\t" << program << " mULti ab?c{2}" << endl;
