@@ -1,7 +1,3 @@
-// To-do
-// add case-insensitive option
-// add option: type in string or get data from .txt file
-
 #include <fstream>
 #include <iomanip>
 #include <iostream>
