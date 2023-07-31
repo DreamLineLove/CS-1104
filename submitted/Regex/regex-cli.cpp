@@ -15,11 +15,9 @@ Options option(string arg1, string arg2, string arg3, bool *is_icase,
 
 void printHelp(string program);
 
-// void printDetails(string patternStr, string str);
-
 void whole_matching(regex pattern, string str, bool from_file, ifstream &file);
 
-void once_matching(regex pattern, string str);
+void once_matching(regex pattern, string str, bool from_file, ifstream &file);
 
 void multi_matching(regex pattern, string str);
 
@@ -73,10 +71,10 @@ int main(int argc, char *argv[]) {
   } else if (chosen == once) {
     if (is_icase == true) {
       regex pattern(patternStr, regex_constants::icase);
-      once_matching(pattern, str);
+      once_matching(pattern, str, from_file, file);
     } else {
       regex pattern(patternStr);
-      once_matching(pattern, str);
+      once_matching(pattern, str, from_file, file);
     }
     file.close();
     return 0;
@@ -158,10 +156,6 @@ void printHelp(string program) {
   cout << "\t\t" << program << " multiPLE ab?c{2} y y" << endl;
 }
 
-// void printDetails(string patternStr, string str) {
-//   cout <<
-// }
-
 void whole_matching(regex pattern, string str, bool from_file, ifstream &file) {
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
@@ -189,14 +183,30 @@ void whole_matching(regex pattern, string str, bool from_file, ifstream &file) {
   }
 }
 
-void once_matching(regex pattern, string str) {
+void once_matching(regex pattern, string str, bool from_file, ifstream &file) {
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
-  if (regex_search(str, pattern)) {
-    cout << "#\tMatch found in given string!" << endl;
+  if (from_file != true) {
+    if (regex_search(str, pattern)) {
+      cout << "#\tMatch found in given string!" << endl;
+    } else {
+      cout << "#\tNo match was found in given string!" << endl;
+    }
   } else {
-    cout << "#\tNo match was found in given string!" << endl;
+    string line;
+    int n = 0, count = 0;
+    while (getline(file, line)) {
+      if (regex_search(line, pattern)) {
+        cout << "line" << n << "  (yes) \t\t" << line << endl;
+        count++;
+      } else {
+        cout << "line" << n << "  (no)  \t\t" << line << endl;
+      }
+      n++;
+    }
+    cout << "\n\t"
+         << "matches found in " << count << " lines" << endl;
   }
 }
 
