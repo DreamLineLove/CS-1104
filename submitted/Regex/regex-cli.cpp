@@ -21,13 +21,13 @@ void multi_matching(regex pattern, string str);
 
 int main(int argc, char *argv[]) {
   if (argc < 3) {
-    cout << "#\tTwo command line arguments required!" << endl;
+    cout << "!\tTwo command line arguments required!" << endl;
     printHelp(argv[0]);
     return 0;
   }
 
   if (argc > 3) {
-    cout << "#\tOnly two command line argument accepted!" << endl;
+    cout << "!\tOnly two command line argument accepted!" << endl;
     printHelp(argv[0]);
     return 0;
   }
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
   bool is_icase = false;
   Options chosen = option(argv[1], argv[2], &is_icase);
   if (chosen == none) {
-    cout << "#\tPlease choose an existing option!" << endl;
+    cout << "!\tPlease choose an existing option!" << endl;
     printHelp(argv[0]);
     return 0;
   }
@@ -106,20 +106,30 @@ Options option(string arg1, string arg2, bool *is_icase) {
 }
 
 void printHelp(string program) {
-  cout << "#\tThe pattern is\t\t"
-       << "./program_name matching-option case-option input_option" << endl;
-  cout << "#\tThe case does not actually matter so long as the option is "
+  cout << endl;
+  cout
+      << "#\tThe pattern is"
+      << "\n\t\t./program_name matching_option case_insensitive input_from_file"
+      << endl;
+  cout << "\n#\tThe case does not actually matter so long as the option is "
           "spelled correctly"
        << endl;
-  cout << "\n3 Matching-Options are availabe:" << endl;
-  cout << "\twhole" << setw(42) << "implements regex_match" << endl;
-  cout << "\tonce" << setw(44) << "implements regex_search" << endl;
-  cout << "\tmulti (multiple)" << setw(35) << "implements sregex_iterator"
+  cout << "\n1. Matching-Options" << endl;
+  cout << "\twhole" << setw(40) << "implements regex_match" << endl;
+  cout << "\tonce" << setw(42) << "implements regex_search" << endl;
+  cout << "\tmulti (multiple)" << setw(33) << "implements sregex_iterator"
        << endl;
+  cout << "\n2. Case_insensitivity" << endl;
+  cout << "\ty" << setw(52) << "uses case-insensitive matching" << endl;
+  cout << "\tn" << setw(60) << "does not use case-insensitive matching" << endl;
+  cout << "\n3. Input From File?" << endl;
+  cout << "\ty" << setw(51) << "later you specify a filename " << endl;
+  cout << "\tn" << setw(50) << "later you type in the string" << endl;
   cout << "\nEXAMPLES" << endl;
-  cout << "\t" << program << " whole ab?c{2}" << endl;
-  cout << "\t" << program << " mULti ab?c{2}" << endl;
-  cout << "\t" << program << " multiPLE ab?c{2}" << endl;
+  cout << "\t\t" << program << " whole ab?c{2} y n" << endl;
+  cout << "\t\t" << program << " once ab?c{2} y n" << endl;
+  cout << "\t\t" << program << " mULti ab?c{2} n y" << endl;
+  cout << "\t\t" << program << " multiPLE ab?c{2} y y" << endl;
 }
 
 void whole_matching(regex pattern, string str) {
