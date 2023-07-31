@@ -9,7 +9,8 @@ using namespace std;
 
 enum Options { whole, once, multiple, none };
 
-Options option(string arg1, string arg2, bool *is_icase);
+Options option(string arg1, string arg2, string arg3, bool *is_icase,
+               bool *from_file);
 
 void printHelp(string program);
 
@@ -20,20 +21,21 @@ void once_matching(regex pattern, string str);
 void multi_matching(regex pattern, string str);
 
 int main(int argc, char *argv[]) {
-  if (argc < 3) {
-    cout << "!\tTwo command line arguments required!" << endl;
+  if (argc < 4) {
+    cout << "!\t3 command line arguments required!" << endl;
     printHelp(argv[0]);
     return 0;
   }
 
-  if (argc > 3) {
-    cout << "!\tOnly two command line argument accepted!" << endl;
+  if (argc > 4) {
+    cout << "!\tOnly 3 command line argument accepted!" << endl;
     printHelp(argv[0]);
     return 0;
   }
 
   bool is_icase = false;
-  Options chosen = option(argv[1], argv[2], &is_icase);
+  bool from_file = false;
+  Options chosen = option(argv[1], argv[2], argv[3], &is_icase, &from_file);
   if (chosen == none) {
     cout << "!\tPlease choose an existing option!" << endl;
     printHelp(argv[0]);
@@ -79,7 +81,8 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-Options option(string arg1, string arg2, bool *is_icase) {
+Options option(string arg1, string arg2, string arg3, bool *is_icase,
+               bool *from_file) {
   regex patternWhole("whole", regex_constants::icase);
   regex patternOnce("once", regex_constants::icase);
   regex patternMulti("\\bmulti(ple)?\\b", regex_constants::icase);
@@ -90,6 +93,14 @@ Options option(string arg1, string arg2, bool *is_icase) {
     *is_icase = true;
   } else if (regex_match(arg2, patternNo)) {
     *is_icase = false;
+  } else {
+    return none;
+  }
+
+  if (regex_match(arg3, patternYes)) {
+    *from_file = true;
+  } else if (regex_match(arg3, patternNo)) {
+    *from_file = false;
   } else {
     return none;
   }
