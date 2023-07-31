@@ -2,6 +2,7 @@
 // add case-insensitive option
 // add option: type in string or get data from .txt file
 
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <regex>
@@ -14,7 +15,9 @@ Options option(string arg1, string arg2, string arg3, bool *is_icase,
 
 void printHelp(string program);
 
-void whole_matching(regex pattern, string str);
+// void printDetails(string patternStr, string str);
+
+void whole_matching(regex pattern, string str, bool from_file, ifstream &file);
 
 void once_matching(regex pattern, string str);
 
@@ -55,14 +58,17 @@ int main(int argc, char *argv[]) {
     cin >> str;
   }
 
+  ifstream file(str);
+
   if (chosen == whole) {
     if (is_icase == true) {
       regex pattern(patternStr, regex_constants::icase);
-      whole_matching(pattern, str);
+      whole_matching(pattern, str, from_file, file);
     } else {
       regex pattern(patternStr);
-      whole_matching(pattern, str);
+      whole_matching(pattern, str, from_file, file);
     }
+    file.close();
     return 0;
   } else if (chosen == once) {
     if (is_icase == true) {
@@ -72,6 +78,7 @@ int main(int argc, char *argv[]) {
       regex pattern(patternStr);
       once_matching(pattern, str);
     }
+    file.close();
     return 0;
   } else if (chosen == multiple) {
     if (is_icase == true) {
@@ -81,9 +88,11 @@ int main(int argc, char *argv[]) {
       regex pattern(patternStr);
       multi_matching(pattern, str);
     }
+    file.close();
     return 0;
   }
 
+  file.close();
   return 0;
 }
 
@@ -149,14 +158,34 @@ void printHelp(string program) {
   cout << "\t\t" << program << " multiPLE ab?c{2} y y" << endl;
 }
 
-void whole_matching(regex pattern, string str) {
+// void printDetails(string patternStr, string str) {
+//   cout <<
+// }
+
+void whole_matching(regex pattern, string str, bool from_file, ifstream &file) {
   cout << "\n\n\tRESULT" << endl;
   cout << "\t-------" << endl;
   cout << endl;
-  if (regex_match(str, pattern)) {
-    cout << "#\tMatch found!" << endl;
+  if (from_file != true) {
+    if (regex_match(str, pattern)) {
+      cout << "#\tMatch found!" << endl;
+    } else {
+      cout << "#\tNo match was found!" << endl;
+    }
   } else {
-    cout << "#\tNo match was found!" << endl;
+    string line;
+    int n = 0, count = 0;
+    while (getline(file, line)) {
+      if (regex_match(line, pattern)) {
+        cout << "line" << n << "  (yes) \t\t" << line << endl;
+        count++;
+      } else {
+        cout << "line" << n << "  (no)  \t\t" << line << endl;
+      }
+      n++;
+    }
+    cout << "\n\t"
+         << "lines matched: " << count << endl;
   }
 }
 
