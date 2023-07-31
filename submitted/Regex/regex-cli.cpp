@@ -46,8 +46,14 @@ int main(int argc, char *argv[]) {
   cout << "Please enter a pattern:\t";
   cin >> patternStr;
   cin.ignore();
-  cout << "Please enter a string :\t";
-  getline(cin, str);
+
+  if (from_file == false) {
+    cout << "Please enter a string :\t";
+    getline(cin, str);
+  } else if (from_file == true) {
+    cout << "Please enter a file name (including extension):\t";
+    cin >> str;
+  }
 
   if (chosen == whole) {
     if (is_icase == true) {
