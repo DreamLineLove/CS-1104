@@ -89,18 +89,18 @@ Options option(string arg1, string arg2, string arg3, bool *is_icase,
   regex patternYes("y", regex_constants::icase);
   regex patternNo("n", regex_constants::icase);
 
-  if (regex_match(arg2, patternYes)) {
-    *is_icase = true;
-  } else if (regex_match(arg2, patternNo)) {
-    *is_icase = false;
-  } else {
-    return none;
-  }
-
   if (regex_match(arg3, patternYes)) {
     *from_file = true;
   } else if (regex_match(arg3, patternNo)) {
     *from_file = false;
+  } else {
+    return none;
+  }
+
+  if (regex_match(arg2, patternYes)) {
+    *is_icase = true;
+  } else if (regex_match(arg2, patternNo)) {
+    *is_icase = false;
   } else {
     return none;
   }
