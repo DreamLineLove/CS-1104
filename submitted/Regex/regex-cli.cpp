@@ -8,7 +8,7 @@ using namespace std;
 
 enum Options { whole, once, multiple, none };
 
-Options option(string arg);
+Options option(string arg1, string arg2, bool *is_icase);
 
 void printHelp(string program);
 
@@ -19,18 +19,20 @@ void once_matching(regex pattern, string str);
 void multi_matching(regex pattern, string str);
 
 int main(int argc, char *argv[]) {
-  if (argc == 1) {
-    cout << "#\tOne command line argument required!" << endl;
-    printHelp(argv[0]);
-    return 0;
-  }
-  if (argc > 2) {
-    cout << "#\tOnly one command line argument accepted!" << endl;
+  if (argc < 3) {
+    cout << "#\tTwo command line arguments required!" << endl;
     printHelp(argv[0]);
     return 0;
   }
 
-  Options chosen = option(argv[1]);
+  if (argc > 3) {
+    cout << "#\tOnly two command line argument accepted!" << endl;
+    printHelp(argv[0]);
+    return 0;
+  }
+
+  bool is_icase = false;
+  Options chosen = option(argv[1], argv[2], &is_icase);
   if (chosen == none) {
     cout << "#\tPlease choose an existing option!" << endl;
     printHelp(argv[0]);
@@ -44,32 +46,59 @@ int main(int argc, char *argv[]) {
   cout << "Please enter a string :\t";
   getline(cin, str);
 
-  regex pattern(patternStr);
-
   if (chosen == whole) {
-    whole_matching(pattern, str);
+    if (is_icase == true) {
+      regex pattern(patternStr, regex_constants::icase);
+      whole_matching(pattern, str);
+    } else {
+      regex pattern(patternStr);
+      whole_matching(pattern, str);
+    }
     return 0;
+
   } else if (chosen == once) {
-    once_matching(pattern, str);
+    if (is_icase == true) {
+      regex pattern(patternStr, regex_constants::icase);
+      once_matching(pattern, str);
+    } else {
+      regex pattern(patternStr);
+      once_matching(pattern, str);
+    }
     return 0;
   } else if (chosen == multiple) {
-    multi_matching(pattern, str);
+    if (is_icase == true) {
+      regex pattern(patternStr, regex_constants::icase);
+      multi_matching(pattern, str);
+    } else {
+      regex pattern(patternStr);
+      multi_matching(pattern, str);
+    }
     return 0;
   }
 
   return 0;
 }
 
-Options option(string arg) {
+Options option(string arg1, string arg2, bool *is_icase) {
   regex patternWhole("whole", regex_constants::icase);
   regex patternOnce("once", regex_constants::icase);
   regex patternMulti("\\bmulti(ple)?\\b", regex_constants::icase);
+  regex patternYes("y", regex_constants::icase);
+  regex patternNo("n", regex_constants::icase);
 
-  if (regex_match(arg, patternWhole)) {
+  if (regex_match(arg2, patternYes)) {
+    *is_icase = true;
+  } else if (regex_match(arg2, patternNo)) {
+    *is_icase = false;
+  } else {
+    return none;
+  }
+
+  if (regex_match(arg1, patternWhole)) {
     return whole;
-  } else if (regex_match(arg, patternOnce)) {
+  } else if (regex_match(arg1, patternOnce)) {
     return once;
-  } else if (regex_match(arg, patternMulti)) {
+  } else if (regex_match(arg1, patternMulti)) {
     return multiple;
   }
 
@@ -78,11 +107,12 @@ Options option(string arg) {
 
 void printHelp(string program) {
   cout << "#\tThe pattern is\t"
-       << "./program_name option" << endl;
+       << "./program_name matching-option case-option" << endl;
   cout << "#\tThe case does not actually matter so long as the option is "
           "spelled correctly"
        << endl;
-  cout << "\nThree OPTIONS are availabe: whole, once, and multi (or multiple)."
+  cout << "\nThree Matching-Options are availabe: whole, once, and multi (or "
+          "multiple)."
        << endl;
   cout << "-\twhole implements regex_match" << endl;
   cout << "-\tonce implements regex_search" << endl;
