@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void selection_sort(int n, int arr[n]) {
+void selection_sort(int n, int arr[], int order[]) {
   for (int i = 0; i < n; i++) {
     int min = i;
 
@@ -11,6 +11,7 @@ void selection_sort(int n, int arr[n]) {
       }
       if (min != 1) {
         swap(arr[min], arr[i]);
+        swap(order[min], order[i]);
       }
     }
   }
@@ -18,19 +19,19 @@ void selection_sort(int n, int arr[n]) {
 
 int main() {
   int n;
-  cout << "- Enter number of students: ";
+  cout << "- Number of students: ";
   cin >> n;
 
   int arr[n];
+  int order[] = {0, 1, 2, 3, 4};
   for (int i = 0; i < n; i++) {
-    cout << "\n- Enter student " << i << " mark: ";
+    cout << "\n- Student " << i << " mark: ";
     cin >> arr[i];
   }
 
-  for (int i = 0; i < n; i++) {
-    cout << arr[i] << endl;
-  }
-  selection_sort(n, arr);
+  selection_sort(n, arr, order);
+  cout << "\n\tStudent " << order[n - 1]
+       << " got the highest mark: " << arr[n - 1] << endl;
 
   return 0;
 }
