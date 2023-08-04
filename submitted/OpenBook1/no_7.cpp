@@ -4,11 +4,11 @@ using namespace std;
 int main() {
   string pw;
   while (pw != "cs@123") {
-    cout << "Enter Correct Password: ";
+    cout << "- Enter Correct Password: ";
     cin >> pw;
   }
 
-  cout << "Correct password!" << endl;
+  cout << "\n\tCorrect password!" << endl;
 
   return 0;
 }
