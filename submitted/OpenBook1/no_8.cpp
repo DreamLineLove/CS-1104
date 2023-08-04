@@ -3,20 +3,38 @@
 using namespace std;
 
 int main() {
-  int n_people = n_people;
-  char arr[n_people][2][80];
-  bool processed[n_people];
-  for (int i = 0; i < n_people; i++) {
-    int count = 0;
-    for (int j = 0; j < n_people; j++) {
-      if (strcmp(arr[i][1], arr[j][1]) == 0 &&
-          strcmp(arr[i][0], arr[j][0]) != 0 && processed[j] != false) {
+  char arr[5][2][80] = {
+      {"Aung Aung", "Yangon"}, {"Aye Aye", "Mon"},    {"Thin Thin", "Mon"},
+      {"Ei Ei", "Yangon"},     {"Zaw Zaw", "Yangon"},
+  };
+
+  bool processed[5] = {false};
+  int count = 0;
+
+  for (int i = 0; i < 5; i++) {
+    if (processed[i]) {
+      continue;
+    }
+
+    count = 1;
+    processed[i] = true;
+
+    for (int j = i + 1; j < 5; j++) {
+      if (strcmp(arr[i][1], arr[j][1]) == 0) {
         count++;
         processed[j] = true;
-        if (count == 1)
-          cout << arr[i][0] << endl;
-        cout << arr[j][0] << endl;
       }
+    }
+
+    if (count > 1) {
+      std::cout << "Address: " << arr[i][1] << "\n";
+      std::cout << "Count: " << count << "\n";
+      for (int k = 0; k < 5; k++) {
+        if (processed[k] && strcmp(arr[i][1], arr[k][1]) == 0) {
+          std::cout << "  " << arr[k][0] << "\n";
+        }
+      }
+      std::cout << "\n";
     }
   }
 
