@@ -3,19 +3,19 @@ using namespace std;
 
 void printStatus(int mark) {
   if (mark >= 75) {
-    cout << "Student passed with distinction." << endl;
+    cout << "- Student passed with distinction." << endl;
     return;
   }
   if (mark >= 65 && mark < 75) {
-    cout << "Student passed with credit." << endl;
+    cout << "- Student passed with credit." << endl;
     return;
   }
   if (mark >= 50 && mark < 65) {
-    cout << "Student passed the exam." << endl;
+    cout << "- Student passed the exam." << endl;
     return;
   }
   if (mark < 50) {
-    cout << "Student did NOT pass the exam :(" << endl;
+    cout << "- Student did NOT pass the exam :(" << endl;
     return;
   }
 }
@@ -26,7 +26,7 @@ int main() {
 
   int value;
   while (value != 0) {
-    cout << "\n- Value: ";
+    cout << "\nenter mark... ";
     cin >> value;
     if (value != 0) {
       printStatus(value);
