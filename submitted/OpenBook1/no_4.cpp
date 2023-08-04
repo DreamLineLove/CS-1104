@@ -1,29 +1,32 @@
 #include <iostream>
 using namespace std;
 
-int dollar(int kyat);
-int yuan(int kyat);
-int yen(int kyat);
+float dollar(float kyat);
+float yuan(float kyat);
+float yen(float kyat);
 
-const int dollarRate = 3500;
-const int yuanRate = 500;
-const int yenRate = 20;
+const float dollarRate = 3500;
+const float yuanRate = 500;
+const float yenRate = 20;
 
 int main() {
   cout << "\tCURRENCY EXCHANGE" << endl;
   cout << "\n-\tType in 0 to quit" << endl;
 
-  int value;
+  float value;
   while (value != 0) {
     cout << "\n- Value: ";
-    cout << "= " << dollar(value) << " USD" << endl;
-    cout << "= " << yuan(value) << " Yuan" << endl;
-    cout << "= " << yen(value) << " Yen" << endl;
+    cin >> value;
+    if (value != 0) {
+      cout << "= " << dollar(value) << " USD" << endl;
+      cout << "= " << yuan(value) << " Yuan" << endl;
+      cout << "= " << yen(value) << " Yen" << endl;
+    }
   }
 
   return 0;
 }
 
-int dollar(int kyat) { return kyat * dollarRate; }
-int yuan(int kyat) { return kyat * yuanRate; }
-int yen(int kyat) { return kyat * yenRate; }
+float dollar(float kyat) { return kyat / dollarRate; }
+float yuan(float kyat) { return kyat / yuanRate; }
+float yen(float kyat) { return kyat / yenRate; }
