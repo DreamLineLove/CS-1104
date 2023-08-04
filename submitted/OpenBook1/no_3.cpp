@@ -24,12 +24,12 @@ int main() {
   cout << "\tCHECK A STUDENT'S EXAM STATUS" << endl;
   cout << "\n-\tType in 0 to quit" << endl;
 
-  int value;
-  while (value != 0) {
+  int mark;
+  while (mark != 0) {
     cout << "\nenter mark... ";
-    cin >> value;
-    if (value != 0) {
-      printStatus(value);
+    cin >> mark;
+    if (mark != 0) {
+      printStatus(mark);
     }
   }
   return 0;
