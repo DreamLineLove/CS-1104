@@ -24,6 +24,8 @@ int main() {
     }
   }
 
+  cout << "\n-\tProgram exited!" << endl;
+
   return 0;
 }
 
