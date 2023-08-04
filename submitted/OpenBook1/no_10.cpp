@@ -9,7 +9,7 @@ int main() {
   int len;
   char t;
 
-  cout << "Original: " << str << endl;
+  cout << "Original\t" << str << endl;
 
   len = strlen(str);
 
@@ -25,19 +25,25 @@ int main() {
     end--;
   }
 
-  cout << "Reversed: " << str << endl;
+  cout << "Reversed\t" << str << endl;
 
   for (int i = 0; i < len; i++) {
     str[i] = toupper(str[i]);
   }
 
-  cout << "Uppercase: " << str << endl;
+  cout << "Uppercase\t" << str << endl;
 
-  for (int j = 0; j < 2; j++) {
+  for (int j = 0; j < 3; j++) {
     char ch[80];
-    cout << "Enter a Harry Potter character you like...";
-    cin >> ch;
-    cout << "The number of letters: " << strlen(ch) << endl;
+    cout << "\n\tEnter a Harry Potter character you like...";
+    cin.getline(ch, 80);
+
+    int count = 0;
+    for (int j = 0; j < strlen(ch); j++) {
+      if (ch[j] != ' ')
+        count++;
+    }
+    cout << "- number of letters: " << count << endl;
   }
 
   return 0;
