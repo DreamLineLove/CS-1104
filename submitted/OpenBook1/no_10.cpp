@@ -3,37 +3,42 @@
 #include <iostream>
 using namespace std;
 
-void reverse();
-void touppercase();
-
 int main() {
-  char hp[] = "Harry Potter";
-  int len = strlen(hp);
-  char *start = hp, *end = &hp[len - 1];
-  char ch;
+  char str[] = "Harry Potter";
+  char *start, *end;
+  int len;
+  char t;
 
-  cout << "Original:\t" << hp << endl;
+  cout << "Original: " << str << endl;
+
+  len = strlen(str);
+
+  start = str;
+  end = &str[len - 1];
+
   while (start < end) {
-    ch = *start;
+    t = *start;
     *start = *end;
-    *end = ch;
+    *end = t;
 
     start++;
     end--;
   }
-  cout << "Reversed:\t" << hp << endl;
+
+  cout << "Reversed: " << str << endl;
+
   for (int i = 0; i < len; i++) {
-    hp[i] = toupper(hp[i]);
+    str[i] = toupper(str[i]);
   }
-  cout << "Uppercase:\t" << hp << endl;
+
+  cout << "Uppercase: " << str << endl;
 
   for (int j = 0; j < 2; j++) {
-    string character;
-    cout << "\nEnter a character you like from Harry Potter: ";
-    cin >> character;
+    char ch[80];
+    cout << "Enter a Harry Potter character you like...";
+    cin >> ch;
+    cout << "The number of letters: " << strlen(ch) << endl;
   }
 
   return 0;
 }
-
-void reverse(char ch, char *start, char *end) {}
