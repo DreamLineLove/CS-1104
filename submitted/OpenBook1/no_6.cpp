@@ -9,8 +9,8 @@ public:
 
 class Season_6miles : public Season {
 public:
-  string name = "Season 6 Miles";
   Season_6miles() {
+    name = "Season 6 Miles";
     menu[0] = "New York Cheese Cake";
     menu[1] = "Strawberry Milkshake";
   }
@@ -18,8 +18,8 @@ public:
 
 class Season_Junction : public Season {
 public:
-  string name = "Season Junction";
   Season_Junction() {
+    name = "Season Junction";
     menu[0] = "Eclair";
     menu[1] = "Vanilla Float";
   }
@@ -27,8 +27,8 @@ public:
 
 class Season_Ocean : public Season {
 public:
-  string name = "Season Ocean";
   Season_Ocean() {
+    name = "Season Ocean";
     menu[0] = "Pizza Bread";
     menu[1] = "Iced Americano";
   }
@@ -43,6 +43,16 @@ int main() {
       junction,
       ocean,
   };
+
+  for (int i = 0; i < 3; i++) {
+    cout << "\t" << arr[i].name << " Menu" << endl;
+    cout << "\t"
+         << "-----------------" << endl;
+    for (int j = 0; j < 2; j++) {
+      cout << j + 1 << ".\t" << arr[i].menu[j] << endl;
+    }
+    cout << endl;
+  }
 
   return 0;
 }
