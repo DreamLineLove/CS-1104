@@ -15,21 +15,34 @@ int wordCount(const string &input, const std::string &word) {
   return count;
 }
 
-int main(int argc, char *argv[]) {
-  string fn = argv[1], wordToCount = argv[2];
+int main() {
+  cout << "\tWord Counter" << endl;
+  cout << "\n-\tEnter q as filename to exit\n" << endl;
+  string fn, wordToCount;
 
+  cout << "enter filename: ";
+  cin >> fn;
   ifstream file(fn);
-  string line;
-  int count = 0;
-  while (getline(file, line)) {
-    int inner = wordCount(line, wordToCount);
-    count += inner;
+
+  while (wordToCount != "q") {
+    cout << "enter word to count: ";
+    cin >> wordToCount;
+
+    string line;
+    int count = 0;
+    while (getline(file, line)) {
+      int inner = wordCount(line, wordToCount);
+      count += inner;
+    }
+
+    cout << "\tRESULT" << endl;
+    cout << "\t------" << endl;
+    cout << "\n-\tThe word '" << wordToCount << "' appears " << count
+         << " times in the text." << endl;
   }
 
-  cout << "\tRESULT" << endl;
-  cout << "\t------" << endl;
-  cout << "\n-\tThe word '" << wordToCount << "' appears " << count
-       << " times in the text." << endl;
+  file.close();
+  cout << "\n-\tProgram exited" << endl;
 
   return 0;
 }
