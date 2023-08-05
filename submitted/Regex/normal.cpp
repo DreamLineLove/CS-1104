@@ -16,11 +16,6 @@ int wordCount(const string &input, const std::string &word) {
 }
 
 int main(int argc, char *argv[]) {
-  // string fn, wordToCount;
-  // cout << "Enter filename...  ";
-  // cin >> fn;
-  // cout << "Word to count...  ";
-  // cin >> wordToCount;
   string fn = argv[1], wordToCount = argv[2];
 
   ifstream file(fn);
