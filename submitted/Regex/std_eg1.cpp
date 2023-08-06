@@ -32,9 +32,9 @@ int main() {
   cout << distance(begin1, end1) << " times" << endl;
 
   regex p2("programming", regex_constants::icase);
-  cout << "\"programming\"\t\t\tFlag icase" << endl;
+  cout << "\n\"programming\"\t\t\tFlag icase" << endl;
 
-  auto begin2 = sregex_iterator(str1.begin(), str1.end(), p1);
+  auto begin2 = sregex_iterator(str1.begin(), str1.end(), p2);
   auto end2 = sregex_iterator();
   cout << "-\tusing sregex_iterator:\t";
   cout << distance(begin2, end2) << " times" << endl;
