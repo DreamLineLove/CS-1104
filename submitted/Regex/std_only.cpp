@@ -19,7 +19,7 @@ int main() {
 
   while (begin != end) {
     smatch match = *begin;
-    cout << match.str() << " found at position: " << match.position() << endl;
+    cout << "\n" << match.str() << "\tposition: " << match.position() << endl;
     begin++;
   }
 
