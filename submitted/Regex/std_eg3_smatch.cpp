@@ -18,7 +18,7 @@ int main() {
   cout << "matched " << count << " time\n";
 
   while (begin != end) {
-    smatch match;
+    smatch match = *begin;
     cout << match.str() << " found at position: " << match.position() << endl;
     begin++;
   }
