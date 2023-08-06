@@ -10,6 +10,7 @@ int main() {
   cout << str1 << endl << endl;
 
   regex p1("programming");
+  cout << "programming" << endl;
 
   cout << "-\tusing regex_match:\t";
   if (regex_match(str1, p1)) {
@@ -18,7 +19,6 @@ int main() {
     cout << "no" << endl;
   }
 
-  cout << "programming" << endl;
   cout << "-\tusing regex_search:\t";
   if (regex_search(str1, p1)) {
     cout << "yes" << endl;
