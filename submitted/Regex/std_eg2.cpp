@@ -8,7 +8,7 @@ int main() {
 
   cout << str << "\n\n";
 
-  regex pattern("college");
+  regex pattern("College");
 
   if (regex_search(str, pattern)) {
     cout << "match" << endl;
