@@ -36,10 +36,18 @@ int main() {
   regex p2("college", regex_constants::icase);
   cout << "\n\"college\"\t\t\tFlag icase" << endl;
 
-  sregex_iterator itr2(str1.begin(), str1.end(), p2);
+  regex p4("(\\w+)");
+  sregex_iterator itr2(str1.begin(), str1.end(), p4);
   sregex_iterator end2;
   cout << "-\tusing sregex_iterator:\t";
   cout << distance(itr2, end2) << " times" << endl;
+
+  while (itr2 != end2) {
+    smatch match = *itr2;
+    string match_str = match.str();
+    cout << "\n" << match_str << endl;
+    itr2++;
+  }
 
   cout << "\n\"Burma\"" << endl;
   cout << "-\tusing regex_replace:\t\n\t";
