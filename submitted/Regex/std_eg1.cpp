@@ -10,7 +10,7 @@ int main() {
   cout << str1 << endl << endl;
 
   regex p1("programming");
-  cout << "programming" << endl;
+  cout << "\"programming\"" << endl;
 
   cout << "-\tusing regex_match:\t";
   if (regex_match(str1, p1)) {
@@ -30,6 +30,9 @@ int main() {
   auto end = sregex_iterator();
   cout << "-\tusing sregex_iterator:\t";
   cout << distance(begin, end) << " times" << endl;
+
+  regex p2("programming", regex_constants::icase);
+  cout << "\"programming\"\t\t\tFlag icase" << endl;
 
   return 0;
 }
