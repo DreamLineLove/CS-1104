@@ -28,7 +28,7 @@ int main() {
 
   auto begin = sregex_iterator(str1.begin(), str1.end(), p1);
   auto end = sregex_iterator();
-  cout << "-\tusing regex_search:\t";
+  cout << "-\tusing sregex_iterator:\t";
   cout << distance(begin, end) << " times" << endl;
 
   return 0;
