@@ -41,6 +41,9 @@ int main() {
   cout << "-\tusing sregex_iterator:\t";
   cout << distance(itr2, end2) << " times" << endl;
 
+  cout << "\n\"Burma\"" << endl;
+  cout << "-\tusing regex_replace:\t\n\t";
+
   regex p3("Myanmar");
   string new_str = regex_replace(str1, p3, "Burma");
   cout << new_str << endl;
