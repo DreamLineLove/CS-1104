@@ -4,9 +4,6 @@
 using namespace std;
 
 int main() {
-  // string str1 =
-  //     "The art of programming is not just about knowing. Programming is
-  //     about" " knowing clearly, completely, specifically and contextually.";
   string str1 = "The Rangoon College is the oldest college in Myanmar's "
                 "education system and the best known college in Myanmar.";
   cout << str1 << endl << endl;
@@ -36,18 +33,10 @@ int main() {
   regex p2("college", regex_constants::icase);
   cout << "\n\"college\"\t\t\tFlag icase" << endl;
 
-  regex p4("(\\w+)");
-  sregex_iterator itr2(str1.begin(), str1.end(), p4);
+  sregex_iterator itr2(str1.begin(), str1.end(), p2);
   sregex_iterator end2;
   cout << "-\tusing sregex_iterator:\t";
   cout << distance(itr2, end2) << " times" << endl;
-
-  while (itr2 != end2) {
-    smatch match = *itr2;
-    string match_str = match.str();
-    cout << "\n" << match_str << endl;
-    itr2++;
-  }
 
   cout << "\n\"Burma\"" << endl;
   cout << "-\tusing regex_replace:\t\n\t";
