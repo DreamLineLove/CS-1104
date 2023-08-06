@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iterator>
 #include <regex>
 using namespace std;
 
@@ -24,6 +25,11 @@ int main() {
   } else {
     cout << "no" << endl;
   }
+
+  auto begin = sregex_iterator(str1.begin(), str1.end(), p1);
+  auto end = sregex_iterator();
+  cout << "-\tusing regex_search:\t";
+  cout << distance(begin, end) << " times" << endl;
 
   return 0;
 }
