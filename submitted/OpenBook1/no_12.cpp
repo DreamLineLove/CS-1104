@@ -12,6 +12,7 @@ int main() {
   cout << "Sine of number using sin()" << sin(num) << endl;
   cout << "Cosine of number using cos()" << cos(num) << endl;
   cout << "Tangent of number using tan()" << tan(num) << endl;
+  cout << "Exponent of number using exp()" << exp(num) << endl;
 
   return 0;
 }
