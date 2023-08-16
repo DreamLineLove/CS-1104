@@ -9,7 +9,7 @@ int main() {
 
   cout << str << "\n\n";
 
-  regex pattern("(s|ex|pre)am[pb]le", regex_constants::icase);
+  regex pattern("(s|ex|pre)am[pb]le");
 
   sregex_iterator begin(str.begin(), str.end(), pattern);
   sregex_iterator end;
