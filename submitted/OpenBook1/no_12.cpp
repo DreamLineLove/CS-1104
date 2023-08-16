@@ -9,6 +9,7 @@ int main() {
 
   cout << "Square of number using pow()..." << pow(num, 2) << endl;
   cout << "Square root of number using sqrt()" << sqrt(num) << endl;
+  cout << "Sine of number using sin()" << sin(num) << endl;
 
   return 0;
 }
