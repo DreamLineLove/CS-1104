@@ -10,7 +10,7 @@ int main() {
   cout << "Enter end number: ";
   cin >> z;
 
-  cout << "\tMultiplication Table\n";
+  cout << "\n\tMultiplication Table\n";
   for (int i = a; i <= z; i++) {
     cout << n << " * " << i << " = " << n * i << endl;
   }
