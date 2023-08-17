@@ -7,12 +7,12 @@ int main() {
   cout << "Enter a number: ";
   cin >> num;
 
-  cout << "Square of number using pow()..." << pow(num, 2) << endl;
-  cout << "Square root of number using sqrt()" << sqrt(num) << endl;
-  cout << "Sine of number using sin()" << sin(num) << endl;
-  cout << "Cosine of number using cos()" << cos(num) << endl;
-  cout << "Tangent of number using tan()" << tan(num) << endl;
-  cout << "Exponent of number using exp()" << exp(num) << endl;
+  cout << "\npow()...\t" << pow(num, 2) << endl;
+  cout << "using sqrt()\t" << sqrt(num) << endl;
+  cout << "using sin()\t" << sin(num) << endl;
+  cout << "using cos()\t" << cos(num) << endl;
+  cout << "using tan()\t" << tan(num) << endl;
+  cout << "exp()\t" << exp(num) << endl;
 
   return 0;
 }
