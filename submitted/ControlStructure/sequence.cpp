@@ -4,9 +4,10 @@ using namespace std;
 int main() {
   int a = 5, b = 3;
 
-  int sum = a + b;
-  int diff = a - b;
-  int prod = a * b;
+  cout << "a = " << a << ", b = " << b << "\n";
+  cout << "Sum: " << a + b << "\n";
+  cout << "Diff: " << a - b << "\n";
+  cout << "Prod: " << a * b << "\n";
 
-  cout << sum << ' ' << diff << ' ' << prod << endl;
+  return 0;
 }
