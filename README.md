@@ -28,11 +28,11 @@ I also explored various aspects of the C++ programming language whenever I felt 
 
 # Contents
 The repository is organized into two sections:
-- ***experimental***, and
-- ***submitted***
-### *experimental*
+- experimental and
+- submitted
+### experimental
 contains experiments I had done divided into their own sub-folders, as well as gists I had prepared for exam prep.
-### *submitted*
+### submitted
 contains final code submitted for assignments and tutorials. It also contains the code during class time or those given as an ungraded assignment (homework).
 <!---
 - (Array) insertion and deletion
