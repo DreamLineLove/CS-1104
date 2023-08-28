@@ -8,7 +8,7 @@ int main() {
   cin >> n;
 
   for (int i = 1; i < n; i++) {
-    cout << pow(n - 1, 2) + 1 << endl;
+    cout << pow(n - 1, 2) + 1 << "\n";
   }
 
   return 0;

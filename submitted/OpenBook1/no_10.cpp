@@ -9,7 +9,7 @@ int main() {
   int len;
   char t;
 
-  cout << "Original\t" << str << endl;
+  cout << "Original\t" << str << "\n";
 
   len = strlen(str);
 
@@ -25,13 +25,13 @@ int main() {
     end--;
   }
 
-  cout << "Reversed\t" << str << endl;
+  cout << "Reversed\t" << str << "\n";
 
   for (int i = 0; i < len; i++) {
     str[i] = toupper(str[i]);
   }
 
-  cout << "Uppercase\t" << str << endl;
+  cout << "Uppercase\t" << str << "\n";
 
   for (int j = 0; j < 3; j++) {
     char ch[80];
@@ -43,7 +43,7 @@ int main() {
       if (ch[j] != ' ')
         count++;
     }
-    cout << "- number of letters: " << count << endl;
+    cout << "- number of letters: " << count << "\n";
   }
 
   return 0;

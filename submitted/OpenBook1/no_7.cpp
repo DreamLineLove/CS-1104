@@ -8,7 +8,7 @@ int main() {
     cin >> pw;
   }
 
-  cout << "\n\tCorrect password!" << endl;
+  cout << "\n\tCorrect password!" << "\n";
 
   return 0;
 }

@@ -45,13 +45,13 @@ int main() {
   };
 
   for (int i = 0; i < 3; i++) {
-    cout << "\t" << arr[i].name << " Menu" << endl;
+    cout << "\t" << arr[i].name << " Menu" << "\n";
     cout << "\t"
-         << "-----------------" << endl;
+         << "-----------------" << "\n";
     for (int j = 0; j < 2; j++) {
-      cout << j + 1 << ".\t" << arr[i].menu[j] << endl;
+      cout << j + 1 << ".\t" << arr[i].menu[j] << "\n";
     }
-    cout << endl;
+    cout << "\n";
   }
 
   return 0;

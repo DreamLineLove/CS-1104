@@ -12,7 +12,7 @@ int main() {
     }
   }
 
-  cout << "The minimum number is: " << min << endl;
+  cout << "The minimum number is: " << min << "\n";
 
   return 0;
 }

@@ -12,7 +12,7 @@ int main() {
     }
   }
 
-  cout << "The maximum number is: " << max << endl;
+  cout << "The maximum number is: " << max << "\n";
 
   return 0;
 }

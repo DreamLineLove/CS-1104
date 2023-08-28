@@ -31,7 +31,7 @@ int main() {
 
   selection_sort(n, arr, order);
   cout << "\n\tStudent " << order[n - 1]
-       << " got the highest mark: " << arr[n - 1] << endl;
+       << " got the highest mark: " << arr[n - 1] << "\n";
 
   return 0;
 }

@@ -10,21 +10,21 @@ const float yuanRate = 500;
 const float yenRate = 20;
 
 int main() {
-  cout << "\tCURRENCY EXCHANGE" << endl;
-  cout << "\n-\tType in 0 to quit" << endl;
+  cout << "\tCURRENCY EXCHANGE" << "\n";
+  cout << "\n-\tType in 0 to quit" << "\n";
 
   float value;
   while (value != 0) {
     cout << "\n- Value: ";
     cin >> value;
     if (value != 0) {
-      cout << "= " << dollar(value) << " USD" << endl;
-      cout << "= " << yuan(value) << " Yuan" << endl;
-      cout << "= " << yen(value) << " Yen" << endl;
+      cout << "= " << dollar(value) << " USD" << "\n";
+      cout << "= " << yuan(value) << " Yuan" << "\n";
+      cout << "= " << yen(value) << " Yen" << "\n";
     }
   }
 
-  cout << "\n-\tProgram exited!" << endl;
+  cout << "\n-\tProgram exited!" << "\n";
 
   return 0;
 }

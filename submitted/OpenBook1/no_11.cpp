@@ -12,7 +12,7 @@ int main() {
 
   cout << "\n\tMultiplication Table\n";
   for (int i = a; i <= z; i++) {
-    cout << n << " * " << i << " = " << n * i << endl;
+    cout << n << " * " << i << " = " << n * i << "\n";
   }
 
   return 0;

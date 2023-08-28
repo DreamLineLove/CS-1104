@@ -18,11 +18,11 @@ int main() {
   cout << "\n\tMatches\n";
   for (int i = 0; i < 5; i++) {
     if (!strcmp(arr[i][1], address)) {
-      cout << setw(15) << arr[i][0] << setw(10) << arr[i][1] << endl;
+      cout << setw(15) << arr[i][0] << setw(10) << arr[i][1] << "\n";
       count++;
     }
   }
-  cout << "\nCount: " << count << endl;
+  cout << "\nCount: " << count << "\n";
 
   return 0;
 }
