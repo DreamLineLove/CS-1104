@@ -14,7 +14,7 @@ int main() {
   cout << "Original array is:\n";
   for (t = 0; t < size; t++)
     cout << nums[t] << " ";
-  cout << endl;
+  cout << "\n";
 
   for (a = 1; a < size; a++) {
     for (b = size - 1; b >= a; b--) {
@@ -29,7 +29,7 @@ int main() {
   cout << "\nSorted array is:\n";
   for (t = 0; t < size; t++)
     cout << nums[t] << " ";
-  cout << endl;
+  cout << "\n";
 
   return 0;
 }

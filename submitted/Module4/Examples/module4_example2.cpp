@@ -10,7 +10,7 @@ int main() {
       nums[t][i] = (t * 4) + i + 1;
       cout << setw(5) << nums[t][i];
     }
-    cout << endl;
+    cout << "\n";
   }
 
   return 0;

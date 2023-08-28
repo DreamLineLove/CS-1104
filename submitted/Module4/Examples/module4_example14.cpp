@@ -8,7 +8,7 @@ int main() {
   int len;
   char t;
 
-  cout << "Original: " << str << endl;
+  cout << "Original: " << str << "\n";
 
   len = strlen(str);
 
@@ -24,7 +24,7 @@ int main() {
     end--;
   }
 
-  cout << "Reversed: " << str << endl;
+  cout << "Reversed: " << str << "\n";
 
   return 0;
 }

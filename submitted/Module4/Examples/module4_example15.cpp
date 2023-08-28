@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  cout << "\tMultiple Indirection" << endl << endl;
+  cout << "\tMultiple Indirection" << "\n" << "\n";
   int x, *p, **q;
 
   x = 10;
@@ -11,11 +11,11 @@ int main() {
 
   q = &p;
 
-  cout << " q: " << q << endl;
-  cout << " *q: " << *q << endl;
-  cout << " p: " << p << endl;
-  cout << " *p: " << *p << endl;
-  cout << " **q: " << **q << endl;
+  cout << " q: " << q << "\n";
+  cout << " *q: " << *q << "\n";
+  cout << " p: " << p << "\n";
+  cout << " *p: " << *p << "\n";
+  cout << " **q: " << **q << "\n";
 
   return 0;
 }

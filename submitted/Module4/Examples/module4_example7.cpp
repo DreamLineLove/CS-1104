@@ -8,11 +8,11 @@ int main() {
   int i;
 
   strcpy(str, "this is a test!");
-  cout << str << endl;
+  cout << str << "\n";
 
   for (i = 0; str[i]; i++)
     str[i] = toupper(str[i]);
-  cout << "\n" << str << endl;
+  cout << "\n" << str << "\n";
 
   return 0;
 }

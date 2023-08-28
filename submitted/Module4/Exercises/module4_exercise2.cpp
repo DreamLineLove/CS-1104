@@ -11,7 +11,7 @@ int main() {
       loop[i][j] = base[i] + (2 * j);
       cout << loop[i][j] << ", ";
     }
-    cout << endl;
+    cout << "\n";
   }
 
   return 0;

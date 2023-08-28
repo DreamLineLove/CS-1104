@@ -8,7 +8,7 @@ int main() {
   int i;
   char str[80] = "This Is A Test";
 
-  cout << "Original string: " << str << endl;
+  cout << "Original string: " << str << "\n";
 
   p = str;
 
@@ -20,7 +20,7 @@ int main() {
     }
   }
 
-  cout << "Inverted-case string: " << str << endl;
+  cout << "Inverted-case string: " << str << "\n";
 
   return 0;
 }

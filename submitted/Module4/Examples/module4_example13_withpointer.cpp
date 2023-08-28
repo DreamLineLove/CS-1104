@@ -6,10 +6,10 @@ void invertCase(char *p);
 int main() {
   char str[] = "Try Inverting This String";
   char *p = str;
-  cout << "Original string: " << str << endl;
+  cout << "Original string: " << str << "\n";
 
   invertCase(p);
-  cout << "Original string: " << str << endl;
+  cout << "Original string: " << str << "\n";
 
   return 0;
 }

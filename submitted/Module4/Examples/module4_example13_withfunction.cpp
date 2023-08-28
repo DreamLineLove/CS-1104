@@ -8,10 +8,10 @@ void invertCase(char *c, int size);
 int main() {
   char str[] = "Try Inverting This String";
   int size = strlen(str);
-  cout << "Original string: " << str << endl;
+  cout << "Original string: " << str << "\n";
 
   invertCase(str, size);
-  cout << "Original string: " << str << endl;
+  cout << "Original string: " << str << "\n";
 
   return 0;
 }

@@ -16,13 +16,13 @@ int main() {
 
   for (i = 0; i < 10; i += 2) {
     if (!strcmp(str, phone_numbers[i])) {
-      cout << "Number is " << phone_numbers[i + 1] << endl;
+      cout << "Number is " << phone_numbers[i + 1] << "\n";
       break;
     }
   }
 
   if (i == 10)
-    cout << "Not found." << endl;
+    cout << "Not found." << "\n";
 
   return 0;
 }

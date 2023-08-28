@@ -8,9 +8,9 @@ int main() {
   total = 3300;
   ptr = &total;
   val = *ptr;
-  cout << "Total is: " << val << endl;
+  cout << "Total is: " << val << "\n";
   *ptr = 4000;
-  cout << "New Total is: " << total << endl;
+  cout << "New Total is: " << total << "\n";
 
   return 0;
 }

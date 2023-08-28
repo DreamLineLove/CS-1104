@@ -9,7 +9,7 @@ int main() {
     multi[i] = 9 * i;
 
   for (i = 2; i < 25; i++)
-    cout << "9 x " << i << " = " << multi[i] << endl;
+    cout << "9 x " << i << " = " << multi[i] << "\n";
 
   return 0;
 }
