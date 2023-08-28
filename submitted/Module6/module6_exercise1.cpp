@@ -5,10 +5,10 @@ void swap(int &x, int &y);
 
 int main() {
   int i = 6, y = 9;
-  cout << i << ' ' << y << endl;
+  cout << i << ' ' << y << "\n";
 
   swap(i, y);
-  cout << i << ' ' << y << endl;
+  cout << i << ' ' << y << "\n";
 
   return 0;
 }

@@ -10,12 +10,12 @@ int main() {
   j = 20;
 
   cout << "Initial values of i and j: ";
-  cout << i << ' ' << j << endl;
+  cout << i << ' ' << j << "\n";
 
   swap(&j, &i);
 
   cout << "Swapped values of i and j: ";
-  cout << i << ' ' << j << endl;
+  cout << i << ' ' << j << "\n";
 
   return 0;
 }
