@@ -11,7 +11,7 @@ int main() {
   regex pattern("Myanmar");
 
   string new_str = regex_replace(str, pattern, "Burma");
-  cout << new_str << endl;
+  cout << new_str << "\n";
 
   return 0;
 }

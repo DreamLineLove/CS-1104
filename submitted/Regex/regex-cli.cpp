@@ -19,13 +19,13 @@ void multi_matching(regex pattern, string str, bool from_file, ifstream &file);
 
 int main(int argc, char *argv[]) {
   if (argc < 4) {
-    cout << "!\t3 command line arguments required!" << endl;
+    cout << "!\t3 command line arguments required!" << "\n";
     printHelp(argv[0]);
     return 0;
   }
 
   if (argc > 4) {
-    cout << "!\tOnly 3 command line argument accepted!" << endl;
+    cout << "!\tOnly 3 command line argument accepted!" << "\n";
     printHelp(argv[0]);
     return 0;
   }
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
   bool from_file = false;
   Options chosen = option(argv[1], argv[2], argv[3], &is_icase, &from_file);
   if (chosen == none) {
-    cout << "!\tPlease choose an existing option!" << endl;
+    cout << "!\tPlease choose an existing option!" << "\n";
     printHelp(argv[0]);
     return 0;
   }
@@ -126,83 +126,83 @@ Options option(string arg1, string arg2, string arg3, bool *is_icase,
 }
 
 void printHelp(string program) {
-  cout << endl;
+  cout << "\n";
   cout
       << "#\tThe pattern is"
       << "\n\t\t./program_name matching_option case_insensitive input_from_file"
-      << endl;
+      << "\n";
   cout << "\n#\tThe case does not actually matter so long as the option is "
           "spelled correctly"
-       << endl;
-  cout << "\n1. Matching-Options" << endl;
-  cout << "\twhole" << setw(40) << "implements regex_match" << endl;
-  cout << "\tonce" << setw(42) << "implements regex_search" << endl;
+       << "\n";
+  cout << "\n1. Matching-Options" << "\n";
+  cout << "\twhole" << setw(40) << "implements regex_match" << "\n";
+  cout << "\tonce" << setw(42) << "implements regex_search" << "\n";
   cout << "\tmulti (multiple)" << setw(33) << "implements sregex_iterator"
-       << endl;
-  cout << "\n2. Case_insensitivity" << endl;
-  cout << "\ty" << setw(52) << "uses case-insensitive matching" << endl;
-  cout << "\tn" << setw(60) << "does not use case-insensitive matching" << endl;
-  cout << "\n3. Input From File?" << endl;
-  cout << "\ty" << setw(51) << "later you specify a filename " << endl;
-  cout << "\tn" << setw(50) << "later you type in the string" << endl;
-  cout << "\nEXAMPLES" << endl;
-  cout << "\t\t" << program << " whole ab?c{2} y n" << endl;
-  cout << "\t\t" << program << " once ab?c{2} y n" << endl;
-  cout << "\t\t" << program << " mULti ab?c{2} n y" << endl;
-  cout << "\t\t" << program << " multiPLE ab?c{2} y y" << endl;
+       << "\n";
+  cout << "\n2. Case_insensitivity" << "\n";
+  cout << "\ty" << setw(52) << "uses case-insensitive matching" << "\n";
+  cout << "\tn" << setw(60) << "does not use case-insensitive matching" << "\n";
+  cout << "\n3. Input From File?" << "\n";
+  cout << "\ty" << setw(51) << "later you specify a filename " << "\n";
+  cout << "\tn" << setw(50) << "later you type in the string" << "\n";
+  cout << "\nEXAMPLES" << "\n";
+  cout << "\t\t" << program << " whole ab?c{2} y n" << "\n";
+  cout << "\t\t" << program << " once ab?c{2} y n" << "\n";
+  cout << "\t\t" << program << " mULti ab?c{2} n y" << "\n";
+  cout << "\t\t" << program << " multiPLE ab?c{2} y y" << "\n";
 }
 
 void whole_matching(regex pattern, string str, bool from_file, ifstream &file) {
-  cout << "\n\n\tRESULT" << endl;
-  cout << "\t-------" << endl;
-  cout << endl;
+  cout << "\n\n\tRESULT" << "\n";
+  cout << "\t-------" << "\n";
+  cout << "\n";
   if (from_file != true) {
     if (regex_match(str, pattern)) {
-      cout << "#\tMatch found!" << endl;
+      cout << "#\tMatch found!" << "\n";
     } else {
-      cout << "#\tNo match was found!" << endl;
+      cout << "#\tNo match was found!" << "\n";
     }
   } else {
     string line;
     int n = 0, count = 0;
     while (getline(file, line)) {
       if (regex_match(line, pattern)) {
-        cout << "line" << n << "  (yes) \t\t" << line << endl;
+        cout << "line" << n << "  (yes) \t\t" << line << "\n";
         count++;
       } else {
-        cout << "line" << n << "  (no)  \t\t" << line << endl;
+        cout << "line" << n << "  (no)  \t\t" << line << "\n";
       }
       n++;
     }
     cout << "\n\t"
-         << "lines matched: " << count << endl;
+         << "lines matched: " << count << "\n";
   }
 }
 
 void once_matching(regex pattern, string str, bool from_file, ifstream &file) {
-  cout << "\n\n\tRESULT" << endl;
-  cout << "\t-------" << endl;
-  cout << endl;
+  cout << "\n\n\tRESULT" << "\n";
+  cout << "\t-------" << "\n";
+  cout << "\n";
   if (from_file != true) {
     if (regex_search(str, pattern)) {
-      cout << "#\tMatch found in given string!" << endl;
+      cout << "#\tMatch found in given string!" << "\n";
     } else {
-      cout << "#\tNo match was found in given string!" << endl;
+      cout << "#\tNo match was found in given string!" << "\n";
     }
   } else {
     string line;
     int n = 0, count = 0;
     while (getline(file, line)) {
       if (regex_search(line, pattern)) {
-        cout << "line" << n << "  (yes) \t\t" << line << endl;
+        cout << "line" << n << "  (yes) \t\t" << line << "\n";
         count++;
       } else {
-        cout << "line" << n << "  (no)  \t\t" << line << endl;
+        cout << "line" << n << "  (no)  \t\t" << line << "\n";
       }
       n++;
     }
     cout << "\n\t"
-         << "matches found in " << count << " lines" << endl;
+         << "matches found in " << count << " lines" << "\n";
   }
 }
 
@@ -217,9 +217,9 @@ void multi_matching(regex pattern, string str, bool from_file, ifstream &file) {
     }
   }
 
-  cout << "\n\n\tRESULT" << endl;
-  cout << "\t-------" << endl;
-  cout << endl;
+  cout << "\n\n\tRESULT" << "\n";
+  cout << "\t-------" << "\n";
+  cout << "\n";
 
   if (from_file != false) {
     string line;
@@ -237,10 +237,10 @@ void multi_matching(regex pattern, string str, bool from_file, ifstream &file) {
         itr++;
       }
 
-      cout << inner << ") \t\t" << line << endl;
+      cout << inner << ") \t\t" << line << "\n";
       n++;
     }
   }
 
-  cout << "\n#\t" << count << " matches found in given string!" << endl;
+  cout << "\n#\t" << count << " matches found in given string!" << "\n";
 }

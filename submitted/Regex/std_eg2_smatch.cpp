@@ -12,9 +12,9 @@ int main() {
   smatch match;
 
   if (regex_search(str, match, pattern)) {
-    cout << match.str() << " found at position: " << match.position() << endl;
+    cout << match.str() << " found at position: " << match.position() << "\n";
   } else {
-    cout << "no match" << endl;
+    cout << "no match" << "\n";
   }
 
   return 0;

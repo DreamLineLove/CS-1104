@@ -9,12 +9,12 @@ int main() {
   std::smatch matches;
   if (std::regex_search(text, matches, pattern)) {
     // Accessing the entire matched substring
-    std::cout << "Matched: " << matches.str() << std::endl;
+    std::cout << "Matched: " << matches.str() << std::"\n";
 
     // Iterating over capturing groups (individual words)
     for (const auto &match : matches) {
       // Getting the matched word (capturing group)
-      std::cout << "Captured: " << match << std::endl;
+      std::cout << "Captured: " << match << std::"\n";
     }
   }
 

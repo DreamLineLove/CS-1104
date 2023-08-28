@@ -15,14 +15,14 @@ int main() {
   cout << "Enter name of the file: ";
   cin >> name;
 
-  cout << endl;
+  cout << "\n";
 
   string line;
   ifstream file(name);
 
   int n = 0, count = 0;
   while (getline(file, line)) {
-    cout << n << ":\t" << line << endl;
+    cout << n << ":\t" << line << "\n";
 
     sregex_iterator itr(line.begin(), line.end(), pattern);
     sregex_iterator end;
@@ -37,8 +37,8 @@ int main() {
 
   file.close();
 
-  cout << endl;
-  cout << "There are " << count << " matches." << endl;
+  cout << "\n";
+  cout << "There are " << count << " matches." << "\n";
 
   return 0;
 }

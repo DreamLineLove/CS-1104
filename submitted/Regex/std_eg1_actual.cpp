@@ -11,9 +11,9 @@ int main() {
   regex pattern("College");
 
   if (regex_match(str, pattern)) {
-    cout << "match" << endl;
+    cout << "match" << "\n";
   } else {
-    cout << "no match" << endl;
+    cout << "no match" << "\n";
   }
 
   return 0;

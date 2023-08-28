@@ -13,12 +13,12 @@ int main() {
   string str5 = "09";
   string str6 = "9";
 
-  cout << regex_match(str1, pattern) << endl;
-  cout << regex_match(str2, pattern) << endl;
-  cout << regex_match(str3, pattern) << endl;
-  cout << regex_match(str4, pattern) << endl;
-  cout << regex_match(str5, pattern) << endl;
-  cout << regex_match(str6, pattern) << endl;
+  cout << regex_match(str1, pattern) << "\n";
+  cout << regex_match(str2, pattern) << "\n";
+  cout << regex_match(str3, pattern) << "\n";
+  cout << regex_match(str4, pattern) << "\n";
+  cout << regex_match(str5, pattern) << "\n";
+  cout << regex_match(str6, pattern) << "\n";
 
   another();
 
@@ -26,7 +26,7 @@ int main() {
 }
 
 void another() {
-  cout << endl;
+  cout << "\n";
   regex pattern(
       "((0[1-9]|[1-9])|1[0-9]|2[0-9])/((0[1-9]|[1-9])|1[0-2])/(\\d{4})");
   string str1 = "05/11/2004";
@@ -34,9 +34,9 @@ void another() {
   string str3 = "17/11/2004";
   string str4 = "28/11/2345";
   string str5 = "32/11/2344";
-  cout << regex_match(str1, pattern) << endl;
-  cout << regex_match(str2, pattern) << endl;
-  cout << regex_match(str3, pattern) << endl;
-  cout << regex_match(str4, pattern) << endl;
-  cout << regex_match(str5, pattern) << endl;
+  cout << regex_match(str1, pattern) << "\n";
+  cout << regex_match(str2, pattern) << "\n";
+  cout << regex_match(str3, pattern) << "\n";
+  cout << regex_match(str4, pattern) << "\n";
+  cout << regex_match(str5, pattern) << "\n";
 }

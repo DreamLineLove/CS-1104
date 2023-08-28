@@ -8,9 +8,9 @@ void whole_matching(ifstream &file, regex pattern) {
   string line;
   while (getline(file, line)) {
     if (regex_search(line, pattern)) {
-      cout << "yes\t" << line << endl;
+      cout << "yes\t" << line << "\n";
     } else {
-      cout << "no\t" << line << endl;
+      cout << "no\t" << line << "\n";
     }
   }
 }
