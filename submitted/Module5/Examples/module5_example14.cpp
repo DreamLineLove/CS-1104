@@ -8,13 +8,13 @@ int main() {
   int *p;
 
   i = 10;
-  cout << i << endl;
+  cout << i << "\n";
 
   p = &i;
 
   f(p);
 
-  cout << i << endl;
+  cout << i << "\n";
 
   return 0;
 }

@@ -21,7 +21,7 @@ int main() {
 
 void func1() {
   cout << "count: " << count;
-  cout << endl;
+  cout << "\n";
   func2();
 }
 

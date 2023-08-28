@@ -12,7 +12,7 @@ int main() {
   // Error! Type mismatch1
   // sqr_it(x);
   sqr_it(y);
-  cout << x << endl;
+  cout << x << "\n";
 
   return 0;
 }

@@ -10,7 +10,7 @@ int main() {
 
   substr = get_substr(str1, str2);
 
-  cout << "substring found: " << substr << endl;
+  cout << "substring found: " << substr << "\n";
 
   return 0;
 }

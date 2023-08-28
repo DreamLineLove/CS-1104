@@ -9,10 +9,10 @@ int main() {
   char str[80];
 
   strcpy(str, "This Is A Test");
-  cout << str << endl;
+  cout << str << "\n";
 
   strInvertCase(str);
-  cout << str << endl;
+  cout << str << "\n";
 
   return 0;
 }

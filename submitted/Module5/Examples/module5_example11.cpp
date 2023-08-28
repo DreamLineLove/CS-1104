@@ -10,7 +10,7 @@ int main() {
   int b;
   cin >> b;
 
-  cout << "Product of two numbers: " << a * b << endl;
+  cout << "Product of two numbers: " << a * b << "\n";
 
   return 0;
 }

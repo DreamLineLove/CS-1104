@@ -12,7 +12,7 @@ int main() {
 }
 
 void f(int *num) {
-  cout << *num << endl;
+  cout << *num << "\n";
 
   *num = *num + 1;
 }

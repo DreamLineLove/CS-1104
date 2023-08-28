@@ -5,7 +5,7 @@ int main(int argc, char *argv[]) {
   double a, b;
 
   if (argc != 3) {
-    cout << "Usage: add num num" << endl;
+    cout << "Usage: add num num" << "\n";
     return 1;
   }
 

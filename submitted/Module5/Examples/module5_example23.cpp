@@ -6,10 +6,10 @@ int fact(int n);
 
 int main() {
   cout << "4 factorial is " << factr(4);
-  cout << endl;
+  cout << "\n";
 
   cout << "4 factorial is " << fact(4);
-  cout << endl;
+  cout << "\n";
 
   return 0;
 }

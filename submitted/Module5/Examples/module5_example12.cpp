@@ -11,10 +11,10 @@ int main() {
     int i;
 
     i = j / 2;
-    cout << "inner i: " << i << endl;
+    cout << "inner i: " << i << "\n";
   }
 
-  cout << "outer i: " << i << endl;
+  cout << "outer i: " << i << "\n";
 
   return 0;
 }

@@ -17,5 +17,5 @@ void f1() {
   // This val is local to f1()
   int val = 88;
 
-  cout << "val is f1(): " << val << endl;
+  cout << "val is f1(): " << val << "\n";
 }

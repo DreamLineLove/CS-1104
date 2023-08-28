@@ -13,7 +13,7 @@ int main() {
 void f() {
   int num = 99;
 
-  cout << num << endl;
+  cout << num << "\n";
 
   num++;
 }

@@ -12,14 +12,14 @@ int main() {
   cout << "Original contents: ";
   for (i = 0; i < 10; i++)
     cout << nums[i] << ' ';
-  cout << endl;
+  cout << "\n";
 
   cube(nums, 10);
 
   cout << "Altered contents: ";
   for (i = 0; i < 10; i++)
     cout << nums[i] << ' ';
-  cout << endl;
+  cout << "\n";
 
   return 0;
 }

@@ -7,7 +7,7 @@ int main() {
   if (x == 19) {
     int y = 20;
 
-    cout << "x + y is " << x + y << endl;
+    cout << "x + y is " << x + y << "\n";
   }
 
   // Error! y not known here (out of its scope)
