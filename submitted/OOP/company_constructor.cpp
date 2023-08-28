@@ -11,10 +11,10 @@ class Company {
 			address = addr;
 			telephone_number = num;
 			
-			cout << "\tCompany Details" << endl << endl;
-			cout << " Name of company: \t" << company_name << " company limited" << endl;
-			cout << " Address: \t\t" << address << "." << endl;
-			cout << " Telephone number: \t0" << telephone_number << endl;
+			cout << "\tCompany Details" << "\n" << "\n";
+			cout << " Name of company: \t" << company_name << " company limited" << "\n";
+			cout << " Address: \t\t" << address << "." << "\n";
+			cout << " Telephone number: \t0" << telephone_number << "\n";
 		}
 		void make_transactions() {
 			cout << "\n Transaction completed!";

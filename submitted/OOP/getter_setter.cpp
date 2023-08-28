@@ -18,7 +18,7 @@ class Employee {
 int main() {
 	Employee Znz;
 	Znz.setSalary(445000);
-	cout << "Salary: $" << Znz.getSalary() << endl;
+	cout << "Salary: $" << Znz.getSalary() << "\n";
 	
 	return 0;
 }

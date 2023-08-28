@@ -8,7 +8,7 @@ class MyClass {
 
 void MyClass::myMethod(int count) {
 	for (int i = 0; i < count; i++) {
-		cout << "Hello World!" << endl;
+		cout << "Hello World!" << "\n";
 	}
 }
 

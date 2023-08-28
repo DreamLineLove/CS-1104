@@ -30,8 +30,8 @@ int main() {
 	CS_Student cs;
 	IC_Student ic;
 	
-	cout << cs.Practical() << endl;
-	cout << ic.Practical() << endl;
+	cout << cs.Practical() << "\n";
+	cout << ic.Practical() << "\n";
 	
 	return 0;
 }

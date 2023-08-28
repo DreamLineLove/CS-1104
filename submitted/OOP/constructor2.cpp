@@ -17,8 +17,8 @@ int main() {
 	Car BMW("BMW", "X5", 1999);
 	Car Ford("Ford", "Mustang", 1969);
 	
-	cout << BMW.brand << " " << BMW.model << " " << BMW.year << endl;
-	cout << Ford.brand << " " << Ford.model << " " << Ford.year << endl;
+	cout << BMW.brand << " " << BMW.model << " " << BMW.year << "\n";
+	cout << Ford.brand << " " << Ford.model << " " << Ford.year << "\n";
 	 
 	return 0;
 }

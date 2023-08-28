@@ -4,21 +4,21 @@ using namespace std;
 class Father {
 	public:
 		void printFather() {
-			cout << "I have a father" << endl;
+			cout << "I have a father" << "\n";
 		}
 };
 
 class Mother {
 	public:
 		void printMother() {
-			cout << "I have a mother" << endl;
+			cout << "I have a mother" << "\n";
 		}
 };
 
 class Person: public Father, public Mother {
 	public: 
 		Person() {
-			cout << "I am a person" << endl;
+			cout << "I am a person" << "\n";
 		}
 };
 

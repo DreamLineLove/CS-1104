@@ -17,7 +17,7 @@ class Car: public Vehicle {
 int main() {
 	Car myCar;
 	myCar.honk();
-	cout << myCar.brand + " " + myCar.model << endl;
+	cout << myCar.brand + " " + myCar.model << "\n";
 	
 	return 0;
 }

@@ -8,7 +8,7 @@ public:
   string grade_specifier[6];
   float total = 0;
   string name;
-  Student() { cout << "\tstudent object constructed..." << endl; }
+  Student() { cout << "\tstudent object constructed..." << "\n"; }
   void gather_information() {
     cout << "\nWhat is the first name of the student? ";
     cin >> name;
@@ -28,12 +28,12 @@ public:
     if (student_failed()) {
       cout << "\n\tSTUDENT FAILED";
     } else {
-      cout << "\n\n\tGRADE SPECIFIERS" << endl;
-      cout << "\t----------------" << endl;
+      cout << "\n\n\tGRADE SPECIFIERS" << "\n";
+      cout << "\t----------------" << "\n";
       for (int i = 0; i < 6; i++) {
-        // cout << "\t- " << subjects[i] << "\t" << grade_specifier[i] << endl;
+        // cout << "\t- " << subjects[i] << "\t" << grade_specifier[i] << "\n";
         cout << "\t- " << grade_specifier[i];
-        cout << "\t" << subjects[i] << endl;
+        cout << "\t" << subjects[i] << "\n";
       }
     }
   }
@@ -64,7 +64,7 @@ int main() {
   znz.gather_information();
   znz.calculate_grade_specifier();
   znz.print_average();
-  cout << endl;
+  cout << "\n";
 
   return 0;
 }

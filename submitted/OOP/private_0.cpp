@@ -4,7 +4,7 @@ using namespace std;
 class Custom {
 public:
   Custom() {
-    cout << "Custom object constructed" << endl;
+    cout << "Custom object constructed" << "\n";
     constructed = true;
   }
   bool constructed = false;
@@ -21,15 +21,15 @@ private:
 int main() {
   Custom mein;
   if (mein.constructed == 1)
-    cout << "constructed: true" << endl;
-  cout << "\n(original) strState: " << mein.getStr() << endl;
+    cout << "constructed: true" << "\n";
+  cout << "\n(original) strState: " << mein.getStr() << "\n";
   // Expected 0 instead
-  cout << "(original) intState: " << mein.getInt() << endl;
+  cout << "(original) intState: " << mein.getInt() << "\n";
 
   mein.setStr("Now it is something");
-  cout << "\n(modified) strState: " << mein.getStr() << endl;
+  cout << "\n(modified) strState: " << mein.getStr() << "\n";
   mein.setInt(999);
-  cout << "(modified) intState: " << mein.getInt() << endl;
+  cout << "(modified) intState: " << mein.getInt() << "\n";
 
   return 0;
 }

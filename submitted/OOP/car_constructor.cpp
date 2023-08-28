@@ -11,7 +11,7 @@ class Car {
 			brand = name;
 			model = mod;
 			
-			cout << year << " " << brand << " " << model << endl;
+			cout << year << " " << brand << " " << model << "\n";
 		}
 };
 

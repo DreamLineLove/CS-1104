@@ -5,7 +5,7 @@ class Alphabet {
 	public: 
 		string description = "Alphabet is the world's largest software holding company.";
 		void greet() {
-			cout << description << endl;
+			cout << description << "\n";
 		}
 };
 
@@ -13,7 +13,7 @@ class Google: public Alphabet {
 	public:
 		string greeting = "My name is Google. I am a subsidiary owned by Alphabet.";
 		void greet() {
-			cout << greeting << endl;
+			cout << greeting << "\n";
 		}
 };
 
@@ -21,7 +21,7 @@ class Gmail: public Alphabet {
 	public: 
 		string what = "Hi I am Gmail! People use me to write emails every day.";
 		void describe() {
-			cout << what << endl;
+			cout << what << "\n";
 		}
 };
 
@@ -30,7 +30,7 @@ int main() {
 	Google googl;
 	Gmail gmail;
 	
-	cout << googl.description << endl;
+	cout << googl.description << "\n";
 	googl.greet();
 	gmail.describe();
 	

@@ -12,8 +12,8 @@ int main() {
 	toyota.year = 2004;
 	toyota.manufacturer = "Toyota";
 	
-	cout << toyota.year << endl;
-	cout << toyota.manufacturer << endl;
+	cout << toyota.year << "\n";
+	cout << toyota.manufacturer << "\n";
 	
 	return 0;
 }

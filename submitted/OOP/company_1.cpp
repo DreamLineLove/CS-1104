@@ -17,10 +17,10 @@ int main() {
 	ZnzLtd.address = "Kyun Taw Road, Time City Office, Tower A";
 	ZnzLtd.telephone_number = 94447065;
 	
-	cout << "\tCompany Details" << endl << endl;
-	cout << " Name of company: \t" << ZnzLtd.company_name << " company limited" << endl;
-	cout << " Address: \t\t" << ZnzLtd.address << "." << endl;
-	cout << " Telephone number: \t0" << ZnzLtd.telephone_number << endl;
+	cout << "\tCompany Details" << "\n" << "\n";
+	cout << " Name of company: \t" << ZnzLtd.company_name << " company limited" << "\n";
+	cout << " Address: \t\t" << ZnzLtd.address << "." << "\n";
+	cout << " Telephone number: \t0" << ZnzLtd.telephone_number << "\n";
 	ZnzLtd.make_transactions();
 	
 	return 0;

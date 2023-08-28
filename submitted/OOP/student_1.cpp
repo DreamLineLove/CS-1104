@@ -12,7 +12,7 @@ class Student {
 		string name;
 		float total = 0;
 		Student() {
-			cout << "\tStudent object constructed..." << endl << endl;
+			cout << "\tStudent object constructed..." << "\n" << "\n";
 		}
 		void setName(string Name) {
 			name = Name;
@@ -47,7 +47,7 @@ class Student {
 			total = Myan + Eng + AM + Math + CS1103 + CS1104;
 		}
 		void print_total() {
-			cout << "Total: " << total << endl;
+			cout << "Total: " << total << "\n";
 		}
 //		int calculate_grade_point(int raw_mark) {
 //			if (raw_mark < 50) {
@@ -61,14 +61,14 @@ class Student {
 //			}
 //		}
 //		void calculate_gpa_and_list() {
-//			cout << endl;
-//			cout << "\tSubject\t\t" << "Grade Point" << endl; 
-//			cout << " \t Myanmar\t     " << calculate_grade_point(Myan) << endl;
-//			cout << " \t English\t     " << calculate_grade_point(Eng) << endl;
-//			cout << " \t AM\t\t     " << calculate_grade_point(AM) << endl;
-//			cout << " \t Math\t\t     " << calculate_grade_point(Math) << endl;
-//			cout << " \t CS-1103\t     " << calculate_grade_point(CS1103) << endl;
-//			cout << " \t CS-1104\t     " << calculate_grade_point(CS1104) << endl;
+//			cout << "\n";
+//			cout << "\tSubject\t\t" << "Grade Point" << "\n"; 
+//			cout << " \t Myanmar\t     " << calculate_grade_point(Myan) << "\n";
+//			cout << " \t English\t     " << calculate_grade_point(Eng) << "\n";
+//			cout << " \t AM\t\t     " << calculate_grade_point(AM) << "\n";
+//			cout << " \t Math\t\t     " << calculate_grade_point(Math) << "\n";
+//			cout << " \t CS-1103\t     " << calculate_grade_point(CS1103) << "\n";
+//			cout << " \t CS-1104\t     " << calculate_grade_point(CS1104) << "\n";
 //			
 //			cout << "\t\t\tGPA: " << (total / 600) * 6;
 //		}

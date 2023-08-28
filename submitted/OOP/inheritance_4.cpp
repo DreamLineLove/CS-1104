@@ -24,8 +24,8 @@ int main() {
 	Programmer zaw_zaw;
 	zaw_zaw.setSalary(75000);
 	zaw_zaw.bonus = 25000;
-	cout << "Salary: " << zaw_zaw.Salary() << endl;
-	cout << "Bonus: " << zaw_zaw.bonus << endl;
-	cout << "Salary: " << zaw_zaw.Total() << endl;
+	cout << "Salary: " << zaw_zaw.Salary() << "\n";
+	cout << "Bonus: " << zaw_zaw.bonus << "\n";
+	cout << "Salary: " << zaw_zaw.Total() << "\n";
 	return 0;
 }
