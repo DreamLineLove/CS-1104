@@ -15,15 +15,15 @@ int main() {
     for (int j = 0; j < 2; j++) {
       cout << "\t";
       cout << base_numbers[0][i] << " * " << multipliers[0][j] << " = "
-           << base_numbers[0][i] * multipliers[0][j] << endl;
+           << base_numbers[0][i] * multipliers[0][j] << "\n";
     }
-    cout << "\t  ...." << endl;
+    cout << "\t  ...." << "\n";
     if (i == 1) {
       for (int z = 0; z < 2; z++) {
         cout << "\t";
         cout << base_numbers[1][z] << " * " << multipliers[1][1] << " = "
-             << base_numbers[1][z] * multipliers[1][1] << endl;
-        cout << "\t  ......" << endl;
+             << base_numbers[1][z] * multipliers[1][1] << "\n";
+        cout << "\t  ......" << "\n";
       }
     }
   }

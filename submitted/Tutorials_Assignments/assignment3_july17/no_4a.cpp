@@ -14,7 +14,7 @@ int main() {
   cout << "Give a number: ";
   cin >> num;
 
-  cout << "\nAnswer: " << factorial(num) << endl;
+  cout << "\nAnswer: " << factorial(num) << "\n";
 
   return 0;
 }

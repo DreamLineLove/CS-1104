@@ -16,7 +16,7 @@ int main() {
     for (j = 0; j < 4; j++) {
       display(nums[i][j]);
     }
-    cout << endl;
+    cout << "\n";
   }
   return 0;
 }

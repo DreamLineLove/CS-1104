@@ -29,9 +29,9 @@ int main() {
     }
   }
 
-  cout << "\n\nminimum number: " << arr[0] << endl;
-  cout << "average number: " << avg << endl;
-  cout << "maximum number: " << arr[4] << endl;
+  cout << "\n\nminimum number: " << arr[0] << "\n";
+  cout << "average number: " << avg << "\n";
+  cout << "maximum number: " << arr[4] << "\n";
 
   return 0;
 }

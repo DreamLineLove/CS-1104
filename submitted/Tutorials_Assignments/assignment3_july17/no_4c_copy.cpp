@@ -61,9 +61,9 @@ int main() {
     cout << arr[i] << " ";
   }
 
-  cout << "\n\nminimum number: " << minNum(arr, 5) << endl;
-  cout << "average number: " << avgNum(arr, 5) << endl;
-  cout << "maximum number: " << maxNum(arr, 5) << endl;
+  cout << "\n\nminimum number: " << minNum(arr, 5) << "\n";
+  cout << "average number: " << avgNum(arr, 5) << "\n";
+  cout << "maximum number: " << maxNum(arr, 5) << "\n";
 
   return 0;
 }

@@ -44,9 +44,9 @@ int main() {
   getMinMax(&min, &max, arr, 5);
   avg = avgNum(arr, 5);
 
-  cout << "\n\nminimum number: " << min << endl;
-  cout << "average number: " << avg << endl;
-  cout << "maximum number: " << max << endl;
+  cout << "\n\nminimum number: " << min << "\n";
+  cout << "average number: " << avg << "\n";
+  cout << "maximum number: " << max << "\n";
 
   return 0;
 }

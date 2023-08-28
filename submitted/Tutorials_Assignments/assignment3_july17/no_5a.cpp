@@ -10,7 +10,7 @@ int main() {
       arr[i][j] = pow(j, i);
       cout << arr[i][j] << "\t";
     }
-    cout << endl;
+    cout << "\n";
   }
 
   return 0;

@@ -7,9 +7,9 @@
 //   for (i = 2; i < 6; i++) {
 //     for (j = 1; j < 11; j++) {
 //       arr[i][j] = i * j;
-//       cout << i << " * " << j << " = " << arr[i][j] << endl;
+//       cout << i << " * " << j << " = " << arr[i][j] << "\n";
 //     }
-//     cout << endl;
+//     cout << "\n";
 //   }
 //
 //   return 0;
@@ -27,9 +27,9 @@ int main() {
 
     for (int j = 0; j < 10; j++) {
       multi[i][j] = numbers[i] * (j + 1);
-      cout << numbers[i] << " x " << (j + 1) << " = " << multi[i][j] << endl;
+      cout << numbers[i] << " x " << (j + 1) << " = " << multi[i][j] << "\n";
     }
-    cout << endl;
+    cout << "\n";
   }
 
   return 0;

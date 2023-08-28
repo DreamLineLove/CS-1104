@@ -18,8 +18,8 @@ int main() {
 
   float avg = sum / n;
 
-  cout << "Sum = " << sum << endl;
-  cout << "Average = " << avg << endl;
+  cout << "Sum = " << sum << "\n";
+  cout << "Average = " << avg << "\n";
 
   return 0;
 }

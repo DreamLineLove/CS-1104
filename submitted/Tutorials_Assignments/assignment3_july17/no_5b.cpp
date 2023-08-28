@@ -10,7 +10,7 @@ int main() {
   cin >> size;
 
   int arr[size];
-  cout << endl;
+  cout << "\n";
 
   while (i < size) {
     cout << "\t- Enter value for index " << i << ": ";
@@ -24,7 +24,7 @@ int main() {
   for (int j = 0; j < size; j++) {
     cout << " " << arr[j];
   }
-  cout << endl;
+  cout << "\n";
 
   return 0;
 }
