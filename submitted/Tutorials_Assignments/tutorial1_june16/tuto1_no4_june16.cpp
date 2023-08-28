@@ -31,6 +31,6 @@ int main() {
   for (int i = 0; i < len; i++) {
     cout << marks[i] << " ";
   }
-  cout << endl;
+  cout << "\n";
   return 0;
 }

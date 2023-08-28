@@ -18,16 +18,16 @@ int main() {
 
   ofstream writeFile;
   writeFile.open("studentsData.txt");
-  writeFile << "No." << setw(23) << "Names" << setw(8) << "Marks" << endl;
+  writeFile << "No." << setw(23) << "Names" << setw(8) << "Marks" << "\n";
   writeFile << "---" << setw(23) << "--------------------" << setw(8) << "-----"
-            << endl;
+            << "\n";
   int i;
   for (i = 0; i < 5; i++) {
     writeFile << i + 1 << ". " << setw(23) << names[i] << setw(5) << marks[i]
-              << endl;
+              << "\n";
   }
   if (i == 5) {
-    writeFile << "\n" << setw(26) << "Total:" << setw(6) << total << endl;
+    writeFile << "\n" << setw(26) << "Total:" << setw(6) << total << "\n";
   }
   writeFile.close();
 
@@ -35,12 +35,12 @@ int main() {
   readFile.open("studentsData.txt");
   string line;
   while (getline(readFile, line)) {
-    cout << line << endl;
+    cout << line << "\n";
   }
   readFile.close();
 
   string filePath = "/studentsData.txt";
-  cout << "\n\n- filepath: \"" << filePath << "\"" << endl;
+  cout << "\n\n- filepath: \"" << filePath << "\"" << "\n";
 
   return 0;
 }

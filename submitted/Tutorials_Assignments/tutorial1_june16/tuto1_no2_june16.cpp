@@ -12,7 +12,7 @@ int main() {
       arr[i][j] = nums[i] * pow(nums[i], j);
       cout << arr[i][j] << "\t";
     }
-    cout << endl;
+    cout << "\n";
   }
 
   return 0;

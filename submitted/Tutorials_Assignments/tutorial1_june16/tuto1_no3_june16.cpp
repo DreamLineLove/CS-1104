@@ -4,14 +4,14 @@ using namespace std;
 void printStatus(int index, int mark, int pass, int credit, int distinction) {
   if (mark >= distinction) {
     cout << "- Student " << index + 1
-         << " passed the CS1104 exam! \tw/ distinction" << endl;
+         << " passed the CS1104 exam! \tw/ distinction" << "\n";
   } else if (mark >= credit) {
     cout << "- Student " << index + 1 << " passed the CS1104 exam! \tw/ credit"
-         << endl;
+         << "\n";
   } else if (mark >= pass) {
-    cout << "- Student " << index + 1 << " passed the CS1104 exam!" << endl;
+    cout << "- Student " << index + 1 << " passed the CS1104 exam!" << "\n";
   } else if (mark < pass) {
-    cout << "- Student " << index + 1 << " failed the CS1104 exam!" << endl;
+    cout << "- Student " << index + 1 << " failed the CS1104 exam!" << "\n";
   }
 }
 
@@ -26,13 +26,13 @@ int main() {
   int credit = 65;
   int distinction = 75;
 
-  cout << "\tCS 1104 EXAM RESULTS" << endl << endl;
-  cout << "\tStudent(s)\tMark" << endl;
-  cout << "\t----------\t----" << endl;
+  cout << "\tCS 1104 EXAM RESULTS" << "\n" << "\n";
+  cout << "\tStudent(s)\tMark" << "\n";
+  cout << "\t----------\t----" << "\n";
   for (int i = 0; i < 4; i++) {
-    cout << "\tStudent " << i + 1 << "\t" << marks[i] << endl;
+    cout << "\tStudent " << i + 1 << "\t" << marks[i] << "\n";
   }
-  cout << endl;
+  cout << "\n";
 
   for (int i = 0; i < 4; i++) {
     printStatus(i, marks[i], pass, credit, distinction);
