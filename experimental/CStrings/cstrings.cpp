@@ -15,5 +15,11 @@ int main() {
   cout << "size of str2: " << sizeof(str2) / sizeof(str2[0]) << "\n";
   cout << "strlen(str2): " << strlen(str2) << "\n";
 
+  char str3[80];
+  cout << "\nempty str3: " << str3 << "\n";
+  cout << "new str3:\t" << strcat(str3, "This should work though!") << "\n";
+
+  cout << strcat(str2, str3) << "\n";
+
   return 0;
 }
