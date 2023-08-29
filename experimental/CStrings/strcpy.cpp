@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+void newline() { cout << "\n"; }
+
 int main() {
   char sample[] = "This is a character array string in C++!";
   char sto1[50];
@@ -12,6 +14,9 @@ int main() {
   cout << sto2 << "\n";
 
   cout << strcat(sto1, sto2) << "\n";
+
+  char str1[] = "string1";
+  char str2[] = "string2";
 
   return 0;
 }
