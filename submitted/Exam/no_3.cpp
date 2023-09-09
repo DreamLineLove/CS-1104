@@ -3,12 +3,20 @@
 using namespace std;
 
 int main() {
-  int arr[4][10];
+  int start, end, diff;
+  cout << "Give starting number: ";
+  cin >> start;
+  cout << "Give ending number: ";
+  cin >> end;
+  diff = end - start;
 
-  for (int i = 0; i < 4; i++) {
+  int arr[diff + 1][10];
+
+  cout << '\n';
+  for (int i = 0; i < diff + 1; i++) {
     for (int j = 0; j < 10; j++) {
-      arr[i][j] = (i + 3) * (j + 1);
-      cout << i + 3 << " * " << j + 1 << " = " << arr[i][j] << '\n';
+      arr[i][j] = (i + start) * (j + 1);
+      cout << i + start << " * " << j + 1 << " = " << arr[i][j] << '\n';
     }
     cout << '\n';
   }
