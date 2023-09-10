@@ -1,31 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int facti(int val);
-int factr(int val);
+int facti(int n);
+int factr(int n);
 
 int main() {
-  int facti_result = facti(4);
-  cout << facti_result << '\n';
-  int factr_result = factr(4);
-  cout << factr_result << '\n';
+  cout << "9 factorial is " << facti(4) << " (iterative)\n";
+  cout << "9 factorial is " << factr(4) << " (recursive)\n";
+
   return 0;
 }
 
-int facti(int val) {
+int facti(int n) {
   int result = 1;
-  for (int i = 1; i <= val; i++) {
+  for (int i = result; i <= n; i++) {
     result = result * i;
   }
   return result;
 }
 
-int factr(int val) {
+int factr(int n) {
   int result;
-  if (val == 1) {
+  if (n == 1)
     return 1;
-  }
 
-  result = factr(val - 1) * val;
+  result = factr(n - 1) * n;
   return result;
 }
