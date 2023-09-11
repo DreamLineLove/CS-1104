@@ -60,9 +60,13 @@ int main() {
   cout << '\n';
 
   cout << "Turning all letters to uppercase" << '\n';
-  char *end = &(str[strlen(str)]);
-  makeUppercase(str, end);
-  cout << str << '\n';
+  char input[100];
+  cout << "\tEnter a string: ";
+  cin.getline(input, 100, '\n');
+
+  char *end = &(input[strlen(input)]);
+  makeUppercase(input, end);
+  cout << input << '\n';
 
   return 0;
 }
