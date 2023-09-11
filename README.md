@@ -35,7 +35,8 @@ I also explored various aspects of the C++ programming language, data structures
 - I also learned how to interact with the standard input and output (the command-line or terminal) using C++ functions.
   - In part, I learned getline() and various other functions to handle the stdin in a buffered stream.
   - In part, I had to use \<cstdio\> and \<iostream\>
-- I learned the difference between pointers and references, pointer dereferencing, and pointer arithmetic in arrays. 
+- I learned the difference between pointers and references, pointer dereferencing, and pointer arithmetic in arrays.
+- I also learned various functions from the \<cmath\> header like pow(). 
 <!---- 
 - (Array) insertion and deletion
 - Linear search
