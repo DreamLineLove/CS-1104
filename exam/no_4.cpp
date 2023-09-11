@@ -17,6 +17,10 @@ int main() {
   }
   cout << "\n\n";
 
+  cout << "Minimum number is " << minimum(arr, n) << '\n';
+  cout << "Maximum number is " << maximum(arr, n) << '\n';
+  cout << "\n";
+
   selection_sort(arr, n);
 
   cout << "Sorted array" << '\n';
@@ -45,4 +49,22 @@ void selection_sort(int arr[], int n) {
       arr[minIndex] = temp;
     }
   }
+}
+
+int minimum(int arr[], int n) {
+  int min = arr[0];
+
+  for (int i = 0; i < n; i++) {
+    min = (arr[i] < min) ? arr[i] : min;
+  }
+  return min;
+}
+
+int maximum(int arr[], int n) {
+  int max = arr[0];
+
+  for (int i = 0; i < n; i++) {
+    max = (arr[i] > max) ? arr[i] : max;
+  }
+  return max;
 }
