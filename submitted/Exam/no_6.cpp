@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void printUppercase(char *str);
+void makeUppercase(char *start, char *end);
 
 int main() {
   char str[] = "This is a cat";
@@ -59,7 +59,17 @@ int main() {
   cout << capitalized_str << "\tcount " << count << "\n";
   cout << '\n';
 
+  cout << "Turning all letters to uppercase" << '\n';
+  char *end = &(str[strlen(str)]);
+  makeUppercase(str, end);
+  cout << str << '\n';
+
   return 0;
 }
 
-void printUppercase() {}
+void makeUppercase(char *start, char *end) {
+  while (start < end) {
+    *start = toupper(*start);
+    start++;
+  }
+}
