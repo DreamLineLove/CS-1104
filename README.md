@@ -27,6 +27,7 @@ In this repository, you will find:
 # Notes
 - I learned the nuances of looping over arrays.
 - I also learned search algorithms like linear search and binary search.
+- I learned a few sorting algorithms like bubble sort and selection sort.
 
 <!---- 
 - (Array) insertion and deletion
