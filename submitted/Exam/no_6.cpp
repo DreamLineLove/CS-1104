@@ -3,6 +3,8 @@
 #include <iostream>
 using namespace std;
 
+void printUppercase(char *str);
+
 int main() {
   char str[] = "This is a cat";
   char reverse_str[80];
@@ -11,20 +13,19 @@ int main() {
   strcpy(reverse_str, str);
   strcpy(capitalized_str, str);
 
-  int i, n = strlen(reverse_str);
+  int i, n = strlen(reverse_str), count = 0;
 
   cout << "Original string" << '\n';
   cout << str << '\n';
   cout << '\n';
 
+  cout << "Reversed string" << '\n';
   for (i = 0; i < n; i++) {
     int temp = reverse_str[i];
     reverse_str[i] = reverse_str[n - 1];
     reverse_str[n - 1] = temp;
     n--;
   }
-
-  cout << "Reversed string" << '\n';
   cout << reverse_str << '\n';
   cout << '\n';
 
@@ -38,5 +39,27 @@ int main() {
   cout << capitalized_str << '\n';
   cout << '\n';
 
+  cout << "Counting lowercase letters" << '\n';
+  for (i = 0; i < strlen(str); i++) {
+    if (islower(str[i]))
+      count++;
+  }
+  cout << str << "\tcount " << count << "\n";
+  count = 0;
+  for (i = 0; i < strlen(reverse_str); i++) {
+    if (islower(reverse_str[i]))
+      count++;
+  }
+  cout << reverse_str << "\tcount " << count << "\n";
+  count = 0;
+  for (i = 0; i < strlen(capitalized_str); i++) {
+    if (islower(capitalized_str[i]))
+      count++;
+  }
+  cout << capitalized_str << "\tcount " << count << "\n";
+  cout << '\n';
+
   return 0;
 }
+
+void printUppercase() {}
