@@ -1,11 +1,9 @@
 # Welcome to CS-1104!
 
 In this repository, you will find:
-- code submitted for assignments, tutorials, or lecture,
-- In-between experiments I had done, and
-- code intended as gists for exam prepreration.
-
-I also explored various aspects of the C++ programming language whenever I felt necessary!
+- **submitted** code (assignment and lecture program submissions)
+- **experimental** code 
+- **exam** code.
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
