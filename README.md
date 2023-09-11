@@ -5,6 +5,8 @@ In this repository, you will find:
 - code I wrote to learn different concepts (**experimental**)
 - programs for **exam**
 
+I also explored various aspects of the C++ programming language, data structures and algorithms, and building basic cli apps.
+
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
 
