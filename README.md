@@ -1,9 +1,9 @@
 # Welcome to CS-1104!
 
 In this repository, you will find:
-- **submitted** code (assignment and lecture submissions)
-- **experimental** code 
-- **exam** code.
+- assignment, lecture programs and other submissions (think powerpoint files) (**submitted**)
+- code I wrote to learn different concepts (**experimental**)
+- programs for **exam**
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
@@ -24,15 +24,11 @@ In this repository, you will find:
 ```
 - To fetch latest versions after cloning, use ```$ git pull```
 
-# Contents
-The repository is organized into two sections:
-- experimental and
-- submitted
-### experimental
-contains experiments I had done divided into their own sub-folders, as well as gists I had prepared for exam prep.
-### submitted
-contains final code submitted for assignments and tutorials. It also contains the code during class time or those given as an ungraded assignment (homework).
-<!---
+# Notes
+- I learned the nuances of looping over arrays.
+- I also learned search algorithms like linear search and binary search.
+
+<!---- 
 - (Array) insertion and deletion
 - Linear search
 - Bubble sort
