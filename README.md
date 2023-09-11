@@ -1,7 +1,7 @@
 # Welcome to CS-1104!
 
 In this repository, you will find:
-- **submitted** code (assignment and lecture program submissions)
+- **submitted** code (assignment and lecture submissions)
 - **experimental** code 
 - **exam** code.
 
