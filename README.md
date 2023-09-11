@@ -1,11 +1,11 @@
 # Welcome to CS-1104!
 
 In this repository, you will find:
-- code submitted for assignments, tutorials, or lecture,
-- In-between experiments I had done, and
-- code intended as gists for exam prepreration.
+- assignment, lecture programs and other submissions (think powerpoint files) (**submitted**)
+- code I wrote to learn different concepts (**experimental**)
+- programs for **exam**
 
-I also explored various aspects of the C++ programming language whenever I felt necessary!
+I also explored various aspects of the C++ programming language, data structures and algorithms, and building basic cli apps.
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
@@ -26,15 +26,18 @@ I also explored various aspects of the C++ programming language whenever I felt 
 ```
 - To fetch latest versions after cloning, use ```$ git pull```
 
-# Contents
-The repository is organized into two sections:
-- experimental and
-- submitted
-### experimental
-contains experiments I had done divided into their own sub-folders, as well as gists I had prepared for exam prep.
-### submitted
-contains final code submitted for assignments and tutorials. It also contains the code during class time or those given as an ungraded assignment (homework).
-<!---
+# Notes
+- I learned the nuances of looping over arrays.
+- I also learned search algorithms like linear search and binary search.
+- I learned a few sorting algorithms like bubble sort and selection sort.
+- I learned how to use C-style strings in C++ (arrays of characters that are null terminated).
+  - In part, I learned a few useful functions from the <cstring> header including strcpy(), strcmp(), strcat(), and strlen().
+- I also learned how to interact with the standard input and output (the command-line or terminal) using C++ functions.
+  - In part, I learned getline() and various other functions to handle the stdin in a buffered stream.
+  - In part, I had to use \<cstdio\> and \<iostream\>
+- I learned the difference between pointers and references, pointer dereferencing, and pointer arithmetic in arrays.
+- I also learned various functions from the \<cmath\> header like pow(). 
+<!---- 
 - (Array) insertion and deletion
 - Linear search
 - Bubble sort
