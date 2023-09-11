@@ -1,25 +1,29 @@
 #include <iostream>
 using namespace std;
 
-float running_avg(const float input);
+float running_avg(float i);
 
 int main() {
-  float v;
+  float num = 0;
 
   do {
-    cout << "\nEnter number: ";
-    cin >> v;
-    cout << "Running average is: " << running_avg(v) << '\n';
-  } while (v > 0);
+    cout << "Enter number (-1 to quit): ";
+    cin >> num;
+    if (num != -1)
+      cout << "Running average is: " << running_avg(num) << '\n';
+    cout << '\n';
+  } while (num > -1);
 
   return 0;
 }
 
-float running_avg(const float input) {
-  static float sum = 0, count = 0;
+float running_avg(float i) {
+  static float sum = 0;
+  static int count = 0;
+
+  sum = sum + i;
+
   count++;
 
-  sum = sum + input;
-  cout << "Current" << sum << '\n';
   return sum / count;
 }
