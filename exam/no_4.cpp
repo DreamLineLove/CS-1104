@@ -3,19 +3,23 @@
 using namespace std;
 
 void selection_sort(int arr[], int n);
+int minimum(int arr[], int n);
+int maximum(int arr[], int n);
 
 int main() {
   int arr[] = {520, 491, 503, 476, 454, 439};
 
   int n = sizeof(arr) / sizeof(arr[0]);
 
+  cout << "Original array" << '\n';
   for (int i = 0; i < n; i++) {
     cout << arr[i] << ' ';
   }
-  cout << '\n';
+  cout << "\n\n";
 
   selection_sort(arr, n);
 
+  cout << "Sorted array" << '\n';
   for (int i = 0; i < n; i++) {
     cout << arr[i] << ' ';
   }

@@ -3,7 +3,7 @@ using namespace std;
 
 class Apple {
 public:
-  Apple() : full_name("Apple Inc."){};
+  Apple() : full_name("Apple Inc.") {}
 
   virtual void Print() const {
     cout << full_name << " is the most valuable company in the world." << '\n';
@@ -15,7 +15,7 @@ protected:
 
 class AppleProduct {
 public:
-  AppleProduct(const int price) : made_in("China"), price_usd(price){};
+  AppleProduct(const int price) : made_in("China"), price_usd(price) {}
 
 protected:
   string made_in;
@@ -24,7 +24,7 @@ protected:
 
 class Pixar : public Apple {
 public:
-  Pixar() : full_name("Pixar Animation Studios"){};
+  Pixar() : full_name("Pixar Animation Studios") {}
 
   void Print() const override {
     cout << "Name of company: " << full_name << '\n';
@@ -41,7 +41,7 @@ private:
 
 class iPhone : public Apple, public AppleProduct {
 public:
-  iPhone() : latest_model("iPhone 15"), AppleProduct(799){};
+  iPhone() : latest_model("iPhone 15"), AppleProduct(799) {}
 
   void Print() const override {
     cout << "Latest iPhone model: " << latest_model << '\n';
@@ -61,7 +61,7 @@ private:
 
 class iWatch : public Apple, public AppleProduct {
 public:
-  iWatch() : latest_model("Apple Watch Series 9"), AppleProduct(399){};
+  iWatch() : latest_model("Apple Watch Series 9"), AppleProduct(399) {}
 
   void Print() const override {
     cout << "Latest iWatch model: " << latest_model << '\n';

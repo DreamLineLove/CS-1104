@@ -3,7 +3,7 @@ using namespace std;
 
 class Charles {
 public:
-  Charles() : name("Charles"){};
+  Charles() : name("Charles") {}
   virtual void printName() const {
     cout << "My name is " << name << ". I am a grandparent.\n";
   }
@@ -14,13 +14,14 @@ protected:
 
 class Harry : public Charles {
 public:
-  Harry() : name("Harry"){};
+  Harry() : name("Harry") {}
   virtual void printName() const override {
     cout << "My name is " << name << ".\n";
   }
   void printParentName() const {
     cout << "Inside Harry\n";
     Charles::printName();
+    cout << '\n';
   }
 
 protected:
@@ -29,13 +30,14 @@ protected:
 
 class William : public Charles {
 public:
-  William() : name("William"){};
+  William() : name("William") {}
   virtual void printName() const override {
     cout << "My name is " << name << ". I am a parent.\n";
   }
   void printParentName() const {
     cout << "Inside William\n";
     Charles::printName();
+    cout << '\n';
   }
 
 protected:
@@ -44,11 +46,12 @@ protected:
 
 class George : public William {
 public:
-  George() : name("George"){};
+  George() : name("George") {}
   void printName() const override { cout << "My name is " << name << ".\n"; }
   void printParentName() const {
     cout << "Inside George\n";
     William::printName();
+    cout << '\n';
   }
 
 protected:
