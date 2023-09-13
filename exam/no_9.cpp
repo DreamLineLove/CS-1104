@@ -4,7 +4,7 @@ using namespace std;
 class Charles {
 public:
   Charles() : name("Charles") {}
-  virtual void printName() const {
+  virtual void print() const {
     cout << "My name is " << name << ". I am a grandparent.\n";
   }
 
@@ -15,12 +15,12 @@ protected:
 class Harry : public Charles {
 public:
   Harry() : name("Harry") {}
-  virtual void printName() const override {
+  virtual void print() const override {
     cout << "My name is " << name << ".\n";
   }
-  void printParentName() const {
+  void printParent() const {
     cout << "Inside Harry\n";
-    Charles::printName();
+    Charles::print();
     cout << '\n';
   }
 
@@ -31,12 +31,12 @@ protected:
 class William : public Charles {
 public:
   William() : name("William") {}
-  virtual void printName() const override {
+  virtual void print() const override {
     cout << "My name is " << name << ". I am a parent.\n";
   }
-  void printParentName() const {
+  void printParent() const {
     cout << "Inside William\n";
-    Charles::printName();
+    Charles::print();
     cout << '\n';
   }
 
@@ -47,10 +47,10 @@ protected:
 class George : public William {
 public:
   George() : name("George") {}
-  void printName() const override { cout << "My name is " << name << ".\n"; }
-  void printParentName() const {
+  void print() const override { cout << "My name is " << name << ".\n"; }
+  void printParent() const {
     cout << "Inside George\n";
-    William::printName();
+    William::print();
     cout << '\n';
   }
 
@@ -64,15 +64,15 @@ int main() {
   William william;
   George george;
 
-  charles.printName();
-  harry.printName();
-  william.printName();
-  george.printName();
+  charles.print();
+  harry.print();
+  william.print();
+  george.print();
   cout << '\n';
 
-  harry.printParentName();
-  william.printParentName();
-  george.printParentName();
+  harry.printParent();
+  william.printParent();
+  george.printParent();
 
   return 0;
 }
