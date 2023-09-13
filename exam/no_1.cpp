@@ -5,8 +5,8 @@ int facti(int n);
 int factr(int n);
 
 int main() {
-  cout << "9 factorial is " << facti(4) << " (iterative)\n";
-  cout << "9 factorial is " << factr(4) << " (recursive)\n";
+  cout << "9 factorial is " << facti(9) << " (iterative)\n";
+  cout << "9 factorial is " << factr(9) << " (recursive)\n";
 
   return 0;
 }
