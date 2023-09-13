@@ -19,7 +19,7 @@ I explored various aspects of the C++ programming language, data structures and 
 ```
     $ cd CS-1104
 ```
-- Navigate to the directory in which the program you want to test lives and run it. For example:
+- Navigate to the directory of the source file and then run it. For example:
 ```
     $ cd CS-1104/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
@@ -31,7 +31,7 @@ I explored various aspects of the C++ programming language, data structures and 
 - I also learned search algorithms like linear search and binary search.
 - I learned a few sorting algorithms like bubble sort and selection sort.
 - I learned how to use C-style strings in C++ (arrays of characters that are null terminated).
-  - In part, I learned a few useful functions from the <cstring> header including strcpy(), strcmp(), strcat(), and strlen().
+  - In part, I learned some useful functions from the \<cstring\> header including strcpy(), strcmp(), strcat(), and strlen().
 - I also learned how to interact with the standard input and output (the command-line or terminal) using C++ functions.
   - In part, I learned getline() and various other functions to handle the stdin in a buffered stream.
   - In part, I had to use \<cstdio\> and \<iostream\>
