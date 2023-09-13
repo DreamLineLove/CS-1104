@@ -31,7 +31,7 @@ public:
     cout << "Name of company: " << full_name << '\n';
   }
   void printParent() {
-    cout << "My parent company name is " << Apple::full_name << '\n';
+    cout << "- My parent company name is " << Apple::full_name << '\n';
     cout << '\n';
   }
 
@@ -47,10 +47,9 @@ public:
     cout << "Latest iPhone model: " << latest_model << '\n';
     cout << "price: $" << price_usd << '\n';
     cout << "Made in: " << made_in << '\n';
-    cout << '\n';
   }
   void printParent() {
-    cout << "My parent company name is " << Apple::full_name << '\n';
+    cout << "- My parent company name is " << Apple::full_name << '\n';
     cout << '\n';
   }
 
@@ -66,10 +65,9 @@ public:
     cout << "Latest iWatch model: " << latest_model << '\n';
     cout << "price: $" << price_usd << '\n';
     cout << "Made in: " << made_in << '\n';
-    cout << '\n';
   }
   void printParent() {
-    cout << "My parent company name is " << Apple::full_name << '\n';
+    cout << "- My parent company name is " << Apple::full_name << '\n';
     cout << '\n';
   }
 
@@ -83,20 +81,19 @@ int main() {
   iWatch latest_iwatch;
   Pixar pixar_animation_studios;
 
+  cout << "\tInside Apple" << '\n';
   apple.print();
+
+  cout << "\tInside iPhone" << '\n';
   latest_iphone.print();
-  latest_iwatch.print();
-  pixar_animation_studios.print();
-
-  cout << "\n";
-
-  cout << "Inside iPhone" << '\n';
   latest_iphone.printParent();
 
-  cout << "Inside iWatch" << '\n';
+  cout << "\tInside iWatch" << '\n';
+  latest_iwatch.print();
   latest_iwatch.printParent();
 
-  cout << "Inside Pixar" << '\n';
+  cout << "\tInside Pixar" << '\n';
+  pixar_animation_studios.print();
   pixar_animation_studios.printParent();
 
   return 0;
