@@ -12,8 +12,9 @@ int main() {
 }
 
 int facti(int n) {
-  int result = 1;
-  for (int i = result; i <= n; i++) {
+  int i, result = 1;
+
+  for (i = 1; i <= n; i++) {
     result = result * i;
   }
   return result;
