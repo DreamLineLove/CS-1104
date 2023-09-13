@@ -16,19 +16,22 @@ protected:
 
 class AppleProduct {
 public:
-  AppleProduct(const int price) : made_in("China"), price_usd(price) {}
+  AppleProduct(const int price, string madein)
+      : made_in(madein), price_usd(price) {}
 
 protected:
   string made_in;
   int price_usd;
 };
 
-class Pixar : public Apple {
+class Pixar : public Apple, public AppleProduct {
 public:
-  Pixar() : full_name("Pixar Animation Studios") {}
+  Pixar() : full_name("Pixar Animation Studios"), AppleProduct(15, "USA") {}
 
   void print() const override {
     cout << "Name of company: " << full_name << '\n';
+    cout << "Company value: $" << price_usd << " billion\n";
+    cout << "Location: " << made_in << '\n';
   }
   void printParent() {
     cout << "- My parent company name is " << Apple::full_name << '\n';
@@ -41,11 +44,11 @@ private:
 
 class iPhone : public Apple, public AppleProduct {
 public:
-  iPhone() : latest_model("iPhone 15"), AppleProduct(799) {}
+  iPhone() : latest_model("iPhone 15"), AppleProduct(799, "China") {}
 
   void print() const override {
     cout << "Latest iPhone model: " << latest_model << '\n';
-    cout << "price: $" << price_usd << '\n';
+    cout << "Price: $" << price_usd << '\n';
     cout << "Made in: " << made_in << '\n';
   }
   void printParent() {
@@ -59,11 +62,11 @@ private:
 
 class iWatch : public Apple, public AppleProduct {
 public:
-  iWatch() : latest_model("Apple Watch Series 9"), AppleProduct(399) {}
+  iWatch() : latest_model("Apple Watch Series 9"), AppleProduct(399, "China") {}
 
   void print() const override {
     cout << "Latest iWatch model: " << latest_model << '\n';
-    cout << "price: $" << price_usd << '\n';
+    cout << "Price: $" << price_usd << '\n';
     cout << "Made in: " << made_in << '\n';
   }
   void printParent() {
