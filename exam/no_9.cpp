@@ -18,10 +18,9 @@ public:
   Harry() : name("Harry") {}
   virtual void print() const override {
     cout << "My name is " << name << ".\nI am an uncle.\n";
-    cout << '\n';
   }
   void printParent() const {
-    cout << "My parent's name is " << Charles::name << '\n';
+    cout << "My parent's name is " << Charles::name << ".\n";
     cout << '\n';
   }
 
@@ -34,10 +33,9 @@ public:
   William() : name("William") {}
   virtual void print() const override {
     cout << "My name is " << name << ".\nI am a parent.\n";
-    cout << '\n';
   }
   void printParent() const {
-    cout << "My parent's name is " << Charles::name << '\n';
+    cout << "My parent's name is " << Charles::name << ".\n";
     cout << '\n';
   }
 
@@ -50,13 +48,12 @@ public:
   George() : name("George") {}
   void print() const override {
     cout << "My name is " << name << ".\nI am a grandson.\n";
-    cout << '\n';
   }
   void printParent() const {
-    cout << "My parent's name is " << William::name << '\n';
+    cout << "My parent's name is " << William::name << ".\n";
   }
   void printGrandparent() const {
-    cout << "My grandparent's name is " << Charles::name << '\n';
+    cout << "My grandparent's name is " << Charles::name << ".\n";
     cout << '\n';
   }
 
@@ -70,18 +67,19 @@ int main() {
   William william;
   George george;
 
+  cout << "\tInside Charles\n";
   charles.print();
-  harry.print();
-  william.print();
-  george.print();
 
-  cout << "Inside Harry\n";
+  cout << "\tInside Harry\n";
+  harry.print();
   harry.printParent();
 
-  cout << "Inside William\n";
+  cout << "\tInside William\n";
+  william.print();
   william.printParent();
 
-  cout << "Inside George\n";
+  cout << "\tInside George\n";
+  george.print();
   george.printParent();
   george.printGrandparent();
 
