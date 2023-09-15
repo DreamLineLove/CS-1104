@@ -12,19 +12,18 @@ int main() {
 }
 
 int facti(int n) {
-  int i, result = 1;
+  int result = 1;
 
-  for (i = 1; i <= n; i++) {
+  for (int i = 1; i <= n; i++) {
     result = result * i;
   }
+
   return result;
 }
 
 int factr(int n) {
-  int result;
   if (n == 1)
     return 1;
 
-  result = factr(n - 1) * n;
-  return result;
+  return n * factr(n - 1);
 }
