@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void changeToUppercase(char str[], int n) {
+void changeIntoUppercase(char str[], int n) {
   for (int i = 0; i < n; i++) {
     str[i] = toupper(str[i]);
   }
@@ -51,7 +51,7 @@ int main() {
   cout << "each phrase starts with capital: " << cstr << '\n';
   cout << '\n';
 
-  changeToUppercase(str, strlen(str));
+  changeIntoUppercase(str, strlen(str));
   cout << "uppercase letters: " << str << '\n';
 
   return 0;
