@@ -4,10 +4,13 @@ using namespace std;
 
 int main() {
   int start, end, diff;
+
   cout << "Give starting number: ";
   cin >> start;
+
   cout << "Give ending number: ";
   cin >> end;
+
   diff = end - start;
 
   int arr[diff + 1][10];
