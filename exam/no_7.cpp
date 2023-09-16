@@ -13,7 +13,7 @@ int main() {
   string ML_words[6] = {"sample", "example", "preamble",
                         "Sample", "Example", "Preamble"};
 
-  regex pattern("sample|example", regex_constants::icase);
+  regex pattern("(s|ex)ample", regex_constants::icase);
 
   for (int i = 0; i < 6; i++) {
     use_regex(pattern, ML_words[i]);
