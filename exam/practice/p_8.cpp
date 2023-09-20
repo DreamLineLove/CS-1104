@@ -4,12 +4,12 @@ using namespace std;
 class Apple {
 public:
   void print() {
-    cout << full_name << " is the biggest technology company in the world!"
+    cout << company_name << " is the biggest technology company in the world!"
          << '\n';
   }
 
 protected:
-  string full_name = "Apple Inc.";
+  string company_name = "Apple Inc.";
 };
 
 class AppleProduct {
@@ -23,6 +23,9 @@ public:
   void print() {
     cout << latest_product << " is the latest iPhone model." << '\n';
   }
+  void printParent() {
+    cout << "My parent company is " << company_name << '\n';
+  }
 };
 
 class iWatch : public Apple, public AppleProduct {
@@ -31,6 +34,9 @@ public:
   void print() {
     cout << latest_product << " is the latest iWatch model." << '\n';
   }
+  void printParent() {
+    cout << "My parent company is " << company_name << '\n';
+  }
 };
 
 class Pixar : public Apple, public AppleProduct {
@@ -38,6 +44,9 @@ public:
   Pixar(string name) { latest_product = name; }
   void print() {
     cout << latest_product << " is the latest Pixar animation." << '\n';
+  }
+  void printParent() {
+    cout << "My parent company is " << company_name << '\n';
   }
 };
 
@@ -48,9 +57,19 @@ int main() {
   Pixar Elemental("Elemental");
 
   apple.print();
+  cout << '\n';
+
   iPhone15.print();
+  iPhone15.printParent();
+  cout << '\n';
+
   iWatch9.print();
+  iWatch9.printParent();
+  cout << '\n';
+
   Elemental.print();
+  Elemental.printParent();
+  cout << '\n';
 
   return 0;
 }
