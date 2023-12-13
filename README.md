@@ -28,7 +28,7 @@ I explored some basic aspects of computer science using C++ like
     $ cd CS-1104/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
 ```
-- To fetch latest updates after having cloned already, use ```$ git pull```
+- If new changes were added after having already cloned, use ```$ git pull``` to fetch them
 
 # Notes
 - I was introduced the concept of accessing addresses in memory using pointers.
