@@ -1,11 +1,15 @@
 # Welcome to CS-1104!
 
-In this repository, you will find:
+In this repository, you will find: 
 - programs, assignments, and powerpoints (**submitted**)
-- code I wrote in my free time (**experimental**)
-- select **exam** programs
+- code I wrote in my free time (**experimental**) and
+- select **exam** programs.
 
-I explored some basic aspects of computer science using C++, like data structures and algorithms, pointers in memory and building basic CLI programs, and gained valuable basic programming experience along the way.
+I explored some basic aspects of computer science using C++ like 
+- data structures and algorithms
+- pointers in memory and
+- building basic CLI programs 
+and gained valuable basic programming experience along the way.
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
