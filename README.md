@@ -1,11 +1,11 @@
 # Welcome to CS-1104!
 
 In this repository, you will find:
-- assignment and lecture programs, and powerpoint files (**submitted**)
-- code I wrote to understand different concepts (**experimental**)
+- programs, assignments, and powerpoints (**submitted**)
+- code I wrote in my free time (**experimental**)
 - select **exam** programs
 
-I explored various aspects of C++, data structures and algorithms, building basic CLI programs, and other concepts that are transferrable in CS field.
+I explored various aspects of C++, data structures and algorithms, building basic CLI programs, and gained valuable basic programming experience.
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
