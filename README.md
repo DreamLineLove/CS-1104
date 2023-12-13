@@ -27,7 +27,7 @@ I explored some basic aspects of computer science using C++, like data structure
 - To fetch latest versions after cloning, use ```$ git pull```
 
 # Notes
-- I was introduced the concept of moving through data items in memory using pointers (looping over arrays).
+- I was introduced the concept of moving through memory places using pointers (looping over arrays).
 - I implemented search algorithms like linear search and binary search.
 - I implemented a few sorting algorithms like bubble sort and selection sort.
 - I handled C-style strings in C++ (arrays of characters that are null terminated).
