@@ -9,7 +9,7 @@ I explored some basic aspects of computer science using C++ like
 - data structures and algorithms
 - pointers and memory address space and
 - building basic CLI programs 
-and gained valuable basic programming experience along the way.
+<br>and gained valuable basic programming experience along the way.
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
