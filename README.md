@@ -27,16 +27,17 @@ I explored various aspects of C++, data structures and algorithms, building basi
 - To fetch latest versions after cloning, use ```$ git pull```
 
 # Notes
-- I learned the nuances of looping over arrays.
-- I also learned search algorithms like linear search and binary search.
-- I learned a few sorting algorithms like bubble sort and selection sort.
-- I learned how to use C-style strings in C++ (arrays of characters that are null terminated).
+- I was introduced the concept of moving through data items in memory using pointers (looping over arrays).
+- I implemented search algorithms like linear search and binary search.
+- I implemented a few sorting algorithms like bubble sort and selection sort.
+- I handled C-style strings in C++ (arrays of characters that are null terminated).
   - In part, I learned some useful functions from the \<cstring\> header including strcpy(), strcmp(), strcat(), and strlen().
-- I also learned how to interact with the standard input and output (the command-line or terminal) using C++ functions.
-  - In part, I learned getline() and various other functions to handle the stdin in a buffered stream.
-  - In part, I had to use \<cstdio\> and \<iostream\>
-- I learned the difference between pointers and references, pointer dereferencing, and pointer arithmetic in arrays.
-- I also learned various functions from the \<cmath\> header like pow(). 
+- I was introduced how a string is represented in memory and what it means to manipulate it.
+- I learned how to interact with the standard input and output using the standard library.
+  - I was introduced the concept of streams and "buffered" streams.
+  - I was introduced the nuances of std-lib functions that handle data from the standard input.
+- I was introduced to references, pointers, pointer dereferencing, and basic pointer arithmetic.
+- I used a wide range of functionality from the standard library, including the \<cmath\> header. 
 <!---- 
 - (Array) insertion and deletion
 - Linear search
