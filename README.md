@@ -33,7 +33,7 @@ I explored some basic aspects of computer science using C++, like data structure
 - I implemented a few sorting algorithms like bubble sort and selection sort.
 - I handled C-style strings in C++ (arrays of characters that are null terminated).
   - In part, I learned some useful functions from the \<cstring\> header including strcpy(), strcmp(), strcat(), and strlen().
-- I was introduced how a string is represented in memory and what it means to manipulate it.
+- I got a basic sense of how a string is represented in memory and what it means to manipulate it.
 - I learned how to interact with the standard input and output using the standard library.
   - I was introduced the concept of streams and "buffered" streams.
   - I was introduced the nuances of std-lib functions that handle data from the standard input.
