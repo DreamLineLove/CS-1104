@@ -7,7 +7,7 @@ In this repository, you will find:
 
 I explored some basic aspects of computer science using C++ like 
 - data structures and algorithms
-- pointers in memory and
+- pointers and memory address space and
 - building basic CLI programs 
 and gained valuable basic programming experience along the way.
 
