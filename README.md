@@ -1,11 +1,15 @@
 # Welcome to CS-1104!
 
-In this repository, you will find:
-- assignment, lecture programs and other submissions (think powerpoint files) (**submitted**)
-- code I wrote to learn different concepts (**experimental**)
-- programs for **exam**
+In this repository, you will find: 
+- programs, assignments, and powerpoints (**submitted**)
+- code I wrote in my free time (**experimental**) and
+- select **exam** programs.
 
-I explored various aspects of the C++ programming language, data structures and algorithms, building basic CLI applications, and other concepts that are transferrable in the field of computer science.
+I explored some basic aspects of computer science using C++ like 
+- data structures and algorithms
+- pointers and memory address space and
+- building basic CLI programs 
+<br>and gained valuable basic programming experience along the way.
 
 # Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
@@ -24,19 +28,21 @@ I explored various aspects of the C++ programming language, data structures and 
     $ cd CS-1104/experimental/insertion_deletion/
     $ ./v1_insertion_deletion
 ```
-- To fetch latest versions after cloning, use ```$ git pull```
+- If new changes were added after having already cloned, use ```$ git pull``` to fetch them
 
 # Notes
-- I learned the nuances of looping over arrays.
-- I also learned search algorithms like linear search and binary search.
-- I learned a few sorting algorithms like bubble sort and selection sort.
-- I learned how to use C-style strings in C++ (arrays of characters that are null terminated).
+- I was introduced the concept of accessing addresses in memory using pointers.
+  - I was introduced the notion that looping over array items using iterative control flow is akin to accessing (and/or manipulating) data from contiguous memory places.
+- I implemented search algorithms like linear search and binary search.
+- I implemented a few sorting algorithms like bubble sort and selection sort.
+- I handled C-style strings in C++ (arrays of characters that are null terminated).
   - In part, I learned some useful functions from the \<cstring\> header including strcpy(), strcmp(), strcat(), and strlen().
-- I also learned how to interact with the standard input and output (the command-line or terminal) using C++ functions.
-  - In part, I learned getline() and various other functions to handle the stdin in a buffered stream.
-  - In part, I had to use \<cstdio\> and \<iostream\>
-- I learned the difference between pointers and references, pointer dereferencing, and pointer arithmetic in arrays.
-- I also learned various functions from the \<cmath\> header like pow(). 
+- I got a basic sense of how a string is represented in memory and what it means to manipulate it.
+- I learned how to interact with the standard input and output using the standard library.
+  - I was introduced the concept of streams and "buffered" streams.
+  - I was introduced the nuances of std-lib functions that handle data from the standard input.
+- I was introduced to references, pointers, pointer dereferencing, and basic pointer arithmetic.
+- I used a wide range of functionality from the standard library, including the \<cmath\> header. 
 <!---- 
 - (Array) insertion and deletion
 - Linear search
