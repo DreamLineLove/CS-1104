@@ -3,43 +3,14 @@
 ```
 CS-1104/
 ├── exam
-│   ├── bin
-│   ├── chatgpt
-│   ├── legacy
-│   ├── practice
-│   └── wine
+│   ├── bin
+│   ├── practice
+│   └── .cpp ...
 ├── experimental
-│   ├── arrays
-│   ├── bubble_sort
-│   ├── ControlStructures
-│   ├── CStrings
-│   ├── Data-Types-In-C++
-│   ├── dhms
-│   ├── insertion_deletion
-│   ├── linear_search
-│   ├── multiplication_table
-│   ├── OOP
-│   ├── prime_check
-│   ├── recursion
-│   ├── Regex
-│   ├── selection_sort
-│   ├── static
-│   ├── strings
-│   └── tutorials_legacy
-│       └── tuto1_june16
+│   └── / ...
 ├── README.md
-└── submitted
-    ├── assignment3_july17
-    ├── Module4
-    │   ├── Examples
-    │   └── Exercises
-    ├── Module5
-    │   └── Examples
-    ├── Module6
-    ├── OOP
-    ├── OpenBook
-    ├── Powerpoints
-    └── tutorial1_june16
+└── submitted    
+    └── / ...
 ```
 
 In this repository, you will find: 
