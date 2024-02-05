@@ -18,9 +18,9 @@ In this repository, you will find:
 - exploratory code I wrote in my spare time (**experimental**) and
 - select **exam** programs.
 
-I was introduced to several basic concepts of Computer Science such as 
+In this course, I was introduced to several basic concepts in computer science such as 
 - data structures and algorithms,
-- pointers and memory and
+- memory addresses and pointers, and
 - imperative (C-style) programming constructs
 <br>by building basic CLI programs in C++.
 
