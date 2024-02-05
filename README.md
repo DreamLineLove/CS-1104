@@ -1,5 +1,47 @@
 # Welcome to CS-1104!
 
+```
+CS-1104/
+├── exam
+│   ├── bin
+│   ├── chatgpt
+│   ├── legacy
+│   ├── practice
+│   └── wine
+├── experimental
+│   ├── arrays
+│   ├── bubble_sort
+│   ├── ControlStructures
+│   ├── CStrings
+│   ├── Data-Types-In-C++
+│   ├── dhms
+│   ├── insertion_deletion
+│   ├── linear_search
+│   ├── multiplication_table
+│   ├── OOP
+│   ├── prime_check
+│   ├── recursion
+│   ├── Regex
+│   ├── selection_sort
+│   ├── static
+│   ├── strings
+│   └── tutorials_legacy
+│       └── tuto1_june16
+├── README.md
+└── submitted
+    ├── assignment3_july17
+    ├── Module4
+    │   ├── Examples
+    │   └── Exercises
+    ├── Module5
+    │   └── Examples
+    ├── Module6
+    ├── OOP
+    ├── OpenBook
+    ├── Powerpoints
+    └── tutorial1_june16
+```
+
 In this repository, you will find: 
 - programs, assignments, and powerpoints (**submitted**)
 - code I wrote in my free time (**experimental**) and
@@ -11,10 +53,10 @@ I explored some basic aspects of computer science using C++ like
 - building basic CLI programs 
 <br>and gained valuable basic programming experience along the way.
 
-# Requirements
+## Requirements
 - You should have **git** <a href="http://git-scm.com">installed</a> in order to clone the repo.
 
-# Usage
+## Usage
 - First, clone the repository to your local machine:
 ```
     $ git clone https://github.com/DreamLineLove/CS-1104.git
@@ -30,7 +72,7 @@ I explored some basic aspects of computer science using C++ like
 ```
 - If new changes were added after having already cloned, use ```$ git pull``` to fetch them
 
-# Notes
+## Notes
 - I was introduced the concept of accessing addresses in memory using pointers.
   - I was introduced the notion that looping over array items using iterative control flow is akin to accessing (and/or manipulating) data from contiguous memory places.
 - I implemented search algorithms like linear search and binary search.
